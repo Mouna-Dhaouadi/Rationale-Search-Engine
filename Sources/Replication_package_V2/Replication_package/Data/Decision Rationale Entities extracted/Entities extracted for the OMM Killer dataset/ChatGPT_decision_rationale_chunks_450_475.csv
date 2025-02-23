@@ -1,0 +1,26 @@
+Decision;Rationale
+remove the prototype for the old function;the prototype still existed
+fixes documentation and comment references to badness() and adjusts them accordingly;None
+Kill it and directly access;directly access
+removes PF_OOM_ORIGIN;behavior is equivalent to setting the process's oom_score_adj to OOM_SCORE_ADJ_MAX
+add filter argument to show_mem and fix private implementations;None
+The fix is to remove __show_mem() and add its argument to show_mem() in all implementations;to prevent this breakage
+Architectures that implement their own show_mem() actually don't do anything with the argument yet, but they could be made to filter nodes that aren't allowed in the current context in the future just like the generic implementation.;They could be made to filter nodes that aren't allowed in the current context in the future just like the generic implementation.
+Give it access to memory reserves with a higher scheduling priority;so that it may quickly exit and free its memory
+"This is identical to the global oom killer and is done even before checking for panic_on_oom: a pending SIGKILL here while panic_on_oom is selected is guaranteed to have come from userspace; the thread only needs access to memory reserves to exit and thus we don't unnecessarily panic the machine until the kernel has no last resort to free memory.";the thread only needs access to memory reserves to exit and thus we don't unnecessarily panic the machine until the kernel has no last resort to free memory
+This patch causes only memory information to be displayed for nodes that are allowed by current's cpuset when dumping the VM state;to prevent verbosity that can be harmful and cause other important messages to be scrolled from the kernel log and incur a significant time delay
+Information for all other nodes is irrelevant to the oom condition;we don't care if there's an abundance of memory elsewhere if we can't access it
+per-cpu pageset statistics are now suppressed;extremely verbose in oom killer output
+The oom killer does not want to defer in this case;there is no guarantee that thread will ever exit without intervention
+Sacrifice a child for the chosen parent only if it has a different mm.;This ensures that the thread group leader is always targeted appropriately.
+skip zombies when iterating tasklist;oom
+Find kill other threads that pin the same ->mm or find another task to kill.;Memory needs to be freed.
+prevent unnecessary oom kills or kernel panics;unnecessary oom kills or kernel panics
+reverting two commits;prevents unnecessary oom kills or kernel panics
+Ignore the fact that all threads in a thread group do not necessarily exit at the same time;495789a5 (oom: make oom_score to per-process value)
+detect threads that are in the exit path, specifically those with PF_EXITING set;to prevent needlessly killing additional tasks
+None;None
+None;"detect this situation so that we may allow that exiting thread time to exit and free its memory; if it is able to exit on its own, that should free memory so current is no longer oom"
+None;None
+fix the child_points logic;None
+check child->mm != t->mm;"""children has a different mm"" doesn't match the reality"

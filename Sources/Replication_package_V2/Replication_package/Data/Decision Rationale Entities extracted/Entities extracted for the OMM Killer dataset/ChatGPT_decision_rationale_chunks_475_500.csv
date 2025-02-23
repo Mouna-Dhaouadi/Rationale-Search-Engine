@@ -1,0 +1,26 @@
+Decision;Rationale
+oom_kill_task() will kill them anyway;t->mm == NULL doesn't really matter
+This patch reintroduces the code removed in 8c5cd6f3;it is obsoleted
+Issue a SIGKILL to any thread sharing the same mm;We're safe
+None;access to memory reserves, quickly allocate and release the lock, oom killed task may exit
+Preventing the livelock;caring more about preventing the livelock
+avoid killing a task if a thread sharing its mm cannot be killed;a thread sharing its mm cannot be killed
+Filter the tasklist dump to only those tasks that are eligible for oom kill.;Those tasks that are eligible for oom kill.
+Reduces confusion;Users currently don't know which tasks in the tasklist aren't eligible for kill
+This patch ensures that the badness score of any eligible task is never 0;so the machine doesn't unnecessarily panic because it cannot find a task to kill.
+fix tasklist_lock leak;None
+None;This patch fixes it
+fix NULL pointer dereference;NULL pointer dereference
+make it as simple and predictable as possible;so the results are better understood and we end up killing the task which will lead to the most memory freeing while still respecting the fine-tuning from userspace
+None;better indication of the amount of memory that will be freeable if the oom killed task is chosen and subsequently exits
+KDE or GNOME is chosen for oom kill on desktop systems;help specifically in cases where
+save root's task;better to save
+introduce a new user interface to tune it;Because of the change in the badness() heuristic's baseline
+Redefine the meaning of /proc/pid/oom_adj with a new scale;The ABI cannot be changed for backward compatibility
+ABI is not broken with userspace applications and allows oom_adj to be deprecated for future removal;This is required
+multi threaded process coredump don't make deadlock;None
+Remove this dubious PF_EXITING check;dubious
+add the protection of multi threaded issue;protection of multi threaded issue
+giving the dying task an even higher priority;to be sure it will be scheduled sooner and free the desired memory
+Using SCHED_FIFO:1 with the lowest RT priority;This task won't interfere with any running RT task
+to avoid boosting the dying task priority in case of mem_cgroup OOM;Another good suggestion implemented here

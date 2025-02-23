@@ -1,0 +1,27 @@
+Decision;Rationale
+moves oomkilladj (now more appropriately named oom_adj) from struct task_struct to struct signal_struct;more appropriately named
+None;"it naturally prevent, select_bad_process()"" choose wrong task"
+"treat unmerge_and_remove_all_rmap_items() in the same way that we treat try_to_unuse()
+";generalize PF_SWAPOFF to PF_OOM_ORIGIN, and bracket both with that, to ask the OOM killer to kill them first, to prevent them from spawning more and more OOM kills.
+must not break this assumption;None
+Only oom kill exiting tasks with attached memory;oom
+__oom_kill_task() will simply be a no-op in such circumstances;mm can become detached later since task_lock() is not held
+it is no longer necessary to warn about killing mm-less tasks;it is a no-op
+avoid unnecessary mm locking and scanning for OOM_DISABLE;unnecessary mm locking and scanning for OOM_DISABLE
+Move the check for OOM_DISABLE to the badness heuristic;Reduce the number of times task_lock() needs to be held
+None;None
+tasks with badness scores of 0 are prohibited from being oom killed;they would not allow for future memory freeing anyway
+it is no longer necessary to check the oom_adj value for threads sharing the same memory (except when simply issuing SIGKILLs for threads in other thread groups);the oom_adj value is a characteristic of an mm and not a task
+Move oomkilladj (now more appropriately named oom_adj) from struct task_struct to struct mm_struct;more appropriately named
+None;None
+None;fixes a livelock if the oom killer chooses a task and another thread sharing the same memory has an oom_adj value of OOM_DISABLE
+None;None
+Taking task_lock() in select_bad_process() to check for OOM_DISABLE and in oom_kill_task() to check for threads sharing the same memory will be removed in the next patch in this series ;it will no longer be necessary
+Writing to /proc/pid/oom_adj for a kthread will now return -EINVAL;these threads are immune from oom killing already
+fix possible oom_dump_tasks NULL pointer;possible oom_dump_tasks NULL pointer
+prevent livelock when oom_kill_allocating_task is set;None
+There is no need to call for int_sqrt;if argument is 0
+avoid deadlock caused by race between oom and cpuset_attach;race between oom and cpuset_attach
+avoid this deadlock;This patch
+avoid unnecessary system-wide-oom-killer;unnecessary
+None;None

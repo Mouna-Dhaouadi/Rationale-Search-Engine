@@ -1,0 +1,26 @@
+Decision;Rationale
+Move trace_finish_task_reaping() inside the locked region;Increases mmap_sem hold time a little
+Add a short explanation for the return value and fix the rest by reorganizing the function a bit to have unified function exit paths.;to have unified function exit paths
+None;describe task memory unit, larger PID pad
+Add a small printk prior to the task dump informing;that the memory units are actually memory _pages_
+extends PID field;align on up to 7 characters
+let's wait for it to actually happen in real life before we make the locking more complex again;Although this is possible in principle
+distinguish blockable mode for mmu notifiers;None
+handles the low hanging fruit;None
+improve that even further;there is a common pattern to do a range lookup first and then do something about that
+The first part can be done without a sleeping lock in most cases;AFAICS (As far as I can see)
+document oom_lock;None
+Add comments describing oom_lock's scope;describing oom_lock's scope
+solve in a more reasonable way;more reasonable way
+None;much more complex thing to achieve
+remove a stale code;quick fixup
+Rename page_counter_limit() to page_counter_set_max();The idea behind this renaming is to have the direct matching between memory cgroup knobs (low, high, max) and page_counters API
+renaming;doesn't bring any functional change
+fix concurrent munlock and oom reaper unmap, v3;None
+Fix this by manually freeing all possible memory from the mm before doing the munlock and then setting MMF_OOM_SKIP;None
+The oom reaper cannot run on the mm anymore;the munlock is safe to do in exit_mmap()
+There is no clear decision in this sentence.;There is no clear rationale in this sentence.
+Remove the CAP_SYS_ADMIN bias;so that all processes are treated equally
+It is always allowed to adjust /proc/pid/oom_score_adj;If any CAP_SYS_ADMIN process would like to be biased against
+add missing parameter descriptions;None
+None;None

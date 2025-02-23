@@ -1,0 +1,26 @@
+Decision;Rationale
+set_current_state()/schedule_timeout();to reduce kernel size
+keeps a task in or under one mem_exclusive cpuset;from provoking an oom kill of a task under a non-overlapping mem_exclusive cpuset
+This patch enables configuring a system so that a runaway job under one mem_exclusive cpuset cannot cause the killing of a job in another such cpuset that might be using very high compute and memory resources for a prolonged time.;prevent a runaway job in one cpuset from killing a job in another cpuset that is using high compute and memory resources for a prolonged time.
+Tweaking /proc/<pid>/oom_adj is not ideal;if the big research project really does run amuck allocating memory, it should be shot, not some other task outside the research projects mem_exclusive cpuset
+extend the use of the 'mem_exclusive' flag of cpusets to manage such scenarios;manage such scenarios
+Let memory allocations for user space (GFP_USER) be constrained by a tasks current cpuset, but memory allocations for kernel space (GFP_KERNEL) be constrained by the nearest mem_exclusive ancestor of the current cpuset, even though kernel space allocations will still _prefer_ to remain within the current tasks cpuset;even though kernel space allocations will still _prefer_ to remain within the current tasks cpuset, if memory is easily available
+Let the oom killer be constrained to consider only tasks that are in overlapping mem_exclusive cpusets;it won't help much to kill a task that normally cannot allocate memory on any of the same nodes as the ones on which the current task can allocate.
+Some minor cleanup, and some improvements to the code layout;to make subsequent patches cleaner
+None;None
+Patch (1), the one time I looked on an SN2 (ia64) build, actually saved 32 bytes of kernel text space;actually saved 32 bytes of kernel text space
+Patches (3) and (4) added;about 600 bytes each of kernel text space, mostly in kernel/cpuset.c, which matters only if CONFIG_CPUSET is enabled
+applies a few comment and code cleanups to mm/oom_kill.c prior to applying a few small patches to improve cpuset management of memory placement;to improve cpuset management of memory placement
+The comment changed in oom_kill.c was seriously misleading;seriously misleading
+"The code layout change in select_bad_process() makes room for adding another condition on which a process can be spared the oom killer (see the subsequent cpuset_nodes_overlap patch for this addition)
+";None
+None;None
+quieten OOM killer noise;None
+Use printk_ratelimit();to quieten it
+print order information when OOM killing;None
+add OOM debug;None
+Provides more debug info when the system is OOM;More debug info, system is OOM
+It displays memory stats (basically sysrq-m info) from __alloc_pages() when page allocation fails and during OOM kill;N/A
+make the magical value of -17 in /proc/<pid>/oom_adj defeat the oom-killer altogether;iscsi/lvm2/multipath needs guaranteed protection from the oom-killer
+Initial git repository build;None
+"create a separate ""historical"" git archive of that later";if we want to, and in the meantime it's about 3.2GB when imported into git - space that would just make the early git days unnecessarily complicated, when we don't have a lot of good infrastructure for it

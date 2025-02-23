@@ -1,0 +1,26 @@
+Decision;Rationale
+Ensure that a non-NULL zonelist is always passed to the oom killer.;to always pass a non-NULL zonelist to the oom killer.
+By giving root tasks a bonus that is proportional to their actual size;they remain comparable even when relatively small
+The OOM killer will discount the 1M agetty's 256 badness points down to 179, and the 10G fork bomb's 262144 points down to 183500 points and make the right choice;instead of discounting both to 0 and killing agetty because it's first in the task list
+prefer thread group leaders for display purposes;for display purposes
+kill the thread group leader;the actual process name is printed to the kernel log rather than the thread group name which may be shared amongst several processes
+it now iterates threads instead;leads to ambiguity
+simplify a bit one of its callers, oom_kill_process();allows to simplify a bit
+oom_kill: has_intersects_mems_allowed() needs rcu_read_lock();rcu_read_lock() is needed for has_intersects_mems_allowed()
+Add the necessary rcu_read_lock();necessary
+"we need ""bool ret"" and ""break""";we can not simply return from the loop
+cleans up the code a little bit and avoids the unnecessary initialization.;None
+Change oom_kill.c to use for_each_thread();rather than the racy while_each_thread() which can loop forever if we race with exit
+This change fixes both problems.;The new for_each_thread() only requires the stable task_struct
+convert it to atomic_long_t;to avoid races
+changes the way tasks behave after detecting a memcg OOM;makes sure nobody loops or sleeps with locks held
+the OOM victim can not get stuck on locks the looping task may hold;this way
+no longer get stuck on any lock;a sleeping task may hold
+remove weird use of ERR_PTR()/PTR_ERR();None
+None;None
+Provide more precise dump info while memcg oom happening;more precise dump info
+None ;more pointed memcg page statistics for memcg-oom and take hierarchy into consideration
+remove redundant sleep in pagefault oom handler;redundant sleep
+cleanup pagefault oom handler;mm, oom
+This obsoletes try_set_system_oom() and clear_system_oom() so that they can be removed.;None
+use N_MEMORY instead;handle with the nodes which have memory,

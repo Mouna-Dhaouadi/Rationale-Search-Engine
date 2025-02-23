@@ -1,0 +1,26 @@
+Decision;Rationale
+fix badness score underflow;None
+Fix this by making the type signed and return 1, meaning the thread is still eligible for kill, if the value is negative.;making the type signed and return 1, meaning the thread is still eligible for kill, if the value is negative
+None;better comparison between eligible threads for kill and no change from the userspace perspective
+The rest of the users of struct cred are left for other patches;there are too many changes to make in one go and leave the change reviewable
+force oom kill on sysrq+f;oom
+This patch causes SysRq+F to always kill an eligible thread;This patch can be used to force a kill even if another oom killed thread has failed to exit.
+None;adds truth to that statement
+There's no need to emit any warning about the oom condition if the thread is already exiting;since it will not be killed
+silently return the oom killer;its only giving access to memory reserves and is otherwise a no-op
+fold oom_kill_task() into its parent function, oom_kill_process();oom_kill_task() has a single caller
+avoid looping when chosen thread detaches its mm;mm, oom
+return to the page allocator and retry the allocation;memory could have been freed in the interim and the oom condition may no longer exist
+unify remaining mem_cont, mem, etc. variable names to memcg;None
+add tracepoints for debugging oom_score_adj;debugging oom_score_adj
+adds some tracepoints useful for debugging;useful for debugging
+fix integer overflow of points in oom_badness;integer overflow of points in oom_badness
+The points variable should be of type long instead of int;to prevent the int overflow
+rename thaw_process() to __thaw_task() and simplify the implementation;None
+Remove the unnecessary return value, rename, unexport and collapse __thaw_process() into it;unnecessary return value
+fix race while temporarily setting current's oom_score_adj;None
+A new compare_swap_oom_score_adj() function is introduced;To fix this, with the same semantics as the compare and swap CAS instruction, or CMPXCHG on x86
+Remove mm->oom_disable_count entirely;it's unnecessary and currently buggy
+Remove the count;It's better to remove the count
+ensure that only user threads and not kthreads are sent a SIGKILL if they share the same mm_struct as the oom killed task;None
+Change select_bad_process() to check ->mm after TIF_MEMDIE, but skip the tasks which have already passed exit_notify();to ensure a zombie with TIF_MEMDIE set can't block oom-killer

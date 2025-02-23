@@ -1,0 +1,26 @@
+Decision;Rationale
+use the newly added pidfd_get_task() helper;Instead of duplicating the same code in two places
+This fixes an unimportant bug where PIDTYPE_PID is used whereas PIDTYPE_TGID should have been used.;unimportant
+This ensures that an accurate copy of the process can be captured in the coredump;no cleanup for the process happens before the coredump completes
+ensures that PTRACE_EVENT_EXIT will not be visited by any thread until the coredump is complete;This also
+Add a new flag PF_POSTCOREDUMP;so that tasks that have passed through coredump_task_exit can be recognized and ignored in zap_process
+"Replace ""may_ptrace_stop()"" with a simple test of ""current->ptrace""";"a simple test of ""current->ptrace"" is more efficient and clear"
+These tests are no longer necessary;it is now guaranteed that fatal_signal_pending will be set if the code enters ptrace_stop during a coredump
+None;"This is no longer an issue as ""ptrace_event(PTRACE_EVENT_EXIT)"" is no longer reached until after the coredump completes."
+Factor coredump_exit_mm out of exit_mm;None
+Separate the coredump logic from the ordinary exit_mm logic by moving the coredump logic out of exit_mm into its own function coredump_exit_mm;N/A
+This way the memory is freed in a more controllable way with CPU affinity and priority of the caller;more controllable way with CPU affinity and priority of the caller
+introduce a dedicated system call to cover this use case;to cover this use case
+cleanup nodemask intersection check for oom;None
+cleans up these and unifies the parameter sanity check for mbind() and set_mempolicy();None
+Rename the function to make that purpose explicit;The oom proper is the only existing user
+Drop the MPOL_INTERLEAVE;Those allocations never have a nodemask defined (see alloc_page_interleave), so this is a dead code and a confusing one because MPOL_INTERLEAVE is a hint rather than a hard requirement, so it shouldn't be considered during the OOM.
+The final code can be reduced to a check for MPOL_BIND;MPOL_BIND is the only memory policy that is a hard requirement and thus relevant to a constrained OOM logic
+Fix typo in comment: kthead -> kthread;typo
+fix typos in comments;typos in comments
+Fix ~94 single-word typos in locking code comments, plus a few very obvious grammar mistakes.;Improve code quality and readability.
+minor coding style tweaks;None
+Various coding style tweaks to various files under mm/;coding style tweaks
+Fix stray kernel-doc warnings in mm/;mis-typed or missing function names
+fix a comment in dump_task();None
+delete the corresponding comment;it will be checked in oom_unkillable_task()

@@ -1,0 +1,27 @@
+Decision;Rationale
+"We still want some access to reserves
+";we do not want other consumers to eat up the victim's freed memory
+None;aggressive to starve oom victims completely
+This makes the access to reserves independent on which task has passed through mark_oom_victim;None
+Drop any usage of TIF_MEMDIE from the page allocator proper and replace it by tsk_is_oom_victim as well;Make page_alloc.c completely TIF_MEMDIE free finally
+CONFIG_MMU=n doesn't have oom reaper so let's stick to the original ALLOC_NO_WATERMARKS approach;CONFIG_MMU=n doesn't have oom reaper
+This change ;will allow such a usecase without worrying about complete memory reserves depletion.
+add tracepoints for oom reaper-related events;None
+adding some tracepoints ;might help with debugging of similar issues
+problem mentioned above can be found;How it works in practice
+None;None
+improve oom disable handling;None
+Add printk to both oom_killer_{enable,disable};Help distinguish first case from the second
+Prepare for new header dependencies before moving code to <linux/sched/coredump.h>;Prepare for new header dependencies
+Create a trivial placeholder <linux/sched/coredump.h> file that just maps to <linux/sched.h>;to make this patch obviously correct and bisectable
+Include the new header in the files that are going to need it;files that are going to need it
+Prepare for new header dependencies before moving code to <linux/sched/mm.h>;Prepare for new header dependencies
+Create a trivial placeholder <linux/sched/mm.h> file;to make this patch obviously correct and bisectable
+Include the new header in the files that are going to need it;that are going to need it
+use madvise_dontneed() logic to decide if unmap the VMA;to decide if unmap the VMA
+Extract condition on which we can shoot down pagesi from a VMA with MADV_DONTNEED into separate function and use it in both places;None
+detail == NULL would give the same functionality as .check_swap_entries==true;give the same functionality as .check_swap_entries==true
+None;this argument is rather weak because the OOM killer doesn't really guarantee a forward progress for those exceptional cases
+None;None
+removes the __GFP_NOFAIL special case;more clear semantic without surprising side effects
+Get rid of this hardcoded behavior;push the allocation mask down the show_mem path and use it instead of cpuset_current_mems_allowed

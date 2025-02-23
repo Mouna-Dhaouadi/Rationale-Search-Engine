@@ -1,0 +1,26 @@
+Decision;Rationale
+hold tasklist_lock;tsk->sighand is not guarded by RCU, just as what out_of_memory() does.
+fix kernel-doc;None
+Fix kernel-doc notation in oom_kill.c;kernel-doc notation needs to be fixed
+Reflect the same changes in the CONFIG definition for the Memory Resource Controller;None
+add sysctl to enable task memory dump;enable task memory dump
+Adds a new sysctl, 'oom_dump_tasks';enables the kernel to produce a dump of all system tasks
+It is configurable;so that large systems, such as those with several thousand tasks, do not incur a performance penalty associated with dumping data they may not desire
+The tasklist shall be filtered to exclude tasks that are not a member of the same cgroup.;to exclude tasks that are not a member of the same cgroup.
+Trust CAP_SYS_ADMIN;uid comparisons are unnecessary
+allow for CAP_SYS_RESOURCE as well;"CAP_SYS_RESOURCE means ""give me extra resources"""
+None;Any privileged code should be protected, but uid is not an indication of privilege
+keep the existing checks;uid==0 makes processes on the host as well as in containers more important
+uid==0 makes processes only on the host more important;even without any capabilities
+The patch supports legacy (32-bit) capability userspace and translates 32-bit capabilities to/from userspace and the VFS to 64-bit kernel space capabilities.;Supports legacy (32-bit) capability userspace and translates 32-bit capabilities.
+Move the task_struct members specific to rt scheduling together;specific to rt scheduling
+Use helpers to obtain task pid in printks;to obtain task pid in printks
+start using the helpers (task_pid_nr/task_pid_vnr/task_pid_nr_ns) in the kernel;The task_struct->pid member is going to be deprecated
+start with the pid, printed to dmesg ;safely use task_pid_nr() in this case
+None;printks produce more (much more) than a half of all the explicit pid usage.
+hide it behind the helpers;With pid namespaces this field is now dangerous to use explicitly
+start isolating the tons of warnings;cannot be sent right now as this leads to tons of warnings
+p->tgid == pid has to be changed to has_group_leader_pid();Oleg pointed out that in case of posix cpu timers this is the same, and thread_group_leader() is more preferable.
+kill only the cgroup if the cgroup's init has a bug;rather than force a kernel panic
+"There's no reason to sleep in try_set_zone_oom() or clear_zonelist_oom() if the lock can't be acquired; it will be available soon enough once the zonelist scanning is done";none
+It is better to simply test for intersection between the task's mems_allowed in their task descriptors;It is better

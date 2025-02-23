@@ -1,0 +1,200 @@
+Decision;Rationale
+trigger wakeup key events;ACPI: button
+Use different notify handlers for lid and buttons  ;differentiate between lid and buttons
+Introduce acpi_lid_notify();lid handling in acpi_button_notify() is special
+Rework the ACPI button driver to install notify handlers or fixed event handlers for the devices it binds to by itself, reduce the indentation level in its notify handler routine and drop its notify callback;
+Driver core needs no inform from callee(bus driver) about the result of remove callback;increases separation of concerns
+Add DMI quirk for Lenovo Yoga 9 (14INTL5);
+fix some coding style issues;fix some coding style issues
+Fix some coding style issues reported by checkpatch.pl;including the following types
+code indent should use tabs where possible;to maintain consistency and follow coding standards
+Clean up printing messages;ACPI button
+replace the direct printk() invocations with pr_info() and drop the unneeded PREFIX symbol definition from battery.c;changes the excessive log level for some of them too
+Add DMI quirk for Medion Akoya E2228T;
+"Remove the "" MD60198"" part from the E2215T quirk";the MD60### part of the model number differs per country/batch while all of the E2215T and E2228T models have this issue
+Drop no longer necessary Acer SW5-012 lid_init_state quirk;no longer necessary
+"Commit 78a5b53e9fb4 (""Input: soc_button_array - work around DSDTs which modify the irqflags"") adds a workaround for DSDTs with a _LID method which play tricks with the irqflags";assuming that the OS is using an irq-type of IRQ_TYPE_LEVEL_LOW
+we no longer need to disable the lid functionality on the Acer SW5-012;Now that this workaround is in place
+fix handling lid state changes when input device closed;-
+Let's ensure that state updates happen even if userspace closed (or in the future inhibited) input device;state updates happen even if userspace closed (or in the future inhibited) input device
+Use fallthrough pseudo-keyword;
+Replace the existing /* fall through */ comments and its variants with the new pseudo-keyword macro fallthrough;[1]
+Remove unnecessary fall-through markings  ;when it is the case
+Delete unused proc filename macros;unused
+Drop no longer necessary Asus T200TA lid_init_state quirk;no longer necessary
+drop the quirk  ;the lid_init_state=ACPI_BUTTON_LID_INIT_OPEN quirk for the Asus T200TA is no longer necessary, the lid now works properly without it
+"Fixes: 17e5888e4e18 (""x86: Select HARDIRQS_SW_RESEND on x86"")";"(""x86: Select HARDIRQS_SW_RESEND on x86"")"
+"
+The problem here is the accesses to the PBCG and HMCG
+";"
+these are the pinconf0 registers for the power"
+adds the BYT_TRIG_LVL flag to this;so now it is turned into a level interrupt which fires both when low and high, iow it simply always fires leading to an interrupt storm, the tablet immediately waking up from suspend again, etc
+There is nothing we can do to fix this, except for a DSDT override, which the user needs to do manually;
+This commit adds a quirk for this;as no lid-switch function is better then the interrupt storm
+A user manually applying a DSDT override can also override the quirk on the kernel cmdline.  ;
+Remove unused acpi_lid_notifier_[un]register() functions;unused
+Add DMI quirk for Asus T200TA;
+Setting lid_init_state to ACPI_BUTTON_LID_INIT_OPEN on the T200TA  ;fixes the unwanted behavior, adds a DMI based quirk
+Add DMI quirk for Medion Akoya E2215T  ;
+ the lid_init_state selection needs to be set to ACPI_BUTTON_LID_INIT_OPEN  ;In order for the Linux LID code to work properly with this implementation
+Turn lid_blacklst DMI table into a generic quirk table;ACPI: button
+allow us to add quirks to make the LID work OOTB on broken devices;
+"Add a new ""disabled"" value for the lid_init_state module option";can be used to disable LID support on devices where it is completely broken
+re-using the existing option;keeps things simple and it will make it much easier to add DMI quirks which can either disable the LID completely or set another non-default lid_init_state value, both of which are necessary on some devices
+[ an action or a change that has been made, including a description of the patch behaviour ];[ the reason for a decision or value judgment ]
+update Lid state unconditionally in the button driver .resume() callback  ;overlooked the resume case
+Fix this by flushing the cached lid state before updating the Lid device in .resume() callback;
+Fix an issue in button.lid_init_state=ignore mode;Reported-and-tested-by: Zhao Lijian <lijian.zhao@intel.com>
+fix defined but not used warning;
+Fix a build warning in the ACPI button driver when CONFIG_PROC_FS is not enabled by marking the unused function as __maybe_unused;not enabled, unused
+Increment wakeup count only when notified;-
+only trigger acpi_pm_wakeup_event() in the acpi_button_notify() path and don't do that in the acpi_lid_initialize_state() path;To avoid the confusion
+Variants of proc_create{,_data} that directly take a seq_file show callback;drastically reduces the boilerplate code in the callers
+making the ACPI button driver loadable as a module even if not booted in ACPI mode;to fix the asymmetry and provide the acpi_lid_open() symbol
+"The only solution is to add a DMI based blacklist and ignore the LID device on these tablets.
+";There is nothing the ACPI button driver (or the gpio code) can do to fix this.
+evemu-record after noticing a spurious suspend is too late to detect;a LID closed event is the (probable) cause of this
+adds an acpi_handle_debug call  ;to help debugging this
+Fix function prototypes for module_param_call();-
+fix whitespace in pr_fmt() to align log entries;align log entries
+The ->sync hook allows all of the relevant event queues to be flushed;to prevent events from being missed due to race conditions
+the cursor will not show up as it's by default on the internal display too;
+"the ""open"" choice is worse";"the ""method"" operation mode implementation can be buggy on some platforms"
+It breaks docking stations basically;there is no way to have a user-space hwdb to fix that
+libinput (1.7.0+) can fix the state of the lid switch for us: you need to set the udev property LIBINPUT_ATTR_LID_SWITCH_RELIABILITY to 'write_open';can fix the state of the lid switch for us
+assume the user will use the internal keyboard before this timeout expires;logind only checks the lid switch value after a timeout
+"userspace requires to see ""close"" event after the system is resumed";so that it can determine whether the internal display should remain dark and the external display should be lit on
+Reversion of button.lid_init_state=method;doing so can enter a regression loop, but facilitates users to work the reported regressions around with
+Remove lid_init_state=method mode;Fixes: ecb10b694b72 (ACPI / button: Remove lid_init_state=method mode)
+The ->sync hook allows all of the relevant event queues to be flushed;to prevent events from being missed due to race conditions
+This patch makes it deprecated;lid_init__state=open is more useful than this mode
+have a separate patch to make lid_init_state=method deprecated  ;lid_init_state=method is buggy
+Fix an issue in button.lid_init_state=ignore mode;
+This patch adds a mechanism to insert lid events as a compensation for the platform triggered ones to form a complete event switches  ;in order to make sure that the platform triggered events can always be reliably delivered to the userspace
+it should not send the complement switch event for the unreliable initial lid state notification;However this mechanism is not suitable for lid_init_state=open/method
+implements this mechanism  ;only
+Use key event type to implement ACPI lid events;Another approach
+While using KEY event type, there is no such problem;no such problem
+Remove pointer to old lid_sysfs on unbind;ACPI / button
+When we removed the procfs dir on error or if the driver is unbound;the two variables acpi_lid_dir and acpi_button_dir were not reset
+Correct a wrong macro usage;This patch simplies the code by merging some redundant code
+this patch stops sending the initial lid state to the userspace;to avoid sending the wrong lid state to the userspace to trigger such kind of wrong suspending
+Remove FSF mailing addresses;
+There is no need to carry potentially outdated Free Software Foundation mailing address in file headers;since the COPYING file includes it
+"Mark ACPI buttons (other than the lid) as ""suspended"" during system suspend and report wakeup events on button events";To prevent propagating those events up the stack
+Add ACPI Button event via netlink routine;-
+removed ACPI Button event which originally was sent to userspace via /proc/acpi/event;Remove the old /proc/acpi/event interface
+This caused ACPI shutdown regression on gentoo;VirtualBox
+add ACPI Button event back via netlink routine;Now ACPI events are sent to userspace via netlink
+fix button driver compile error when CONFIG_PM_SLEEP is undefined;CONFIG_PM_SLEEP is undefined
+compile error;CONFIG_PM_SLEEP is undefined
+Fix enabling button GPEs twice;Fix
+Button GPEs have been enabled in the acpi_wake_device_init() during boot;the button driver enables them for the second time
+remove the GPE enabling code from the button driver;to avoid the problem
+Clean up inclusions of ACPI header files;ACPI
+Replace direct inclusions of <acpi/acpi.h>, <acpi/acpi_bus.h> and <acpi/acpi_drivers.h> with <linux/acpi.h> inclusions and remove some inclusions of those files that aren't necessary;incorrect, not necessary
+<acpi/acpi.h>, <acpi/acpi_bus.h> and <acpi/acpi_drivers.h> should not be included directly from any files that are built for CONFIG_ACPI unset;because that generally leads to build warnings about undefined symbols in !CONFIG_ACPI builds
+For CONFIG_ACPI set, <linux/acpi.h> includes those files and for CONFIG_ACPI unset it provides stub ACPI symbols to be used in that case  ;
+<acpi/acpi_bus.h> be included prior to <acpi/acpi_drivers.h>;so that the acpi_pci_root declarations the latter depends on are always there
+Use the patch to replace the origin code;provide a better solution
+"Provide a helper for that; static inline for now, eventually will be moved to fs/proc, along with the knowledge of struct proc_dir_entry layout.";
+This patch fixes following compiler warnings when build via make W=1;
+Remove useless type argument of driver .remove() operation;useless
+"The second argument of ACPI driver .remove() operation is only used by the ACPI processor driver
+";the value passed to that driver through it is always available from the given struct acpi_device object's removal_type field
+drop the second ACPI driver .remove() argument  ;the second ACPI driver .remove() argument is in fact useless
+Fix unused function warnings for CONFIG_PM_SLEEP;unused function warnings
+add #ifdefs to prevent them from being built in that case  ;several suspend/resume functions in ACPI drivers are not used for CONFIG_PM_SLEEP unset
+remove unused procfs I/F;unused
+Remove unused ACPI button procfs interface;unused
+Avoid disabling wakeup unnecessarily on remove;-
+Use device wakeup flags for handling ACPI wakeup devices;for handling ACPI wakeup devices
+use standard device wakeup flags instead of the special ACPI flags for handling those devices;address this problem
+Use GPE reference counting to support shared GPEs  ;the wakeup enable mask bits of GPEs are set as soon as the GPEs are enabled to wake up the system
+it is sufficient to set/unset the wakeup mask bits for them during system sleep transitions;"this means that the reference counting of ""wakeup"" GPEs doesn't really make sense"
+This will allow us to simplify the GPE handling code quite a bit;that change is too intrusive for 2.6.35
+Update gfp.h and slab.h includes  ;prepare for breaking implicit slab.h inclusion from percpu.h
+Prepare for this change by updating users of gfp and slab facilities;include those headers directly instead of assuming availability
+the following script is used as the basis of conversion;As this conversion needs to touch a large number of source files
+only the necessary includes are there;necessary
+put the new include  ;its order conforms to its surrounding
+prints out an error message indicating which .h file needs to be added to the file;the file doesn't have fitting include block
+some didn't need the inclusion, some needed manual addition while adding it to implementation .h or embedding .c file was more appropriate for others;
+The script was run again  ;to make sure no file was left behind
+Several build tests were done and a couple of problems were fixed;
+The script was run on all .h files but without automatically editing them;sprinkling gfp.h and slab.h inclusions around .h files could easily lead to inclusion dependency hell
+Most gfp.h inclusion directives were ignored  ;stuff from gfp.h was usually wildly available and often used in preprocessor macros
+description of the patch behaviour;an action or a change
+failures were fixed;Build tests were done on the following configurations
+CONFIG_GCOV_KERNEL was turned off for all tests and a few more options had to be turned off depending on archs to make things build;my distributed build env didn't work with gcov compiles, like ipr on powerpc/64 which failed due to missing writeq
+percpu.h modifications were reverted  ;so that it could be applied as a separate patch and serve as bisection point
+I'm fairly confident about the coverage of this conversion patch  ;Given the fact that I had only a couple of failures from tests on step 6
+Add more run-time wake-up fields;Add more
+Introduce a new wake-up flag, always_enabled, for marking devices that should be permanently enabled to generate run-time events  ;devices that should be permanently enabled to generate run-time events
+Introduce a reference counter for run-wake devices and a function that will initialize all of the run-time wake-up fields for given device.;-
+Add an API to allow devices to indicate whether or not they want their device's GPE to be enabled for both runtime and wakeup events;to allow devices to indicate whether or not they want their device's GPE to be enabled
+Remove the old GPE type handling entirely  ;Gets rid of various quirks, like the implicit disabling with GPE type setting
+complain the following warning message;"will
+
+"
+"This patch is to eliminate the above warning message
+";Device PNP0C0D:00 failed to resume: error 1
+don't try to use a non-existent lid device;non-existent
+return -ENODEV;there's no lid device present
+Some drivers need to know when a lid event occurs and get the current status;-
+not all ACPI drivers use/want it;they should not have to #undef PREFIX to define their own
+whitespace fix  ;This does not change any actual console output
+remove control method/fixed hardware distinctions;
+removes the driver distinction between control method (CM) and fixed hardware (FF) buttons  ;
+we could install either a fixed event handler or a notify handler, but the Linux/ACPI code now handles that for us;We previously needed that so we don't need to worry about it
+"removes the FF/CM annotation from the ""info"" files in /proc";
+type: Power Button;I don't think there's anything meaningful user-space can do by knowing whether a button is a control method or a fixed hardware button
+Remove button->device pointer;button
+We no longer need a pointer from struct acpi_button back to the struct acpi_device;no longer need
+removes the structure element;
+This patch adds temporaries to cache the acpi_device_hid(), acpi_device_name(), and acpi_device_class() pointers;so we don't have to clutter the code with so many uses of those interfaces
+Better to oops and learn about a bug;than to silently cover it up
+changes a bit of whitespace to follow Linux conventions;follow Linux conventions
+use .notify method instead of installing handler directly  ;-
+The presence of .notify() causes Linux/ACPI to manage event handlers and notify handlers on our behalf  ;so we don't have to install and remove them ourselves
+convert that back to ACPI_BUTTON_NOTIFY_STATUS;to preserve user-space backward compatibility
+remove struct proc_dir_entry::owner;
+Setting ->owner as done currently (pde->owner = THIS_MODULE) is racy;as correctly noted at bug #12454
+leave ->owner as easy-manipulative field;somebody will forget to unpin previous/pin current module when switching ->owner
+"proc_fops is declared as ""const""";should give some thoughts
+"rmmod'ed directories will be empty and return ""."" and "".."" -- no harm";no harm
+don't want such modular code;definitely
+Use spinlock for acpi_{en|dis}able_gpe;
+start using GPE from userspace;GPE is already disabled in interrupt context
+Move all the component definitions for drivers to a single shared place, include/acpi/acpi_drivers.h  ;to have a single shared place
+"verify by using ""input-events"" from input-utils and just closing and opening the lid";easy
+Change the argument to take a pointer to an acpi_integer;support 64-bit integers on all platforms
+use non-racy method for proc entries creation;reduce race conditions in proc entries creation
+Use proc_create()/proc_create_data() to make sure that ->proc_fops and ->data be setup;before gluing PDE to main tree
+Add correct ->owner to proc_fops to fix reading/module unloading race  ;fix reading/module unloading race
+get rid of input BIT* duplicate defines;duplicate
+Also remove includes of input.h from non-input sources only for BIT macro definition;non-input sources, BIT macro definition
+Define the macro temporarily in a local manner;all those local definitions will be removed further in this patchset (to not break bisecting)
+Schedule /proc/acpi/event for removal in 6 months;
+Re-name acpi_bus_generate_event() to acpi_bus_generate_proc_event()  ;to make sure there is no confusion that it is for /proc/acpi/event only
+Add CONFIG_ACPI_PROC_EVENT to allow removal of /proc/acpi/event;to allow removal of /proc/acpi/event
+acpi:ACPI0001;
+Cosmetic only;
+fix acpi_driver.name usage;fix
+ls bus/acpi/drivers  ;Display the list of ACPI drivers.
+clean up ACPI_MODULE_NAME() use  ;
+"Make ""module name"" actually match the file name";cosmetic only
+"Invoke with ';' as leaving it off confuses Lindent  ";gcc doesn't care
+Fix indentation where Lindent did get confused  ;Lindent did get confused
+Pull sysfs into test branch;
+include/acpi/acpi_drivers.h;
+remove unnecessary casts and variable initializations, clean up formatting;unnecessary
+Remove unneeded acpi_handle from driver;unneeded
+Use acpi_device's handle instead of driver's  ;-
+un-export ACPI_ERROR() -- use printk(KERN_ERR...);use printk(KERN_ERR...)
+Enable ACPI error messages w/o CONFIG_ACPI_DEBUG;
+restore /proc/acpi/button/ (ala 2.6.12)  ;[ACPI]
+delete /proc/acpi/button;
+Linux-2.6.12-rc2;
+Initial git repository build;
+"Create a separate ""historical"" git archive";about 3.2GB when imported into git - space that would just make the early git days unnecessarily complicated

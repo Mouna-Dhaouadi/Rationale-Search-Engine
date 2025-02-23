@@ -1,0 +1,32 @@
+Decision;Rationale
+Kill current;It is better than another task needlessly.
+set TIF_MEMDIE;access to memory reserves and can quickly exit as the comment implies
+"Upon returning to the page allocator, its allocation will hopefully succeed
+";so it can quickly exit and free its memory
+"fix
+";use find_lock_task_mm too
+When find_lock_task_mm() returns a thread other than p in dump_tasks(), its name should be displayed instead;the name should be displayed instead
+None;None
+remove the cast on task_cpu(task) as Andrew suggested;as Andrew suggested
+improve commentary in dump_tasks();None
+The comments in dump_tasks() should be updated;to be more clear about why tasks are filtered and how they are filtered by its argument
+An unnecessary comment concerning a check for is_global_init() is removed;it isn't of importance
+dump_task() should use find_lock_task_mm() too;None
+Introduce find_lock_task_mm() to fix !mm false positives;None
+"Remove the ""if (!p->mm)"" check in select_bad_process()";it is just wrong
+Add the new helper, find_lock_task_mm();"finds the live thread which uses the memory and takes task_lock() to pin ->mm
+
+Decision: change oom_badness()"
+oom_badness() was fixed;"but oom_kill_task() still ignores the task without ->mm
+
+Decision: oom_forkbomb_penalty() should use find_lock_task_mm() too and it also needs other changes"
+oom: PF_EXITING check should take mm into account;take mm into account
+Change the code to ignore the PF_EXITING tasks without ->mm.;PF_EXITING tasks without ->mm should not be expected to free more memory.
+Update gfp.h and slab.h includes to prepare for breaking implicit slab.h inclusion from percpu.h;Prepare for breaking implicit slab.h inclusion from percpu.h
+update users of gfp and slab facilities include those headers directly;Prepare for this change
+As this conversion needs to touch large number of source files;needs to touch large number of source files
+only the necessary includes are there;necessary
+Put the new include;Conform to its surrounding
+prints out an error message indicating which .h file needs to be added to the file;the file doesn't have fitting include block
+None;None
+None;None

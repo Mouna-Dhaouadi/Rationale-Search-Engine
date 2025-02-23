@@ -1,0 +1,27 @@
+Decision;Rationale
+None;"The current ""child->mm == p->mm"" check prevents selection of vfork()ed task"
+consider vfork();we don't have any reason
+cleanup has_intersects_mems_allowed();oom
+has_intersects_mems_allowed() should use while_each_thread();has own thread iterate logic
+None;It slightly improve the code readability.
+kill duplicate OOM_DISABLE check;duplicate
+treat kernel thread honestly;/proc/<pid>/oom_score
+None;None
+oom_kill_process() needs to check that p is unkillable;needs to check that p is unkillable
+check it first;None
+Unify it;None
+don't try to kill oom_unkillable child;oom_unkillable
+Fix it.;Fixes
+Fold __out_of_memory() into out_of_memory() and add a comment about locking for its call to oom_kill_process();__out_of_memory() only has a single caller
+remove unnecessary code and cleanup;unnecessary code and cleanup
+Remove the redundancy in __oom_kill_task();redundancy
+moves the kernel log message to a higher level;verbosity is not always emitted here
+it can be merged into that function at the same time;__oom_kill_task() only has a single caller
+Extract this to a helper function;to remove all the confusion as to its semantics
+fix a call to dump_header() where tasklist_lock is not read-locked;tasklist_lock is not read-locked, as required
+It should be enabled by default;It emits useful information such as each eligible thread's memory usage that can determine why the system is oom
+"scan the tasklist for nodes that are allowed to allocate on current's set of nodes and kill the task with the highest badness() score
+";it is better to allocate resources to tasks with a lower score and remove tasks with the highest badness() score.
+the most memory-hogging task, or the one configured by the user with /proc/pid/oom_adj, is always selected in such scenarios;This ensures
+None;kill a memory-hogging task more often, and allow the configurable /proc/pid/oom_adj value to be considered as a factor in which child to kill
+Use a sane heuristic, ensure that killing a task would likely free memory for current and avoid needlessly killing others at all costs;To use a sane heuristic, ensure that killing a task would likely free memory for current and avoid needlessly killing others at all costs because their potential memory freeing is unknown

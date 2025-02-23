@@ -1,0 +1,26 @@
+Decision;Rationale
+Attempt to demystify the task_will_free_mem() loop;None
+deduplicate victim selection code for memcg and global oom;improve code efficiency and maintainability
+rework this as follows: keep all oom heuristic related code private to oom_kill.c and make oom_kill.c use exported memcg functions when it's really necessary (like in case of iterating over memcg tasks);None
+fix uninitialized ret in task_will_free_mem();uninitialized ret in task_will_free_mem()
+hide the mm from the oom killer by setting MMF_OOM_REAPED flag for it;help forward progress for the OOM killer
+We should guarantee forward progress for the OOM killer even when the selected victim is sharing memory with a kernel thread or global init as long as the victims mm is still alive.;N/A
+do not attempt to reap a task more than twice;do not attempt to reap a task more than twice
+set MMF_OOM_REAPED to hide this mm from the oom killer completely;hide this mm from the oom killer completely
+mitigate the risk of OOM deadlock;considerably while we still try really hard to perform all reclaim attempts and stay predictable in the behavior.
+Teach task_will_free_mem to skip over MMF_OOM_REAPED tasks;because they will be unlikely to free anything more
+None;None
+This patch builds on top for more complex scenarios where mm is shared between different processes - CLONE_VM without CLONE_SIGHAND, or in kernel use_mm();N/A
+replace try_oom_reaper by wake_oom_reaper;task_will_free_mem implies the task is reapable now
+all paths which bypass the oom killer are now reapable;so they shouldn't lock up the oom killer
+None;None
+Killing such a task should be acceptable;it is highly unlikely it has done anything useful because it cannot modify any memory before it calls exec
+An alternative would be to keep the task alive and skip the oom reaper and risk all the weird corner cases where the OOM killer cannot make forward progress because the oom victim hung somewhere on the way to exit;None
+drop printk when OOM_SCORE_ADJ_MIN killed task;the setting is inherently racy and we cannot do much about it without introducing locks in hot paths
+Share the same oom_score_adj;As a result
+make sure that mmput_async is called only when memory was reaped;to ensure that mmput_async is only called when memory was reaped
+make sure that the mmput_async is only called;when we do not back off and reap some memory
+be more robust and do not pin mm_users unless we are sure we are actually doing some real work during __oom_reap_task;It is not clear whether this race is possible at all
+remove unused argument from oom_scan_process_thread();unused argument
+zap ZONE_OOM_LOCKED;None
+avoid pointless atomic_inc_not_zero usage;pointless

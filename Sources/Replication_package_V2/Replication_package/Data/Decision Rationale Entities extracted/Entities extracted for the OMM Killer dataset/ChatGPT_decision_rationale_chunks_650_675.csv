@@ -1,0 +1,26 @@
+Decision;Rationale
+None;hint in the badness scoring
+Tasks that do not have an intersection in their mems_allowed with the current task are not explicitly restricted from being OOM killed;it is quite possible that the candidate task has allocated memory there before and has since changed its mems_allowed.
+suppress extraneous stack and memory dump;oom
+Suppresses the extraneous stack and memory dump when a parallel OOM killing has been found;None
+There's no need to fill the ring buffer with this information;if its already been printed and the condition that triggered the previous OOM killer has not yet been alleviated.
+Adds a new sysctl, 'oom_kill_allocating_task';which will automatically kill the OOM-triggering task instead of scanning through the tasklist to find a memory-hogging target
+OOM killer synchronization should be done with zone granularity;so that memory policy and cpuset allocations may have their corresponding zones locked and allow parallel kills for other OOM conditions that may exist elsewhere in the system
+DMA allocations can be targeted at the zone level;locking was done in nodes or globally
+"Synchronization shall be done with a variation of ""trylocks.""";The goal is to put the current task to sleep and restart the failed allocation attempt later if the trylock fails.
+Define the OOM killer's CONSTRAINT definitions in include/linux/oom.h  ;The OOM killer's CONSTRAINT definitions are more appropriate in an enum
+None;simplify the code
+Print it as such;None
+Add back fs.h or less bloated headers (err.h) to files that need it;to files that need it
+None;None
+fix constraint deadlock;constraint deadlock
+Fixes a deadlock in the OOM killer for allocations that are not __GFP_HARDWALL;deadlock in the OOM killer for allocations that are not __GFP_HARDWALL
+We now take callback_mutex after iterating through the zonelist;we don't need it yet
+fix handling of panic_on_oom when cpusets are in use;None
+panic ASAP;want failover
+This patch makes sure that the oom_adj shift actually increases badness points appropriately.;None
+fix OOM killing processes wrongly thought MPOL_BIND;wrongly thought MPOL_BIND
+kill those individual threads;When finding other threads that share an mm with that task
+prevent oom from killing a process with children/sibling unkillable;fix oom issue
+fix OOM killing of swapoff;None
+"OOM killer gives ""BUG: scheduling while atomic"" and the machine hangs";there isn't enough memory, badness() needs to do its PF_SWAPOFF return after the task_unlock

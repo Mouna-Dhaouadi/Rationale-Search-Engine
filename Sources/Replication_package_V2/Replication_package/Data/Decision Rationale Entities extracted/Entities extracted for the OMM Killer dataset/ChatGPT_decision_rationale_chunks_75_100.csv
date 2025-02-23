@@ -1,0 +1,26 @@
+Decision;Rationale
+MADV_COLD can be used by a process to mark a memory range as not expected to be used in the near future;not expected to be used in the near future
+deciding which pages to evict early during memory pressure;The hint can help kernel in early eviction during memory pressure
+It works for every LRU pages like MADV_[DONTNEED|FREE];None
+It moves active file page -> inactive file LRU, active anon page -> inactive anon LRU;MADV_FREE doesn't move active anonymous pages to inactive file LRU's head, because MADV_COLD is a little bit different semantic.
+MADV_FREE means it's okay to discard when the memory pressure because the content of the page is garbage so freeing such pages is almost zero overhead;we don't need to swap out and access afterward causes just minor fault
+put those freeable pages in inactive file LRU;it would make sense to
+None;It makes sense for implementation point of view, too because it's not swapbacked memory any longer until it would be re-dirtied
+give a bonus to make them be reclaimed on swapless system;could
+reclaiming them requires swap-out/in in the end;it's bigger cost
+better to position inactive anon's LRU list;based on cost-model, anonymous cold pages would be better
+avoid unnecessary scanning;help to avoid unnecessary scanning if system doesn't have a swap device
+Let's start simpler way without adding complexity at this moment;without adding complexity at this moment
+None;because we rarely age anonymous LRU lists
+Print oom_score_adj value for the OOM Killed process to document what the oom score adjust value was at the time the process was OOM Killed ;To document what the oom score adjust value was at the time the process was OOM Killed
+printing this value;the only documentation of the value for the process being killed
+None;The output documents both the misconfiguration and the fact that the process was correctly targeted by OOM due to the misconfiguration.
+The addition of the pgtables_bytes ;is a useful measure of the memory size of the process.
+invoking memcg OOM killer (despite GFP_NOFS) will be the only choice we can choose for now;None
+None;None
+Users, especially system administrators, will find it useful to immediately see the UID of the process;it useful to immediately see the UID of the process
+remove redundant OOM score normalization in select_bad_process();redundant OOM score normalization
+decouple mems_allowed from oom_unkillable_task;None
+remove redundant task_in_mem_cgroup() check;redundant
+mem_cgroup_scan_tasks() can use CSS_TASK_ITER_PROCS in order to check only one thread from each thread group;"Since commit c03cd7738a83 (""cgroup: Include dying leaders with live threads in PROCS iterations"") corrected how CSS_TASK_ITER_PROCS works"
+fix uninitialized oc->constraint;uninitialized

@@ -1,0 +1,26 @@
+Decision;Rationale
+"fixes to guarantee ""don't accnout against process with TIF_MEMDIE""";None
+None;print the triggering task's set of allowable nodes so the subsequently printed meminfo can be interpreted correctly
+Print the task's cpuset name for informational purposes;for informational purposes
+fix zone_scan_mutex name;None
+name it appropriately;zone_scan_mutex is actually a spinlock
+it's silly to unconditionally kill the faulting process at page fault time;With increasingly sophisticated oom behaviour
+None;None
+None;None
+None;None
+LSMs should use the new has_capability_noaudit() interface;The denials will not be recorded
+fix badness() kerneldoc;None
+Remove the parameter @mem;removed since v2.6.26
+dump task state information for thread group leaders;When /proc/sys/vm/oom_dump_tasks is enabled, it's only necessary
+Fix setting of PF_SUPERPRIV by __capable();None
+Fix the setting of PF_SUPERPRIV by __capable();it could corrupt the flags of the target process if that is not the current process and it is trying to change its own flags in a different way at the same time
+Two of the instances of __capable() actually only act on current, and so have been changed to calls to capable();only act on current
+cap_safe_nice() only ever saw current, so now uses capable();only ever saw current, capable()
+The order of the tests have been switched and capable() is used instead;smack_setprocattr() rejected accesses to tasks other than current just after calling __capable()
+allow privileged processes to receive SIGIO on files they're manipulating;privileged processes
+remove unused parameter in badness();unused
+None;None
+Introduce a struct zoneref to store a zone pointer and a zone index;Store a zone pointer and a zone index
+None;None
+fallback allocations when the target/preferred node has no free pages;target/preferred node has no free pages
+fix oops in oom handling;None

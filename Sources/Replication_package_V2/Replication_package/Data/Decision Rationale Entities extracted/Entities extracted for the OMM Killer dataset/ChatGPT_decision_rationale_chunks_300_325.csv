@@ -1,0 +1,26 @@
+Decision;Rationale
+Introduce is_sysrq_oom helper function;to improve readability
+fix the wrong task->mm == mm checks in oom_kill_process();wrong task->mm == mm checks
+remove the wrong fatal_signal_pending() check in oom_kill_process();None
+we must not skip this process;because its sub-thread originated the coredump
+remove the wrong check along with pr_info();wrong check along with pr_info()
+We can tolerate a comm being printed that is in the middle of an update;to avoid taking the lock
+"suppress unnecessary ""sharing same memory"" message";"unnecessary ""sharing same memory"""
+"reduces the ""Kill process"" lines by printing that line with info level";only if SIGKILL is not pending
+fix potentially killing unrelated process;potentially killing unrelated process
+get a reference on the OOM victim's mm before calling task_unlock(victim);to make sure that the OOM victim's mm does not go away until for_each_process() loop finishes
+remove unnecessary variable;unnecessary
+"The ""killed"" variable in out_of_memory() can be removed";since the call to oom_kill_process() where we should block to allow the process time to exit is obvious.
+Avoid panicking the system for sysrq+f when no processes are killed;no processes are killed
+organize oom context into struct;None
+Organize these elements into a new struct, struct oom_control;specifies the context for an oom condition
+Print it as such;None
+simplify OOM killer locking;None
+Replace both locking schemes with a single global mutex serializing OOM kills regardless of context.;regardless of context
+Remove unnecessary locking in exit_oom_victim();unnecessary locking in exit_oom_victim()
+generalize OOM progress waitqueue;None
+This could have been replaced with waitqueue_active();it only saves a few instructions in one of the coldest paths in the kernel
+Use clear_thread_flag() directly;None
+clean up victim marking and exiting interfaces;None
+None;locking implications
+Rename mark_tsk_oom_victim() to mark_oom_victim();which is easier on the eye.

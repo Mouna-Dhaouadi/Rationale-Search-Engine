@@ -1,0 +1,755 @@
+Decision1;Rationale1;Decision2;Rationale2;Relationship;Alpha
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Contradicts;0.5040726065635681
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Save <file_name> allocation;Performance tuning;Contradicts;0.5626276731491089
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Contradicts;0.6888749599456787
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.7631999254226685
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;dont set port attribute; <file_name>  is null;Contradicts;0.5641369223594666
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;use revision in  <file_name>  ( <pr_link> );Revision use;Contradicts;0.5117369890213013
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.628835141658783
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.5636022686958313
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.7404307126998901
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5921270251274109
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Contradicts;0.500141978263855
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.6512745022773743
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5077376961708069
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.6994048357009888
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5692172050476074
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Contradicts;0.8084060549736023
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.7689834833145142
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;dont set port attribute; <file_name>  is null;Contradicts;0.5588220953941345
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.608629584312439
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Correct <file_name> version  ;Correct;Contradicts;0.5147377848625183
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.5622124671936035
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Contradicts;0.5196601152420044
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8991764783859253
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5820300579071045
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Merge pull request  ;fix QoS port can only be configured by identity property problem;Contradicts;0.5210570096969604
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.7016911506652832
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;fix test case DUBBO-135  ;test case glitch fix;Contradicts;0.5056796073913574
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.6577451229095459
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Fix issue#5411 (<pr_link>);Fix;Contradicts;0.5552086234092712
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6397112011909485
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6113067865371704
+Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5183560848236084
+Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6329020261764526
+Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6417329907417297
+Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6890775561332703
+The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5603100657463074
+The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.6861371397972107
+The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.650942325592041
+The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6257707476615906
+add <iden> for dynamically created class;dynamically created;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5937725901603699
+add <iden> for dynamically created class;dynamically created;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.6679627895355225
+add <iden> for dynamically created class;dynamically created;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8413644433021545
+add <iden> for dynamically created class;dynamically created;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7549942135810852
+add <iden> for dynamically created class;dynamically created;rename package name from <iden> to impl;-;Contradicts;0.964984655380249
+fix test case DUBBO-135  ;test case glitch fix;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.7615297436714172
+fix test case DUBBO-135  ;test case glitch fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6155044436454773
+fix test case DUBBO-135  ;test case glitch fix;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5846908688545227
+fix test case DUBBO-135  ;test case glitch fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6692759990692139
+fix test case DUBBO-135  ;test case glitch fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7295998930931091
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Fix NPE in <file_name>  ;Fix;Contradicts;0.5248178243637085
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.9614311456680298
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;dont set port attribute; <file_name>  is null;Contradicts;0.7282512187957764
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Fix <issue_link> ( <pr_link> );fix;Contradicts;0.6019917130470276
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5559963583946228
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.6781466007232666
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.6428055763244629
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9146355390548706
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.7390826344490051
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.5898419618606567
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5696312785148621
+add switch of generic invocation with class info  ;fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6021525859832764
+add switch of generic invocation with class info  ;fix;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5385092496871948
+add switch of generic invocation with class info  ;fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9165763854980469
+add switch of generic invocation with class info  ;fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.813592255115509
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.7302521467208862
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5343967080116272
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5099112391471863
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5283148884773254
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6434628963470459
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5615065693855286
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7367498278617859
+return default value if not implemented;not implemented;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6236183047294617
+return default value if not implemented;not implemented;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5670816898345947
+return default value if not implemented;not implemented;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6747992038726807
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.6983977556228638
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;dont set port attribute; <file_name>  is null;Contradicts;0.5585363507270813
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5204379558563232
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5467069149017334
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.6916444301605225
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5966588258743286
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6652204990386963
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5357597470283508
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.5014616250991821
+Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.676775336265564
+Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5798516273498535
+Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6959670782089233
+Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5458411574363708
+add comment for <file_name>;see <issue_link>;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6634865999221802
+add comment for <file_name>;see <issue_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5288899540901184
+add comment for <file_name>;see <issue_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7351986765861511
+add comment for <file_name>;see <issue_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.9962360262870789
+add start status for <iden> server  ;-;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5314281582832336
+add start status for <iden> server  ;-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8858646154403687
+add start status for <iden> server  ;-;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6474823951721191
+add start status for <iden> server  ;-;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.8400682210922241
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5045346021652222
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9625242948532104
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8069577813148499
+fix parameters could be null;fix parameters could be null;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.7064862251281738
+fix parameters could be null;fix parameters could be null;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5815228223800659
+fix parameters could be null;fix parameters could be null;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6862720847129822
+Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> );"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6230316162109375
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Remove call of deprecated method;Deprecated;Contradicts;0.5840749740600586
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.8508493304252625
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5681923627853394
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;Contradicts;0.5563873052597046
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8744178414344788
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6027210354804993
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.647977888584137
+revert (<pr_link>);performance tuning;Enhancement;file_name, pr_link;Contradicts;0.5496729016304016
+revert (<pr_link>);performance tuning;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5247220993041992
+revert (<pr_link>);performance tuning;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5252816081047058
+revert (<pr_link>);performance tuning;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.5116015672683716
+Save <file_name> allocation;Performance tuning;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.8602511286735535
+Save <file_name> allocation;Performance tuning;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.7239245176315308
+Save <file_name> allocation;Performance tuning;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5187241435050964
+Save <file_name> allocation;Performance tuning;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.848916232585907
+Save <file_name> allocation;Performance tuning;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5814936757087708
+Save <file_name> allocation;Performance tuning;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5133165717124939
+fix conflicts after merged master;after merged master;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5746659636497498
+fix conflicts after merged master;after merged master;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5151078701019287
+fix conflicts after merged master;after merged master;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6794342994689941
+Solve compile problem in java11  ;java11;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5932151675224304
+Solve compile problem in java11  ;java11;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6431695222854614
+Solve compile problem in java11  ;java11;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7015150785446167
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.9365214705467224
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5929237008094788
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6259680390357971
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7562258243560791
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5497158169746399
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.716414213180542
+Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.5063690543174744
+Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5062598586082458
+Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6454108357429504
+Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6748501062393188
+Check config instance in <file_name> before create a new one;"-
+
+None";Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.5608768463134766
+Check config instance in <file_name> before create a new one;"-
+
+None";Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;Contradicts;0.5983012318611145
+Check config instance in <file_name> before create a new one;"-
+
+None";Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5712565183639526
+Check config instance in <file_name> before create a new one;"-
+
+None";fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.7063578963279724
+Check config instance in <file_name> before create a new one;"-
+
+None";fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5740331411361694
+Check config instance in <file_name> before create a new one;"-
+
+None";Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6468715071678162
+Check config instance in <file_name> before create a new one;"-
+
+None";"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5409402251243591
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.7564400434494019
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6579881310462952
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7322376370429993
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.6779086589813232
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;dont set port attribute; <file_name>  is null;Contradicts;0.5620463490486145
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7208361625671387
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.689184308052063
+fix NPE when no listeners registered for key;no listeners registered for key;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5794114470481873
+fix NPE when no listeners registered for key;no listeners registered for key;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6586716175079346
+fix NPE when no listeners registered for key;no listeners registered for key;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5330785512924194
+fix NPE when no listeners registered for key;no listeners registered for key;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6565091609954834
+Fix configurator bug;configurator;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6080691814422607
+Fix configurator bug;configurator;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7291638851165771
+Fix NPE in <file_name>  ;Fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6304284334182739
+Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6092666387557983
+Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7718001008033752
+Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.575930118560791
+Fix comments;Fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5878952741622925
+Remove useless config item;useless;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.641369640827179
+Fix compilation problem;Fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5338699221611023
+Fix compilation problem;Fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6991245746612549
+Remove duplicate ut classes;duplicate;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6175821423530579
+Remove duplicate ut classes;duplicate;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6762892007827759
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.6599014401435852
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5261342525482178
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6164432168006897
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5566273927688599
+Add <file_name> name and fix <file_name> error  ;error;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.7968453168869019
+Add <file_name> name and fix <file_name> error  ;error;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5358115434646606
+Add <file_name> name and fix <file_name> error  ;error;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.52171790599823
+Add <file_name> name and fix <file_name> error  ;error;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6059818267822266
+Add <file_name> name and fix <file_name> error  ;error;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9837716221809387
+Add <file_name> name and fix <file_name> error  ;error;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.866204023361206
+Remove call of deprecated method;Deprecated;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5494762063026428
+Fix UT problems after structure change  ;after structure change;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5540695190429688
+Fix UT problems after structure change  ;after structure change;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5273609161376953
+Fix UT problems after structure change  ;after structure change;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7886086106300354
+Remove the shutdown logic from spring bean destroy  ;avoid competition;Enhancement;file_name, pr_link;Contradicts;0.5553661584854126
+Remove the shutdown logic from spring bean destroy  ;avoid competition;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5401307344436646
+Remove the shutdown logic from spring bean destroy  ;avoid competition;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6358261704444885
+Remove the shutdown logic from spring bean destroy  ;avoid competition;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6470233798027039
+Translate missing content and add apache license;missing content and apache license;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5796419382095337
+Translate missing content and add apache license;missing content and apache license;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5054426789283752
+Translate missing content and add apache license;missing content and apache license;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6554045677185059
+Translate missing content and add apache license;missing content and apache license;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6971108913421631
+Remove unnecessary dependencies ;unnecessary;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5856988430023193
+Fixed typo in \<file_name\>  ;mDeamo;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.585010826587677
+Fixed typo in \<file_name\>  ;mDeamo;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.562004566192627
+Ignore unit test <file_name> (no zk server);no zk server;Enable <file_name> ( <pr_link> );Enable;Contradicts;0.5241795182228088
+Ignore unit test <file_name> (no zk server);no zk server;polish <file_name> ;remove test profile and jvm permSize args;Contradicts;0.6434260010719299
+Ignore unit test <file_name> (no zk server);no zk server;Fix <issue_link> ( <pr_link> );fix;Contradicts;0.5031241774559021
+Ignore unit test <file_name> (no zk server);no zk server;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5112384557723999
+Ignore unit test <file_name> (no zk server);no zk server;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.528157114982605
+Ignore unit test <file_name> (no zk server);no zk server;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Contradicts;0.6263512969017029
+Ignore unit test <file_name> (no zk server);no zk server;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6203967928886414
+Add package support for dubbo-remoting-netty4 module;package support;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9440608024597168
+Add package support for dubbo-remoting-netty4 module;package support;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7625906467437744
+Add package support for dubbo-remoting-netty4 module;package support;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.509386420249939
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6186056137084961
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5980962514877319
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7509425282478333
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5233515501022339
+fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5032857060432434
+fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5874566435813904
+fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.572685182094574
+fix compiler bug;bug;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5713584423065186
+fix compiler bug;bug;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5567489862442017
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5360947251319885
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8390505313873291
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5722782015800476
+"add the router key in <file_name> (<pr_link>)
+";-;dont set port attribute; <file_name>  is null;Contradicts;0.8353673219680786
+"add the router key in <file_name> (<pr_link>)
+";-;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5491615533828735
+"add the router key in <file_name> (<pr_link>)
+";-;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.8751055598258972
+"add the router key in <file_name> (<pr_link>)
+";-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9812387228012085
+"add the router key in <file_name> (<pr_link>)
+";-;remove the space ( <pr_link> );follow up for pr#4339;Contradicts;0.8390427827835083
+"add the router key in <file_name> (<pr_link>)
+";-;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.7553756833076477
+dont set port attribute; <file_name>  is null;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.7025781273841858
+dont set port attribute; <file_name>  is null;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5198103785514832
+dont set port attribute; <file_name>  is null;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7145496010780334
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6251338720321655
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7532915472984314
+fix wrong telnet command package;wrong;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.666266143321991
+fix wrong telnet command package;wrong;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6013602614402771
+fix wrong telnet command package;wrong;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7141243815422058
+fix typo ( <pr_link> );typo;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5913905501365662
+fix typo ( <pr_link> );typo;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6919678449630737
+Enhancement;file_name, pr_link;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.556365430355072
+Enhancement;file_name, pr_link;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6047012209892273
+Enhancement;file_name, pr_link;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7528699636459351
+Enable <file_name> ( <pr_link> );Enable;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.627816379070282
+Enable <file_name> ( <pr_link> );Enable;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7302998900413513
+Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5371142029762268
+Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.6426885724067688
+Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.6356722116470337
+Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.693217933177948
+Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.5814226865768433
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6493613123893738
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5473008155822754
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7883819937705994
+Remove unused variable parameters in <file_name> (<pr_link>);unused;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.5126621127128601
+Remove unused variable parameters in <file_name> (<pr_link>);unused;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5991387963294983
+fix typo:<iden> ( <pr_link> );typo;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Contradicts;0.7722331285476685
+fix typo:<iden> ( <pr_link> );typo;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5112501978874207
+fix typo:<iden> ( <pr_link> );typo;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6754335761070251
+Fix issue#5411 (<pr_link>);Fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6058869957923889
+use revision in  <file_name>  ( <pr_link> );Revision use;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.6052901148796082
+use revision in  <file_name>  ( <pr_link> );Revision use;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5892215371131897
+use revision in  <file_name>  ( <pr_link> );Revision use;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5408173203468323
+Fix zk client create logic  ;fix;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6871613264083862
+Fix zk client create logic  ;fix;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5902390480041504
+Fix zk client create logic  ;fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.54960697889328
+Fix zk client create logic  ;fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7825419306755066
+polish <file_name> ;remove test profile and jvm permSize args;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6872463226318359
+polish <file_name> ;remove test profile and jvm permSize args;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.518118143081665
+polish <file_name> ;remove test profile and jvm permSize args;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6439007520675659
+add <file_name> rule to check import order;<pr_link>;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Contradicts;0.6326786875724792
+add <file_name> rule to check import order;<pr_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5485777854919434
+add <file_name> rule to check import order;<pr_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7896027565002441
+add <file_name> rule to check import order;<pr_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5516533255577087
+Fix <issue_link> ( <pr_link> );fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6307511925697327
+Fix <issue_link> ( <pr_link> );fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5148595571517944
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5860984325408936
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Correct <file_name> version  ;Correct;Contradicts;0.5420296788215637
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Modify comments and imports  ;just for [by implication];Contradicts;0.5218878984451294
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;modify consumer  <file_name> : param type from string to map;param type from string to map;Contradicts;0.5527145266532898
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Contradicts;0.5928500890731812
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Reduce object allocation for <method_name>;"-
+None";Contradicts;0.5585222840309143
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.643919825553894
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5477515459060669
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );Contradicts;0.5315267443656921
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Merge pull request  ;fix QoS port can only be configured by identity property problem;Contradicts;0.5754581689834595
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6881600022315979
+Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.5001028180122375
+Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6558706164360046
+Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5301697254180908
+Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7375730872154236
+`<file_name>` class should be consistent with the writing of the ExecutionChannelHandler class;fix <issue_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5888717174530029
+`<file_name>` class should be consistent with the writing of the ExecutionChannelHandler class;fix <issue_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5077927112579346
+support get system load on windows ( <pr_link> );fix <issue_link>;fix publish null value when use consul config center  ;fix publish null value;Contradicts;0.527237057685852
+support get system load on windows ( <pr_link> );fix <issue_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5047860741615295
+support get system load on windows ( <pr_link> );fix <issue_link>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5906705260276794
+support get system load on windows ( <pr_link> );fix <issue_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7063088417053223
+Fix hessian-lite spelling mistake  ;spelling mistake;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5334848165512085
+Fix hessian-lite spelling mistake  ;spelling mistake;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5239555239677429
+Fix hessian-lite spelling mistake  ;spelling mistake;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7532326579093933
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5965115427970886
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9904719591140747
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7815558910369873
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6339869499206543
+Fix NPE when unexport <iden> ( <pr_link> );NPE;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6426284313201904
+Fix NPE when unexport <iden> ( <pr_link> );NPE;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.504450798034668
+fix publish null value when use consul config center  ;fix publish null value;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5077520608901978
+fix publish null value when use consul config center  ;fix publish null value;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5289928913116455
+fix publish null value when use consul config center  ;fix publish null value;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6240249276161194
+Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8032687902450562
+Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6141976118087769
+Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6423122882843018
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.5010876655578613
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5483737587928772
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8834498524665833
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5744472146034241
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6169556379318237
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8374996185302734
+Add `how can I contribute?` section;-;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.879477322101593
+Add `how can I contribute?` section;-;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5621325373649597
+Add `how can I contribute?` section;-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9810466170310974
+Add `how can I contribute?` section;-;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8038793206214905
+Add `how can I contribute?` section;-;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6695542335510254
+Correct <file_name> version  ;Correct;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5492568612098694
+Remove unused code  ;unused;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5251442193984985
+Remove unnecessary null check and fix typo;unnecessary, fix typo;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5565875172615051
+Remove unnecessary null check and fix typo;unnecessary, fix typo;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5795278549194336
+Consider removing <iden> later  ;<iden> is unstable;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5203226208686829
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5354358553886414
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6190635561943054
+Modify comments and imports  ;just for [by implication];fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.6290314793586731
+Modify comments and imports  ;just for [by implication];Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8742811679840088
+Modify comments and imports  ;just for [by implication];"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6857988238334656
+remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Contradicts;0.5256681442260742
+remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Merge pull request  ;fix QoS port can only be configured by identity property problem;Contradicts;0.5436240434646606
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;modify consumer  <file_name> : param type from string to map;param type from string to map;Contradicts;0.5069682002067566
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.7832515835762024
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;add jdk11 to travis ci;upgrade jacoco to support jdk11;Contradicts;0.5016062259674072
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6607085466384888
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );Contradicts;0.5978575348854065
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Merge pull request  ;fix QoS port can only be configured by identity property problem;Contradicts;0.5406176447868347
+fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.7012573480606079
+modify consumer  <file_name> : param type from string to map;param type from string to map;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.5779624581336975
+fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.706809401512146
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6564203500747681
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5290403366088867
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.501920223236084
+fix protocol register set false not work ( <pr_link> );not work;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.6599229574203491
+fix protocol register set false not work ( <pr_link> );not work;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5491567850112915
+Reduce object allocation for <method_name>;"-
+None";"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.5186173319816589
+Refactor: remove;and replace it with <method_name> ( <pr_link> );add unit test for parsing path;-;Contradicts;0.782502293586731
+Minor improvement on test cases: ( <pr_link> )  ;Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4), Use assertTrue and other assert methods through static import to make codes easier to read;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.7145577073097229
+Minor improvement on test cases: ( <pr_link> )  ;Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4), Use assertTrue and other assert methods through static import to make codes easier to read;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6542170643806458
+Simplify code with Lambda;code simplification;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.6227183938026428
+add jdk11 to travis ci;upgrade jacoco to support jdk11;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8358012437820435
+"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Merge pull request  ;fix QoS port can only be configured by identity property problem;Contradicts;0.7055535912513733
+"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.6772854328155518
+Port <pr_link> into main trunk (<pr_link>);Fixes <issue_link>;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.7483031153678894
+rename package name from <iden> to impl;-;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Contradicts;0.5350198149681091

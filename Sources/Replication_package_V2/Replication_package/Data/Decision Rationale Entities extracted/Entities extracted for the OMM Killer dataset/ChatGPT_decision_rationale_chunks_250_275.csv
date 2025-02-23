@@ -1,0 +1,28 @@
+Decision;Rationale
+None;Therefore, we can safely use atomic_inc()
+close race with exiting task;None
+None;address the oom_reaper part by using oom_lock for __oom_reap_task because this would guarantee that a new oom victim will not be selected if the oom reaper might race with the exit path
+None;None
+speed up select_bad_process() loop;mm, oom
+Track number of TIF_MEMDIE threads inside signal_struct;We don't need to do TIF_MEMDIE test on each thread
+This will allow select_bad_process() to use for_each_process();None
+"This patch adds a counter to signal_struct for tracking how many TIF_MEMDIE threads are in a given thread group, and check it at oom_scan_process_thread()
+";so that select_bad_process() can use for_each_process() rather than for_each_process_thread()
+strive for making this context as reliable and independent on other subsystems;as much as possible
+None;the oom_reaper has reclaimed the victim's address space for most cases as much as possible and the remaining context shouldn't bind too much memory anymore
+None;The only exception is when mmap_sem trylock has failed which shouldn't happen too often
+hide oom reaped tasks from OOM killer more carefully;None
+Force the select_bad_process() to ignore all already oom reaped tasks as well as no such task is sacrificed for its parent;None
+try to reap tasks which skip regular OOM killer path;None
+"This patch adds try_oom_reaper.
+";The decision is made in order to check the given task and queue it for the oom reaper if it is safe to be done, meaning that the task doesn't share the mm with an alive process.
+This patch doesn't change this behavior;because we are not ready to allow those allocation requests to fail yet (and maybe we will face the reality that we will never manage to safely fail these request)
+move the __GFP_FS check down to out_of_memory and prevent OOM victim selection there;prevent OOM victim selection
+Keep a comment in __alloc_pages_may_oom;to make sure we do not forget how GFP_NOFS is special and that we really want to do something about
+None;None
+ruling out the OOM killer;lockup machine in most of the cases
+callbacks might be invoked sooner now;GFP_NOFS is a weaker reclaim context and so there could be reclaimable memory which is just not reachable now
+Fix the condition by checking for the head as well;checking for the head as well
+"Fixes: bb29902a7515 (""oom, oom_reaper: protect oom_reaper_list using simpler way"")";protect oom_reaper_list using simpler way
+protect oom_reaper_list using simpler way;simpler way
+checking tsk->oom_reaper_list != NULL;None

@@ -1,0 +1,181 @@
+﻿commit ID,text,predicted_decision,predicted_rationale,Agree decision ? ,Agree rationale ? 
+C_kwDOACN7MtoAKDY2MzBlOTUwZDUzMmZmYWJjZTNhNGJkYmFjN2JlODQ0YmFkMTkzZmU,mm/slob: remove slob.c,1,1,yes,no
+C_kwDOACN7MtoAKDY2MzBlOTUwZDUzMmZmYWJjZTNhNGJkYmFjN2JlODQ0YmFkMTkzZmU,Remove the SLOB implementation,1,1,yes,yes
+C_kwDOACN7MtoAKDY2MzBlOTUwZDUzMmZmYWJjZTNhNGJkYmFjN2JlODQ0YmFkMTkzZmU,RIP SLOB allocator (2006 - 2023),0,0,yes,yes
+C_kwDOACN7MtoAKGJkNTNjZTRkYTI1MmRkYjFhZTQyNTdjMTY0ZjgwYWVhM2Q4YWI5MGM,mm/slob: make kmem_cache_boot static,0,0,no,yes
+C_kwDOACN7MtoAKGJkNTNjZTRkYTI1MmRkYjFhZTQyNTdjMTY0ZjgwYWVhM2Q4YWI5MGM,kmem_cache_boot is never accessed outside slob.c,0,0,yes,no
+C_kwDOACN7MtoAKGJkNTNjZTRkYTI1MmRkYjFhZTQyNTdjMTY0ZjgwYWVhM2Q4YWI5MGM,Make it static.,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1YmIxYmIzNTNjZmUzNDNmYzNjODRmYWYwNmY3MmJhMzA5ZmRlNTQx,mm: Don't build mm_dump_obj() on CONFIG_PRINTK=n kernels,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1YmIxYmIzNTNjZmUzNDNmYzNjODRmYWYwNmY3MmJhMzA5ZmRlNTQx,"The mem_dump_obj() functionality adds a few hundred bytes, which is a
+small price to pay",1,0,no,no
+MDY6Q29tbWl0MjMyNTI5ODo1YmIxYmIzNTNjZmUzNDNmYzNjODRmYWYwNmY3MmJhMzA5ZmRlNTQx," Except on kernels built with CONFIG_PRINTK=n, in
+which mem_dump_obj() messages will be suppressed",1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo1YmIxYmIzNTNjZmUzNDNmYzNjODRmYWYwNmY3MmJhMzA5ZmRlNTQx," This commit therefore
+makes mem_dump_obj() be a static inline empty function on kernels built
+with CONFIG_PRINTK=n and excludes all of its support functions as well",0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo1YmIxYmIzNTNjZmUzNDNmYzNjODRmYWYwNmY3MmJhMzA5ZmRlNTQx,This avoids kernel bloat on systems that cannot use mem_dump_obj().,0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,mm: introduce page_size(),1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,"Patch series ""Make working with compound pages easier"", v2",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,"These three patches add three helpers and convert the appropriate
+places to use them",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,This patch (of 3),1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,It's unnecessarily hard to find out the size of a potentially huge page,1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODphNTBiODU0ZTA3M2NkMzMzNWJiYmFkYThkY2ZmODNhODU3Mjk3ZGQ3,Replace 'PAGE_SIZE << compound_order(page)' with page_size(page).,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2,slab: infrastructure for bulk object allocation and freeing,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2,Add the basic infrastructure for alloc/free operations on pointer arrays,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2,"It includes a generic function in the common slab code that is used in
+this infrastructure patch to create the unoptimized functionality for slab
+bulk operations",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2,"Allocators can then provide optimized allocation functions for situations
+in which large numbers of objects are needed",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2," These optimization may
+avoid taking locks repeatedly and bypass metadata creation if all objects
+in slab pages can be used to provide the objects required",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2,"Allocators can extend the skeletons provided and add their own code to the
+bulk alloc and free functions",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0ODQ3NDhmMGI2NWExOTUwYjJiOTNmNDQ0YTIyODdlOGRkMmNlZGQ2," They can keep the generic allocation and
+freeing and just fall back to those if optimizations would not work (like
+for example when debugging is on).",0,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,mm/sl[aou]b: Move kmallocXXX functions to common code,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"The kmalloc* functions of all slab allcoators are similar now so
+lets move them into slab.h",1,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"This requires some function naming changes
+in slob",1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"As a results of this patch there is a common set of functions for
+all allocators",0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"Also means that kmalloc_large() is now available
+in general to perform large order allocations that go directly
+via the page allocator",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"kmalloc_large() can be substituted if
+kmalloc() throws warnings because of too large allocations",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODpmMWI2ZWI2ZTZiZTE0OWI0MGViYjAxM2Y1YmZlMmFjODZiNmYxYzFi,"kmalloc_large() has exactly the same semantics as kmalloc but
+can only used for allocations > PAGE_SIZE.",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0NTkwNjg1NTQ2YTM3NGZiMGY2MDY4MmNlMGUzYTZmZDQ4OTExZDQ2,mm/sl[aou]b: Common alignment code,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0NTkwNjg1NTQ2YTM3NGZiMGY2MDY4MmNlMGUzYTZmZDQ4OTExZDQ2,Extract the code to do object alignment from the allocators,0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo0NTkwNjg1NTQ2YTM3NGZiMGY2MDY4MmNlMGUzYTZmZDQ4OTExZDQ2,"Do the alignment calculations in slab_common so that the
+__kmem_cache_create functions of the allocators do not have
+to deal with alignment.",0,0,no,no
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,mm/slob: Use free_page instead of put_page for page-size kmalloc allocations,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,"When freeing objects, the slob allocator currently free empty pages
+calling __free_pages()",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,"However, page-size kmallocs are disposed
+using put_page() instead",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,"It makes no sense to call put_page() for kernel pages that are provided
+by the object allocator, so we shouldn't be doing this ourselves",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,This is based on,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo4Y2Y5ODY0YjEzODI4NTFkOTBjN2M1MDVmODQ0MWM4OTI4ZjE0Njll,"commit d9b7f22623b5fa9cc189581dcdfb2ac605933bf4
+Author: Glauber Costa <glommer@parallels.com>
+slub: use free_page instead of put_page for freeing kmalloc allocation",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"mm, sl[aou]b: Extract common fields from struct kmem_cache",1,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,Define a struct that describes common fields used in all slab allocators,1,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"A slab allocator either uses the common definition (like SLOB) or is
+required to provide members of kmem_cache with the definition given",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"After that it will be possible to share code that
+only operates on those fields of kmem_cache",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"The patch basically takes the slob definition of kmem cache and
+uses the field namees for the other allocators",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"It also standardizes the names used for basic object lengths in
+allocators",1,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"object_size	Struct size specified at kmem_cache_create",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"Basically
+		the payload expected to be used by the subsystem",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"size		The size of memory allocator for each object",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"This size
+		is larger than object_size and includes padding, alignment
+		and extra metadata for each object (f.e",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozYjBlZmRmYTFlNzE5MzAzNTM2YzA0ZDlhYmNhNDNhYmViNDBmODBh,"for debugging
+		and rcu).",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo2MDA2MzQ5N2E5NWU3MTZjOWE2ODlhZjNiZTI2ODdkMjYxZjExNWI0,atomic: use <linux/atomic.h>,1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo2MDA2MzQ5N2E5NWU3MTZjOWE2ODlhZjNiZTI2ODdkMjYxZjExNWI0,"This allows us to move duplicated code in <asm/atomic.h>
+(atomic_inc_not_zero() for now) to <linux/atomic.h>",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,SLOB: Free objects to their own list,0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,"SLOB has alloced smaller objects from their own list in reduce overall external
+fragmentation and increase repeatability, free to their own list also",1,0,no,no
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,This is /proc/meminfo result in my test machine,0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,  without this patch,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,"  MemTotal:        1030720 kB
+  MemFree:          750012 kB
+  Buffers:           15496 kB
+  Cached:           160396 kB
+  SwapCached:            0 kB
+  Active:           105024 kB
+  Inactive:         145604 kB
+  Active(anon):      74816 kB
+  Inactive(anon):     2180 kB
+  Active(file):      30208 kB
+  Inactive(file):   143424 kB
+  Unevictable:          16 kB
+  with this patch",1,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODpkNjAyZGFiYWViYTc5ZGY5MGNjNjdjMzJkNWZlNGVlMGQ1ZTJiNzNh,"  MemTotal:        1030720 kB
+  MemFree:          751908 kB
+  Buffers:           15492 kB
+  Cached:           160280 kB
+  SwapCached:            0 kB
+  Active:           102720 kB
+  Inactive:         146140 kB
+  Active(anon):      73168 kB
+  Inactive(anon):     2180 kB
+  Active(file):      29552 kB
+  Inactive(file):   143960 kB
+  Unevictable:          16 kB
+The result shows an improvement of 1 MB!
+And when I tested it on a embeded system with 64 MB, I found this path is never
+called during kernel bootup.",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODowMzljYTRlNzRhMWNmNjBiZDc0ODczMjRhNTY0ZWNmNWM5ODFmMjU0,tracing: Remove kmemtrace ftrace plugin,1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODowMzljYTRlNzRhMWNmNjBiZDc0ODczMjRhNTY0ZWNmNWM5ODFmMjU0,"We have been resisting new ftrace plugins and removing existing
+ones, and kmemtrace has been superseded by kmem trace events
+and perf-kmem, so we remove it.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZWQ5ZjdlNWRiNThjNmU4YzJiNGI3MzhhNzVkNWRjZDhlMTdhYWQ1,fix RCU-callback-after-kmem_cache_destroy problem in sl[aou]b,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZWQ5ZjdlNWRiNThjNmU4YzJiNGI3MzhhNzVkNWRjZDhlMTdhYWQ1,"Jesper noted that kmem_cache_destroy() invokes synchronize_rcu() rather than
+rcu_barrier() in the SLAB_DESTROY_BY_RCU case, which could result in RCU
+callbacks accessing a kmem_cache after it had been destroyed.",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo1ZTE4ZTJiOGIzZDQ1M2U2OGFjY2MzZTI5NTY0M2ZlNGI1YmJjMjk1,slob: do not pass the SLAB flags as GFP in kmem_cache_create(),1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1ZTE4ZTJiOGIzZDQ1M2U2OGFjY2MzZTI5NTY0M2ZlNGI1YmJjMjk1,"The kmem_cache_create() function in the slob allocator passes the SLAB
+flags as GFP flags to the slob_alloc() function",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo1ZTE4ZTJiOGIzZDQ1M2U2OGFjY2MzZTI5NTY0M2ZlNGI1YmJjMjk1," The patch changes this
+call to pass GFP_KERNEL as the other allocators seem to do.",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,SLOB: fix bogus ksize calculation fix,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,"This fixes the previous fix, which was completely wrong on closer
+inspection",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,"This version has been manually tested with a user-space
+test harness and generates sane values",0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,"A nearly identical patch has
+been boot-tested",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,"The problem arose from changing how kmalloc/kfree handled alignment
+padding without updating ksize to match",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3MDA5NmE1NjFkMWUwOTEyMGJhZTFmMjkzZjM2MzJjZWRiZmQ1YzY4,This brings it in sync.,1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo4NWJhOTRiYTA1OTIyOTYwNTNmN2YyODQ2ODEyMTczNDI0YWZlMWNi,SLOB: fix bogus ksize calculation,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo4NWJhOTRiYTA1OTIyOTYwNTNmN2YyODQ2ODEyMTczNDI0YWZlMWNi,"SLOB's ksize calculation was braindamaged and generally harmlessly
+underreported the allocation size",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo4NWJhOTRiYTA1OTIyOTYwNTNmN2YyODQ2ODEyMTczNDI0YWZlMWNi,"But for very small buffers, it could
+in fact overreport them, leading code depending on krealloc to overrun
+the allocation and trample other data.",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo1MWNjNTA2ODVhNDI3NWM2YTAyNjUzNjcwYWY5ZjEwOGE2NGUwMWNm,SL*B: drop kmem cache argument from constructor,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWNjNTA2ODVhNDI3NWM2YTAyNjUzNjcwYWY5ZjEwOGE2NGUwMWNm,"Kmem cache passed to constructor is only needed for constructors that are
+themselves multiplexeres",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWNjNTA2ODVhNDI3NWM2YTAyNjUzNjcwYWY5ZjEwOGE2NGUwMWNm," Nobody uses this ""feature"", nor does anybody uses
+passed kmem cache in non-trivial way, so pass only pointer to object",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWNjNTA2ODVhNDI3NWM2YTAyNjUzNjcwYWY5ZjEwOGE2NGUwMWNm,Non-trivial places are,1,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODo1MWNjNTA2ODVhNDI3NWM2YTAyNjUzNjcwYWY5ZjEwOGE2NGUwMWNm,"	arch/powerpc/mm/init_64.c
+	arch/powerpc/mm/hugetlbpage.c
+This is flag day, yes.",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo2NzkyOTliMzJkYmY5YmFjNGJkYWVkYzg1MGZiOTVkMGY4MWI0OTYz,slob: fix free block merging at head of subpage,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo2NzkyOTliMzJkYmY5YmFjNGJkYWVkYzg1MGZiOTVkMGY4MWI0OTYz,We weren't merging freed blocks at the beginning of the free list,0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo2NzkyOTliMzJkYmY5YmFjNGJkYWVkYzg1MGZiOTVkMGY4MWI0OTYz," Fixing
+this showed a 2.5% efficiency improvement in a userspace test harness.",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo0YmE5YjlkMGJhMGE0OWQ5MWZhNjQxN2M3NTEwZWUzNmY0OGNmOTU3,Slab API: remove useless ctor parameter and reorder parameters,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0YmE5YjlkMGJhMGE0OWQ5MWZhNjQxN2M3NTEwZWUzNmY0OGNmOTU3,Slab constructors currently have a flags parameter that is never used,0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo0YmE5YjlkMGJhMGE0OWQ5MWZhNjQxN2M3NTEwZWUzNmY0OGNmOTU3," And
+the order of the arguments is opposite to other slab functions",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo0YmE5YjlkMGJhMGE0OWQ5MWZhNjQxN2M3NTEwZWUzNmY0OGNmOTU3," The object
+pointer is placed before the kmem_cache pointer",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo0YmE5YjlkMGJhMGE0OWQ5MWZhNjQxN2M3NTEwZWUzNmY0OGNmOTU3,"Convert
+        ctor(void *object, struct kmem_cache *s, unsigned long flags)
+        ctor(struct kmem_cache *s, void *object)
+throughout the kernel",0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoyNDA4YzU1MDM3YzNmN2Q1MWE4YTEwMDAyNWM0NzU5NWU3MWI4Mzhj,"{slub, slob}: use unlikely() for kfree(ZERO_OR_NULL_PTR) check",0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoyNDA4YzU1MDM3YzNmN2Q1MWE4YTEwMDAyNWM0NzU5NWU3MWI4Mzhj,"Considering kfree(NULL) would normally occur only in error paths and
+kfree(ZERO_SIZE_PTR) is uncommon as well, so let's use unlikely() for the
+condition check in SLUB's and SLOB's kfree() to optimize for the common
+case",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyNDA4YzU1MDM3YzNmN2Q1MWE4YTEwMDAyNWM0NzU5NWU3MWI4Mzhj, SLAB has this already.,0,1,yes,yes

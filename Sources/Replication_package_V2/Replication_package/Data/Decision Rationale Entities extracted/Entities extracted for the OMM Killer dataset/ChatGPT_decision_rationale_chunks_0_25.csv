@@ -1,0 +1,26 @@
+Decision;Rationale
+reduce noise in show_mem for lowmem allocations;lowmem allocations
+Reduce the ballast;Doesn't provide any relevant information
+None;throwing it mostly to see what people think about it
+the oom reaper invocation can be dropped;Munlock code is no longer a problem and there shouldn't be any blocking operation before the memory is unmapped by exit_mmap
+Remove the oom_reaper from exit_mmap;make the code easier to read
+This is really unlikely to make any observable difference;some microbenchmarks could benefit from one less branch that needs to be evaluated even though it almost never is true
+fix vm_oom_kill_table[];ifdeffery
+removes the need for munlock_vma_pages_all();eliminating the catastrophic contention on i_mmap_rwsem, and the need for page lock on the pages
+update locked_vm accounting according to the munmapped vmas when munmapping;There is still a need to perform this action
+delete unlock_range();exit_mmap() does not need locked_vm updates
+Permit the OOM reaper on mlocked vmas;No fear of blocking on all those page locks anymore
+The change prevents process_mrelease from calling;which can lead to waiting for IO completion in exit_aio.
+Our container agent wants to know when a container exits if it was OOM killed or not;to report to the user
+OOM kills will get counted against the container cgroup's oom_kill counter despite not actually OOM killing the entire container.;some cases where containers create their children cgroups with memory.oom.group=1
+This patch adds a new oom_group_kill event;to allow userspace to cleanly identify when an entire cgroup is oom killed.
+Change __task_will_free_mem to test signal->core_state instead of the flag SIGNAL_GROUP_COREDUMP;In preparation for removing the flag SIGNAL_GROUP_COREDUMP
+Adding a set_freezable() call;will clear the PF_NOFREEZE flag and thus make the OOM reaper visible to the freezer
+no reason to invoke it again from the #PF path;if the OOM killer has been already invoked
+Drop triggering out_of_memory from pagefault_out_of_memory;There is no legitimate reason 
+None;None
+This patch fixes the problem and should be backported into stable/LTS.;Fixes the problem, should be backported into stable/LTS.
+prevent a race between process_mrelease and exit_mmap;None
+Fix this race by elevating mm->mm_users and preventing exit_mmap from executing until process_mrelease is finished;preventing exit_mmap from executing until process_mrelease is finished
+Patch slightly refactors the code;to adapt for a possible mmget_not_zero failure
+This fix has considerable negative impact on process_mrelease performance;will likely need later optimization

@@ -1,0 +1,146 @@
+Decision;Rationale
+Fixed typo;
+Fix <method_name> ( <pr_link> );<method_name> should not match when the given <iden> has no failures
+Wrap the invocation of <iden>() within a try-catch block  ;Exceptions from <iden>() were causing unrooted tests
+Fix dead link to the ant task in <file_name> (<pr_link>);"The link is dead; task has been moved to another location"
+Fix many warnings (Eclipse <version>/Juno based);Enh: add new 'staticondemandthreshold' setting to eclipse project jdt.ui preference settings file
+changed the <iden>() method to accept a <iden> instead of an explicit <iden>;made some documentation changes
+Updated URL to <iden>'s code style repository. Document indent size. Updating code style as per <pr_link> ;
+Remove redundant field <iden> ;redundant
+Implemented the changes proposed by davidhart82;proposed by davidhart82
+Fixes imports;
+Restore backward compatibility with sub class of <file_name> that override <iden> method and Add <file_name> to <file_name> suite;To ensure backward compatibility with subclasses and include <file_name> in the <file_name> suite
+`<file_name>` should be in junit*.zip  ;
+Updated <file_name>;
+Better validation in <file_name> ;Improve validation
+A <file_name> can be explicitly passed to a <iden> class that needs one in its constructor.;This eliminates the ugly global constant <file_name> in <file_name>, and breaks the cyclic dependency between runners and requests
+Invalid assumptions, failed tests, and ignored tests now all print similarly;
+Remove unnecessary comments;unnecessary
+New <iden> implementation makes <file_name> crazy simple;
+<file_name> handles filtering and sorting for all runners, now including <file_name>;handles filtering and sorting for all runners
+Ignored tests should be shown differently in stack trace section of report;ignored
+Moved <file_name> into proper package;proper
+No matching parameters is now an assumption failure, not an assertion failure;an assumption failure
+Now includes filtering;
+Pull <iden> up into <file_name>;reorganization of code
+Fixed a bug in <file_name> classes with constructor parameters  ;where the method parameters and constructor parameters were switched
+Removed  <file_name> , replaced with  <file_name> , which moved to model package with  <file_name> ;moved to model package
+Renamed link classes  ;Absolute actions are verbs, ActionModifiers are modifying phrases, Moved isShadowedBy(List) to <file_name>
+Created a separate <file_name> directory for new <file_name> scripts, including FTP upload;Organizing and structuring directories for new scripts
+Updated README  ;about Enclosed
+Deprecate rule  <file_name>  ( <pr_link> )  ;The method Assert.assertThrows provides a nicer way for verifying exceptions. In addition the use of  <file_name>  is error-prone when used with other rules like TestWatcher because the order of rules is important in that case.
+Disable parts of doclint for the site's javadoc;That commit is missing to apply the doclint rules to site generation. Hence the site goal fails because of doclint issues. Now doclint is disabled for all groups but accessibility and reference for the site generation.
+Adding additional javadoc context for deprecated <method_name>, Adding <file_name> entry for pholser, Starting <version> release notes;for deprecated <method_name>, for pholser, starting release notes
+Use Field#getType();
+Move emptySuite method to <file_name>;
+beef up <file_name> with checkThat and checkPasses  ;Advance version
+Added suggestions by dsaff, Removed the Markdown syntax, changed import order, removed confusing <iden> section;
+Added <iden> check for MultiPointsMethod;Fix for issue <issue_link>
+ExpectedException allows multiple exceptions;multiple exceptions
+<method_name> creates any type;none
+Fix regression in <method_name> for paths with slashes;In JUnit <version>, <iden>(String) was changed to no longer support paths with a file separator. This has been fixed.
+Added <file_name> <iden>;
+;
+Updated to <version> final;
+minor changes in test;
+minor refactoring;
+added the since <version> where appropriate;
+adding annotation validators functionality;validators
+Added more Javadoc to <file_name> for messages and when they are displayed;Put versiontag back into <method_name>
+Added two simple tests for boolean <iden>;to test for boolean values
+Only use a property where multiple entries need syncing  ;Using properties to define a shared version across multiple dependencies causes less issues when you have multiple dependencies that need to be kept in sync
+Fix distribution management;distribution management
+<iden> added;file_name
+No  <file_name>  class, interceptors turned on by default;interceptors turned on by default
+Remove throws from <method_name>  ;
+Fixed lost names;
+Added  <file_name>  logo  ;
+Added <file_name> large logo;to enhance appearance
+Add tests for serialization of <method_name>;serialization
+Remove <iden> from <file_name> and related methods;<iden> is no longer needed
+Delete all constructors created since <version> was released. Fix style issues.;Create a <iden> for <method_name> <enter>
+Make serialization of <file_name> compatible with <version>;compatibility
+Fix method names;in <method_name>
+Improve error message when <method_name> fails;
+Make  <file_name>  abstract  ;Fix issue 30
+Create <file_name> in org.junit.runners.model and deprecate the one in org.junit.internal.runners.model. Update <file_name> to have a useful message. This allows developers who write custom runners to properly handle multiple exceptions without depending on internal classes.;Provides a more organized structure for custom runners and reduces dependencies on internal classes.
+Improve error message  ;the thrown exception has the same class but the classes are loaded from different class loaders
+Cleaning up compile errors;from reverting hamcrest change
+drastically simplified  ;
+Make  <file_name>  more beautiful by creating a <iden>  <enter> extension point in  <file_name>  <enter>;beautiful
+Incorporated <iden>'s patch for <file_name>;<enter>
+Finishing the work of <file_name>  ;
+Fix javadoc on <file_name>;-
+javadoc'ed, and with better names;
+Multiple categories on tests, inheritance, production classes in production package  ;
+Removed unused import;unused
+Multiple categories on tests, inheritance, production classes in production package;
+reuse code properly from <file_name>;CategoriesMark2
+;
+file_name takes iden target;
+Rule name changes;Fixing <file_name>
+<method_name> to replace <iden>( <file_name> );
+<file_name> takes <iden> target  ;
+Simplify <iden> implementation for backward compatibility;for backward compatibility
+Simplify <file_name> implementations;
+removed spaces before period in comment;
+no inline comment  ;comment space
+no #<iden>, no inline comment, added space in comment  ;added space in comment
+removed <file_name>, updated <file_name> and <file_name>;
+excluded internal packages;same as ANT
+Improved <iden>: <file_name>  ;fails few times
+sorting tests globally;
+first attempt at dogfooding failed;AllTests passes, but Eclipse doesn't cal <file_name>
+Brought in old <file_name> for compatibility. Renamed new <file_name> to <method_name>  ;for compatibility
+Move <file_name> to experimental;Adding javadoc
+Tweaked <file_name> a bit  ;It still seems strange that the class runner creates a statement which creates another class runner (or perhaps more class runners?)
+Comparing arrays declared as <iden> now uses array comparison. There was also a strange change to the <file_name> file that I reverted.;<none>
+'...' in <file_name>  ;
+Fix for JUnit <version> does not compile with JDK <version>;does not compile
+Enhanced missing test.jar error message;missing test.jar error message
+deleted duplicate <file_name>;
+Create a class <method_name>  ;This class keeps the data together that are needed for creating a runner for a single data set of a <file_name> test.
+Move <file_name> to package org.junit.runners.model  ;It is common to add tests to the same package as the class under test
+Revert changes of <otherCommit_link>;Still fixes <issue_link>, but the original fix was superfluous.
+Delete <file_name> files;because we're using Git now
+Deleted dead <file_name> link  ;
+Master now builds on windows;fix for <issue_link>
+Fixes <issue_link>;Fix <version> release notes, make sure markdown errors halt <file_name>
+Updated version to <version>;
+"Update version in <file_name>; delete obsolete <file_name>; remove duplication in <file_name>";obsolete, duplication
+Update <file_name>;to test 'ant profile'
+Update <iden> version, improve <file_name> javadoc, update release notes;improve <file_name> javadoc, update release notes
+further documentation cleanup;especially around <file_name>
+Adding bogus markdown;should be removed later
+Fix  <method_name>  javadoc  ;Thanks to lacostej for initial pull, Closes <pr_link>
+alpha-ready implementation of <file_name>;
+;
+Fix compilation errors;Compilation errors
+Use %n in string.format();it is generally preferable better to use %n, which will produce the platform-specific line separator
+Remove useless variable ( <pr_link> )  ;useless
+Change links to point directly to junit4/5 repos;
+Use new logo and link to new website;Updated branding and improved user experience
+Remove 11;Omit signing
+Add <file_name>  ;
+Add more contributors;increase contributors
+List more contributor names;more
+Add <file_name> <iden>;
+Add type wildcard;wildcard
+Fix indentation;Fix
+Fix <issue_link>;correct link to <version> release notes
+Fix javac build, Replace both() with <iden>()  ;Fix, <iden>()
+Fix typo in test name;Typo
+hasCause() and hasMessage() describe mismatches;Both
+Rename <iden>() to isException()/isThrowable();Following suggestion by @sf105
+Add <method_name> back;
+Add  <method_name>  and  <method_name> <enter> Closes <pr_link>;
+Update <file_name> to make the 'name' field volatile;This ensures that the name is published across threads correctly--for instance, if a parallelized runner is used.
+Added better <file_name>;
+<method_name> did not work reliably.;Was assuming that the <iden> used for JUnit could also load test classes.
+'each' instead of 'f' for the variable name;for the variable name
+Adding <iden> annotation for field parameters;Pull request <pr_link> && <pr_link>
+Remove fast-tests maven target;Many of our tests store data in static fields, so the tests cannot be run in parallel
+surefire and javadoc maven plugin updates;updates
+Reused <iden> instead of own defined class <enter> (they were the same) and relocated the changes to a better location in the file which is more inline with the rest of the file. And, of course, removed the superfluous brackets.;more inline with the rest of the file
+Removed the unnecessary <iden>: block in javadoc;unnecessary
+remove 'f' prefix from field names, add <file_name>, change <file_name>;reformatting and standardizing field names

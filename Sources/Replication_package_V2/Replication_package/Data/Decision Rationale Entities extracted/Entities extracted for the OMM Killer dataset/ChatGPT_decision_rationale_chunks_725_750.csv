@@ -1,0 +1,26 @@
+Decision;Rationale
+Fix it up via task_lock();instead
+out_of_memory() locking fix;locking fix
+lost this read_unlock();None
+Turn that interruptible sleep unto uninterruptible;so we don't get a busywait if signal_pending()
+signal to the process that no memory exists;given the constraints that the process (or the configuration of the process) has placed on the allocation behavior
+The solution is similar to what we do when running out of hugepages;similar to what we do when running out of hugepages
+adds a check before we kill processes;None
+reconstruct a list of nodes;performance considerations do not matter much
+kill the current process;this is a constrained allocation and we should (kill the current process)
+account the memory consumption of the (direct) children to the father;we do want to
+This maintains the property that fathers with too many children will still very likely be picked;whereas a single misbehaving child has the chance to be picked by the OOM killer
+If one child eats more mem than the rest of the family, it will be picked;Otherwise it's still the father and thus the whole family that gets selected
+accounting for a fourth would be better than for half of it;we could debate
+Stick to accounting for half;Significant improvement
+I added some more output;Users tend to be irritated by the choice of killed processes
+Only account for half of children's vm size in oom score calculation;This should still give the parent enough point in case of fork bombs
+Makes the kernel display the oom_score;None
+cpuset oom lock fix;None
+move the cpuset semaphore region outside the tasklist_lock region;The fix seems easy enough
+The locking needs to be changed;The oom code where the locking needs to be changed does not have access to the cpuset locks, which are internal to kernel/cpuset.c only
+Provide a couple more cpuset interface routines, available to the rest of the kernel;Take and drop the lock needed here (cpusets callback_sem)
+Optimise oom kill of current task;None
+There's no need to call schedule_timeout_interruptible();task must die ASAP
+replaced __nocast uses for gfp flags with gfp_t;it gives exactly the same warnings as far as sparse is concerned, doesn't change generated code (from gcc point of view we replaced unsigned int with typedef) and documents what's going on far better.
+fix-up schedule_timeout() usage;fix-up

@@ -1,0 +1,26 @@
+Decision;Rationale
+update comments to reflect current code;reflect current code
+Update the comments for __oom_kill_task();to reflect the code changes
+Print the name of the task invoking the OOM killer;None
+oom: kthread infinite loop fix;None
+None;badness might truncate all results to 0, thus a kernel thread might be picked first, causing an infinite loop.
+Give them high priority, so we will kill them first.;None
+handle oom_disable exiting;None
+Moving the test down;will give the desired behaviour
+"""OOM-kill"" themselves if they are exiting";None
+This is required to prevent OOM killer deadlocks;they don't actually get killed, because they're already exiting -- they're simply allowed access to memory reserves
+handle current exiting;None
+it should actually be allowed to access reserved memory;current is exiting and it should not OOM kill something else
+Can't do this via a straight check in page_alloc.c ;that would allow multiple tasks to use up reserves
+None;becomes more important in future patches
+Reduce the badness rather than disallow cpuset_excl_nodes_overlap.;Just causing.
+None;add a safety net in the presence of memory ballooners
+Deflate the balloon a bit instead of killing processes;If the resource manager inflated the balloon to a size where memory allocations can not be satisfied anymore, it is better to deflate the balloon a bit
+remove task_t, convert to struct task_struct;cleanup, remove
+cleanup: remove task_t and convert all the uses to struct task_struct;remove task_t and convert all the uses to struct task_struct
+fix typos in comments in mm/oom_kill.c;None
+fixes a few typos;in the comments in mm/oom_kill.c
+panic is preferable rather than kill some processes;there are environments where panic is preferable
+fix mm_struct reference counting bugs in mm/oom_kill.c;reference counting bugs
+Fix oom_kill_task() so it doesn't call mmput();holding tasklist_lock
+mm locking fix;oom-kill

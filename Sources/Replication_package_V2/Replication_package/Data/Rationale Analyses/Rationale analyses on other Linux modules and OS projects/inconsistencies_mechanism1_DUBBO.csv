@@ -1,0 +1,465 @@
+Decision1;Rationale1;Decision2;Rationale2;Relationship;Alpha;similarity_rationales;contradiction_rationales
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Similar;0.80831378698349;0.6109313368797302;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Similar;0.8661272525787354;0.6857527494430542;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Similar;0.8507837653160095;0.5197359323501587;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Fix NPE in <file_name>  ;Fix;Similar;0.8186846971511841;0.8382233381271362;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8388804793357849;0.7812723517417908;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8040412664413452;0.4512050449848175;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;fix typo:<iden> ( <pr_link> );typo;Similar;0.8173708915710449;0.7910392880439758;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;Make code of process callback of method cleaner in <file_name> (<pr_link>);cleaner;Similar;0.8174636960029602;0.6601856350898743;
+replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8331027030944824;0.5041261911392212;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Similar;0.8829028606414795;0.626643180847168;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Similar;0.8151060938835144;0.5776128768920898;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Similar;0.8251091241836548;0.6027729511260986;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8392517566680908;0.7846628427505493;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.803572952747345;0.6109313368797302;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;fix typo:<iden> ( <pr_link> );typo;Similar;0.8112691640853882;0.7257235050201416;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Fix <issue_link> ( <pr_link> );fix;Similar;0.820050835609436;0.6700548529624939;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;Make code of process callback of method cleaner in <file_name> (<pr_link>);cleaner;Similar;0.828903079032898;0.5660650730133057;
+Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.884833037853241;0.6726975440979004;
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Similar;0.8018043637275696;0.5912781953811646;
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;fix typo:<iden> ( <pr_link> );typo;Similar;0.8133082389831543;0.6479573845863342;
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Similar;0.8050821423530579;0.6187323331832886;
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;fix typo ( <pr_link> );typo;Similar;0.8066344857215881;0.75819993019104;
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;fix typo:<iden> ( <pr_link> );typo;Similar;0.8210673332214355;0.75819993019104;
+Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8041293621063232;0.6243098974227905;
+Remove redundant judgment ( <pr_link> );redundant;reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;Similar;0.8351635932922363;0.4588490426540375;
+Remove redundant judgment ( <pr_link> );redundant;revert (<pr_link>);performance tuning;Similar;0.8183485269546509;0.43769529461860657;
+Remove redundant judgment ( <pr_link> );redundant;Remove duplicate ut classes;duplicate;Similar;0.8617033958435059;0.7659105062484741;
+Remove redundant judgment ( <pr_link> );redundant;Remove call of deprecated method;Deprecated;Similar;0.891352653503418;0.9005244970321655;
+Remove redundant judgment ( <pr_link> );redundant;Remove unnecessary dependencies ;unnecessary;Similar;0.854846715927124;0.9226030111312866;
+Remove redundant judgment ( <pr_link> );redundant;Remove unused variable parameters in <file_name> (<pr_link>);unused;Similar;0.8669729828834534;0.8929482102394104;
+Remove redundant judgment ( <pr_link> );redundant;Remove unused code  ;unused;Similar;0.8522146940231323;0.8929482102394104;
+Remove redundant judgment ( <pr_link> );redundant;Remove unnecessary null check and fix typo;unnecessary, fix typo;Similar;0.8556498885154724;0.8103369474411011;
+Remove redundant judgment ( <pr_link> );redundant;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Similar;0.8103709816932678;0.5551414489746094;
+Remove redundant judgment ( <pr_link> );redundant;Reduce object allocation for <method_name>;"-
+None";Similar;0.883053719997406;0.8509350419044495;0.522639274597168
+Remove redundant judgment ( <pr_link> );redundant;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8752053380012512;0.5700613856315613;
+Remove redundant judgment ( <pr_link> );redundant;Remove unused import for unit test;clear unused import;Similar;0.8218733072280884;0.7533678412437439;
+Remove redundant judgment ( <pr_link> );redundant;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.9469007849693298;0.31306540966033936;
+add <iden> for dynamically created class;dynamically created;add switch of generic invocation with class info  ;fix;Similar;0.8804755806922913;0.8109467029571533;
+add <iden> for dynamically created class;dynamically created;add start status for <iden> server  ;-;Similar;0.8030076026916504;0.7704287767410278;
+add <iden> for dynamically created class;dynamically created;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8085769414901733;0.598954439163208;
+fix test case DUBBO-135  ;test case glitch fix;Fix issue#5411 (<pr_link>);Fix;Similar;0.801507294178009;0.709597110748291;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Similar;0.9275956749916076;0.5294555425643921;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;add comment for <file_name>;see <issue_link>;Similar;0.8754220604896545;0.7003580927848816;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Save <file_name> allocation;Performance tuning;Similar;0.8102825284004211;0.6507061719894409;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Similar;0.8432356119155884;0.7284587621688843;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Similar;0.8741880059242249;0.7596575021743774;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Fix NPE in <file_name>  ;Fix;Similar;0.8832865953445435;0.8598103523254395;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Similar;0.8903182744979858;0.6969242691993713;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8750016689300537;0.6804057359695435;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.80704665184021;0.6551441550254822;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;Similar;0.8286387920379639;0.7389040589332581;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.876034140586853;0.6221616864204407;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8904160261154175;0.6857527494430542;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;fix typo ( <pr_link> );typo;Similar;0.8888777494430542;0.626356840133667;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Enable <file_name> ( <pr_link> );Enable;Similar;0.8638418912887573;0.7349613308906555;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8587825298309326;0.6470663547515869;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;fix typo:<iden> ( <pr_link> );typo;Similar;0.9208295345306396;0.626356840133667;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.9177072048187256;0.8328744173049927;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;add <file_name> rule to check import order;<pr_link>;Similar;0.8329818248748779;0.6858243346214294;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Fix <issue_link> ( <pr_link> );fix;Similar;0.8613353967666626;0.8598103523254395;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Make code of process callback of method cleaner in <file_name> (<pr_link>);cleaner;Similar;0.8384705781936646;0.6481437683105469;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8183925747871399;0.6177486181259155;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8620746731758118;0.8209810256958008;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.9426419734954834;0.7265825867652893;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;modify consumer  <file_name> : param type from string to map;param type from string to map;Similar;0.8127002716064453;0.6317504644393921;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8653587102890015;0.633454442024231;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8501008749008179;0.6228443384170532;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.859062135219574;0.859091579914093;
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8857384324073792;0.5511336326599121;
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;Similar;0.8435716032981873;0.5025067925453186;
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;Remove unused variable parameters in <file_name> (<pr_link>);unused;Similar;0.860373854637146;0.4860301911830902;
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;Reduce object allocation for <method_name>;"-
+None";Similar;0.8739674687385559;0.4290010929107666;0.6910886168479919
+reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8346255421638489;0.43842315673828125;
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;Similar;0.8414785265922546;0.650315523147583;
+Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8467710018157959;0.8093279600143433;
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;Remove call of deprecated method;Deprecated;Similar;0.8021038174629211;0.7067365646362305;
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;Remove unnecessary null check and fix typo;unnecessary, fix typo;Similar;0.8071404695510864;0.697199821472168;
+Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;Reduce object allocation for <method_name>;"-
+None";Similar;0.8347072601318359;0.4975349009037018;0.8485833406448364
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;add comment for <file_name>;see <issue_link>;Similar;0.8352023363113403;0.6512123942375183;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Save <file_name> allocation;Performance tuning;Similar;0.8068352937698364;0.5033021569252014;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Similar;0.8133640885353088;0.5907158255577087;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Similar;0.8613532185554504;0.5959713459014893;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Fix NPE in <file_name>  ;Fix;Similar;0.8753676414489746;0.6187323331832886;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Similar;0.8214342594146729;0.5586873292922974;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Add <file_name> name and fix <file_name> error  ;error;Similar;0.852455735206604;0.6011109352111816;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.8168858885765076;0.632564902305603;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;Similar;0.8060635924339294;0.5712549090385437;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8395475149154663;0.6293966770172119;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8398237228393555;0.5197359323501587;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;fix typo ( <pr_link> );typo;Similar;0.8878651857376099;0.6481857299804688;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Enable <file_name> ( <pr_link> );Enable;Similar;0.8319600820541382;0.5194357633590698;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;fix typo:<iden> ( <pr_link> );typo;Similar;0.9215298295021056;0.6481857299804688;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8517658710479736;0.6162257194519043;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;add <file_name> rule to check import order;<pr_link>;Similar;0.8177914619445801;0.6487969160079956;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Fix <issue_link> ( <pr_link> );fix;Similar;0.859386146068573;0.6187323331832886;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.820561408996582;0.5895075798034668;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8058432340621948;0.5036970376968384;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.9079396724700928;0.49405696988105774;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.827604353427887;0.5412712097167969;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8298697471618652;0.6020206212997437;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8285890817642212;0.5136499404907227;
+fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8330127000808716;0.3981856107711792;
+add comment for <file_name>;see <issue_link>;add start status for <iden> server  ;-;Similar;0.8113727569580078;0.724563479423523;
+add comment for <file_name>;see <issue_link>;Save <file_name> allocation;Performance tuning;Similar;0.8674560189247131;0.6206058263778687;
+add comment for <file_name>;see <issue_link>;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Similar;0.8684264421463013;0.8273607492446899;
+add comment for <file_name>;see <issue_link>;Fix NPE in <file_name>  ;Fix;Similar;0.8780645728111267;0.7424383759498596;
+add comment for <file_name>;see <issue_link>;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Similar;0.8718405961990356;0.788552463054657;
+add comment for <file_name>;see <issue_link>;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8407342433929443;0.6742194890975952;
+add comment for <file_name>;see <issue_link>;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.8014110326766968;0.7738930583000183;
+add comment for <file_name>;see <issue_link>;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.9045333862304688;0.63994961977005;
+add comment for <file_name>;see <issue_link>;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.886055588722229;0.724563479423523;
+add comment for <file_name>;see <issue_link>;Enable <file_name> ( <pr_link> );Enable;Similar;0.9097501039505004;0.7136344909667969;
+add comment for <file_name>;see <issue_link>;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8559370040893555;0.7543313503265381;
+add comment for <file_name>;see <issue_link>;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.9200194478034972;0.7887626886367798;
+add comment for <file_name>;see <issue_link>;add <file_name> rule to check import order;<pr_link>;Similar;0.8486656546592712;0.9067232608795166;
+add comment for <file_name>;see <issue_link>;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8064824342727661;0.6806399822235107;
+add comment for <file_name>;see <issue_link>;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8841813802719116;0.6635295152664185;
+add comment for <file_name>;see <issue_link>;Correct <file_name> version  ;Correct;Similar;0.8346074819564819;0.6396697759628296;
+add comment for <file_name>;see <issue_link>;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8244737982749939;0.6872921586036682;
+add comment for <file_name>;see <issue_link>;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.927472710609436;0.666441023349762;
+add comment for <file_name>;see <issue_link>;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.801719605922699;0.7363502979278564;
+add comment for <file_name>;see <issue_link>;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8317253589630127;0.7589102983474731;
+add comment for <file_name>;see <issue_link>;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8053708076477051;0.5650902986526489;
+add start status for <iden> server  ;-;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8080805540084839;0.4512050449848175;
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8539060950279236;0.8885270357131958;
+Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> );Consider removing <iden> later  ;<iden> is unstable;Similar;0.8290210962295532;0.4939349591732025;
+Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> );Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8051894903182983;0.6363900899887085;
+Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> );remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8198131322860718;0.5939207077026367;
+revert (<pr_link>);performance tuning;fix typo ( <pr_link> );typo;Similar;0.8251420259475708;0.5471994876861572;
+revert (<pr_link>);performance tuning;Enable <file_name> ( <pr_link> );Enable;Similar;0.8060706853866577;0.622632622718811;
+revert (<pr_link>);performance tuning;Fix <issue_link> ( <pr_link> );fix;Similar;0.8431588411331177;0.6748059988021851;
+revert (<pr_link>);performance tuning;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8053336143493652;0.3983137309551239;
+revert (<pr_link>);performance tuning;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );Similar;0.8345810174942017;0.4354338049888611;
+Save <file_name> allocation;Performance tuning;Fix NPE in <file_name>  ;Fix;Similar;0.84772789478302;0.6748059988021851;
+Save <file_name> allocation;Performance tuning;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.8095772862434387;0.5378116369247437;
+Save <file_name> allocation;Performance tuning;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8027963042259216;0.5475368499755859;
+Save <file_name> allocation;Performance tuning;Enable <file_name> ( <pr_link> );Enable;Similar;0.8844659924507141;0.622632622718811;
+Save <file_name> allocation;Performance tuning;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8491191267967224;0.6730895638465881;
+Save <file_name> allocation;Performance tuning;Correct <file_name> version  ;Correct;Similar;0.8708794116973877;0.5907812714576721;
+Save <file_name> allocation;Performance tuning;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8421311378479004;0.45629751682281494;
+Save <file_name> allocation;Performance tuning;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8079270124435425;0.6646641492843628;0.5324980616569519
+fix conflicts after merged master;after merged master;Fix UT problems after structure change  ;after structure change;Similar;0.8531420230865479;0.760002851486206;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Fix NPE in <file_name>  ;Fix;Similar;0.8260093331336975;0.82145756483078;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Similar;0.8320412635803223;0.7710174918174744;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8190502524375916;0.7875387668609619;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8136966228485107;0.8374423980712891;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Enable <file_name> ( <pr_link> );Enable;Similar;0.8248770833015442;0.7865192890167236;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;fix typo:<iden> ( <pr_link> );typo;Similar;0.8206086158752441;0.8018568754196167;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8469340801239014;0.8145132064819336;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;add <file_name> rule to check import order;<pr_link>;Similar;0.821938693523407;0.8119400143623352;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8475583791732788;0.7472565174102783;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8003053069114685;0.6108626127243042;
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8857403993606567;0.5445026755332947;
+Check config instance in <file_name> before create a new one;"-
+
+None";Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;Similar;0.8005728125572205;0.6327900886535645;0.512087881565094
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;Fix comments;Fix;Similar;0.800026535987854;0.4312191307544708;
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;Enhancement;file_name, pr_link;Similar;0.8073875308036804;0.45978766679763794;
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;Fix <issue_link> ( <pr_link> );fix;Similar;0.8253578543663025;0.4312191307544708;
+Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;Fix typo;typo;Similar;0.8026461601257324;0.35361963510513306;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;fix typo ( <pr_link> );typo;Similar;0.8699032664299011;0.5809144973754883;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Enable <file_name> ( <pr_link> );Enable;Similar;0.8043807744979858;0.6097137331962585;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8057307004928589;0.7459455132484436;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;fix typo:<iden> ( <pr_link> );typo;Similar;0.8993447422981262;0.5809144973754883;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Fix <issue_link> ( <pr_link> );fix;Similar;0.8948224186897278;0.687451183795929;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.8288543224334717;0.5875406265258789;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8665330410003662;0.6574529409408569;
+support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8068572282791138;0.8208481073379517;
+Fix configurator bug;configurator;Fix comments;Fix;Similar;0.8212873935699463;0.8218051195144653;
+Fix configurator bug;configurator;Fix compilation problem;Fix;Similar;0.8377902507781982;0.8218051195144653;
+Fix configurator bug;configurator;fix compiler bug;bug;Similar;0.8822221159934998;0.6379483938217163;
+Fix configurator bug;configurator;fix typo ( <pr_link> );typo;Similar;0.8136703968048096;0.720587968826294;
+Fix configurator bug;configurator;Fix typo;typo;Similar;0.8260174989700317;0.720587968826294;
+Fix NPE in <file_name>  ;Fix;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Similar;0.8171052932739258;0.7213870286941528;
+Fix NPE in <file_name>  ;Fix;Add <file_name> name and fix <file_name> error  ;error;Similar;0.862770140171051;0.8203036189079285;
+Fix NPE in <file_name>  ;Fix;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.8672488927841187;0.7262778282165527;
+Fix NPE in <file_name>  ;Fix;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8437533378601074;0.5771861672401428;
+Fix NPE in <file_name>  ;Fix;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8070093393325806;0.8382233381271362;
+Fix NPE in <file_name>  ;Fix;fix typo ( <pr_link> );typo;Similar;0.8777614831924438;0.75819993019104;
+Fix NPE in <file_name>  ;Fix;Enable <file_name> ( <pr_link> );Enable;Similar;0.8340967893600464;0.8323961496353149;
+Fix NPE in <file_name>  ;Fix;fix typo:<iden> ( <pr_link> );typo;Similar;0.8676317930221558;0.75819993019104;
+Fix NPE in <file_name>  ;Fix;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8852519989013672;0.8519042730331421;
+Fix NPE in <file_name>  ;Fix;Fix <issue_link> ( <pr_link> );fix;Similar;0.8223879337310791;1.0;
+Fix NPE in <file_name>  ;Fix;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.8309677243232727;0.8015164732933044;
+Fix NPE in <file_name>  ;Fix;Correct <file_name> version  ;Correct;Similar;0.8010768294334412;0.7924162745475769;
+Fix NPE in <file_name>  ;Fix;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8595615029335022;0.6243098974227905;
+Fix NPE in <file_name>  ;Fix;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8530440330505371;0.49866005778312683;
+Fix comments;Fix;Fix compilation problem;Fix;Similar;0.8748149871826172;1.0;
+Fix comments;Fix;fix typo ( <pr_link> );typo;Similar;0.8307604193687439;0.75819993019104;
+Fix comments;Fix;Fix <issue_link> ( <pr_link> );fix;Similar;0.8464018702507019;1.0;
+Fix comments;Fix;Fix typo;typo;Similar;0.8799306154251099;0.75819993019104;
+Remove useless config item;useless;Remove call of deprecated method;Deprecated;Similar;0.8334131836891174;0.8086054921150208;
+Remove useless config item;useless;Remove unnecessary dependencies ;unnecessary;Similar;0.8658512830734253;0.9355727434158325;
+Remove useless config item;useless;dont set port attribute; <file_name>  is null;Similar;0.8005014657974243;0.7258070707321167;
+Remove useless config item;useless;Remove unused code  ;unused;Similar;0.8627786636352539;0.8847368955612183;
+Remove useless config item;useless;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8540587425231934;0.4076976776123047;
+Fix compilation problem;Fix;Fix UT problems after structure change  ;after structure change;Similar;0.8160209059715271;0.7223808169364929;
+Fix compilation problem;Fix;fix compiler bug;bug;Similar;0.8600636720657349;0.7695163488388062;
+Fix compilation problem;Fix;fix comment grammar error;to correct the grammar error;Similar;0.8003424406051636;0.5715889930725098;
+Fix compilation problem;Fix;Fix typo;typo;Similar;0.8282874226570129;0.75819993019104;
+Remove duplicate ut classes;duplicate;Remove call of deprecated method;Deprecated;Similar;0.8728129863739014;0.7725299596786499;
+Remove duplicate ut classes;duplicate;Remove unused code  ;unused;Similar;0.8679175972938538;0.763927698135376;
+Remove duplicate ut classes;duplicate;Reduce object allocation for <method_name>;"-
+None";Similar;0.8627358078956604;0.7661874294281006;0.7389117479324341
+Remove duplicate ut classes;duplicate;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8255396485328674;0.6139971613883972;
+Remove duplicate ut classes;duplicate;Remove unused import for unit test;clear unused import;Similar;0.8331428170204163;0.5885973572731018;
+Remove duplicate ut classes;duplicate;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8728954792022705;0.46667635440826416;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Add <file_name> name and fix <file_name> error  ;error;Similar;0.8023581504821777;0.6569347381591797;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8272376656532288;0.5749576091766357;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8239907026290894;0.7856348752975464;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Enable <file_name> ( <pr_link> );Enable;Similar;0.8312979936599731;0.7700814008712769;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8233051300048828;0.7371528744697571;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;fix typo:<iden> ( <pr_link> );typo;Similar;0.8047764301300049;0.7333005666732788;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8980550765991211;0.7762287259101868;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;add <file_name> rule to check import order;<pr_link>;Similar;0.8048262596130371;0.7708600759506226;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8174830675125122;0.5756727457046509;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8750615119934082;0.7050044536590576;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8556146621704102;0.6091213226318359;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;modify consumer  <file_name> : param type from string to map;param type from string to map;Similar;0.81446373462677;0.6545299887657166;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8896163702011108;0.5038604736328125;
+Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8558299541473389;0.6795099973678589;
+Add <file_name> name and fix <file_name> error  ;error;Fixed typo in \<file_name\>  ;mDeamo;Similar;0.8202341794967651;0.6763260364532471;
+Add <file_name> name and fix <file_name> error  ;error;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Similar;0.8156555891036987;0.48764318227767944;
+Add <file_name> name and fix <file_name> error  ;error;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8057922124862671;0.7812723517417908;
+Add <file_name> name and fix <file_name> error  ;error;fix typo ( <pr_link> );typo;Similar;0.8341369032859802;0.7917923331260681;
+Add <file_name> name and fix <file_name> error  ;error;fix typo:<iden> ( <pr_link> );typo;Similar;0.8355920314788818;0.7917923331260681;
+Add <file_name> name and fix <file_name> error  ;error;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8499083518981934;0.7720443606376648;
+Add <file_name> name and fix <file_name> error  ;error;Fix <issue_link> ( <pr_link> );fix;Similar;0.8135133981704712;0.8203036189079285;
+Add <file_name> name and fix <file_name> error  ;error;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8664259910583496;0.5700438618659973;
+Add <file_name> name and fix <file_name> error  ;error;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.825069785118103;0.40485095977783203;
+Remove call of deprecated method;Deprecated;Remove unnecessary dependencies ;unnecessary;Similar;0.841232419013977;0.8742986917495728;
+Remove call of deprecated method;Deprecated;Remove unused code  ;unused;Similar;0.90840482711792;0.8271223902702332;
+Remove call of deprecated method;Deprecated;Remove unnecessary null check and fix typo;unnecessary, fix typo;Similar;0.8131501078605652;0.8138958215713501;
+Remove call of deprecated method;Deprecated;Reduce object allocation for <method_name>;"-
+None";Similar;0.8616749048233032;0.7497019171714783;
+Remove call of deprecated method;Deprecated;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.9198621511459352;0.5911228656768799;
+Remove call of deprecated method;Deprecated;Remove unused import for unit test;clear unused import;Similar;0.8554928302764893;0.6892186999320984;
+Remove call of deprecated method;Deprecated;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8932455778121948;0.38235145807266235;
+Remove unnecessary dependencies ;unnecessary;Remove unused code  ;unused;Similar;0.8477090001106262;0.8948167562484741;
+Remove unnecessary dependencies ;unnecessary;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8425659537315369;0.517672061920166;
+Remove unnecessary dependencies ;unnecessary;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8156195282936096;0.3015427887439728;
+Fixed typo in \<file_name\>  ;mDeamo;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;Similar;0.8667492866516113;0.5601152181625366;
+Fixed typo in \<file_name\>  ;mDeamo;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8195769190788269;0.7412339448928833;
+Fixed typo in \<file_name\>  ;mDeamo;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8256206512451172;0.5112836360931396;
+Fixed typo in \<file_name\>  ;mDeamo;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.806384801864624;0.549184262752533;
+Ignore unit test <file_name> (no zk server);no zk server;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Similar;0.8002029657363892;0.4556099474430084;
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;fix typo:<iden> ( <pr_link> );typo;Similar;0.8038756847381592;0.6585149765014648;
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8039456009864807;0.7393845319747925;
+Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.823074221611023;0.6313735246658325;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;"add the router key in <file_name> (<pr_link>)
+";-;Similar;0.8836843967437744;0.4512050449848175;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Enable <file_name> ( <pr_link> );Enable;Similar;0.8304004669189453;0.5421996712684631;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.834896981716156;0.7790582180023193;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.870215654373169;0.6748607158660889;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;add <file_name> rule to check import order;<pr_link>;Similar;0.8236624002456665;0.655403196811676;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8419875502586365;0.7445620894432068;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8431856036186218;0.5315556526184082;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8205621242523193;0.5127995014190674;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;modify consumer  <file_name> : param type from string to map;param type from string to map;Similar;0.8184359669685364;0.6688401699066162;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8646414279937744;0.7209818363189697;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8212190270423889;0.7314746379852295;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8243335485458374;0.6762831211090088;
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8066986203193665;0.3640343248844147;
+"add the router key in <file_name> (<pr_link>)
+";-;Enable <file_name> ( <pr_link> );Enable;Similar;0.8647110462188721;0.8907932043075562;
+"add the router key in <file_name> (<pr_link>)
+";-;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8181675672531128;0.6048445701599121;
+"add the router key in <file_name> (<pr_link>)
+";-;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8747716546058655;0.7912052869796753;
+"add the router key in <file_name> (<pr_link>)
+";-;add <file_name> rule to check import order;<pr_link>;Similar;0.8242629766464233;0.7444562911987305;
+"add the router key in <file_name> (<pr_link>)
+";-;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8149914145469666;0.4338582754135132;
+"add the router key in <file_name> (<pr_link>)
+";-;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8922827243804932;0.8231077194213867;
+"add the router key in <file_name> (<pr_link>)
+";-;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8295881152153015;0.5041261911392212;
+"add the router key in <file_name> (<pr_link>)
+";-;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8597115278244019;0.3733065724372864;
+"add the router key in <file_name> (<pr_link>)
+";-;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8307041525840759;0.517568826675415;
+"add the router key in <file_name> (<pr_link>)
+";-;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8341041803359985;0.5296376943588257;
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;fix wrong telnet command package;wrong;Similar;0.934408962726593;0.7186780571937561;
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;Fix hessian-lite spelling mistake  ;spelling mistake;Similar;0.8091928958892822;0.739835798740387;
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;Similar;0.8804488182067871;0.7291805148124695;
+fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8099631071090698;0.5906966924667358;
+fix wrong telnet command package;wrong;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8129779100418091;0.8275613784790039;
+fix typo ( <pr_link> );typo;Enable <file_name> ( <pr_link> );Enable;Similar;0.8142040967941284;0.7239996194839478;
+fix typo ( <pr_link> );typo;fix typo:<iden> ( <pr_link> );typo;Similar;0.968956470489502;1.0;
+fix typo ( <pr_link> );typo;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8437175750732422;0.744056224822998;
+fix typo ( <pr_link> );typo;Fix <issue_link> ( <pr_link> );fix;Similar;0.93394935131073;0.75819993019104;
+fix typo ( <pr_link> );typo;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.8545570969581604;0.7843494415283203;
+fix typo ( <pr_link> );typo;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8776927590370178;0.5544750690460205;
+fix typo ( <pr_link> );typo;Fix typo;typo;Similar;0.9157962203025818;1.0;
+Enable <file_name> ( <pr_link> );Enable;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Similar;0.8684676885604858;0.6875578165054321;
+Enable <file_name> ( <pr_link> );Enable;fix typo:<iden> ( <pr_link> );typo;Similar;0.815134584903717;0.7239996194839478;
+Enable <file_name> ( <pr_link> );Enable;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.8872168064117432;0.8004581332206726;
+Enable <file_name> ( <pr_link> );Enable;Fix <issue_link> ( <pr_link> );fix;Similar;0.8135939240455627;0.8323961496353149;
+Enable <file_name> ( <pr_link> );Enable;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8985073566436768;0.9070437550544739;
+Enable <file_name> ( <pr_link> );Enable;Correct <file_name> version  ;Correct;Similar;0.922688126564026;0.9114340543746948;
+Enable <file_name> ( <pr_link> );Enable;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8405387997627258;0.5021300315856934;
+Enable <file_name> ( <pr_link> );Enable;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8786813020706177;0.42542585730552673;
+Enable <file_name> ( <pr_link> );Enable;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8017197251319885;0.5985727906227112;
+Enable <file_name> ( <pr_link> );Enable;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.889263391494751;0.6391083598136902;0.5981388688087463
+Enable <file_name> ( <pr_link> );Enable;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8332009315490723;0.7197391390800476;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.809593677520752;0.7325915694236755;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;add <file_name> rule to check import order;<pr_link>;Similar;0.8014193773269653;0.7773067951202393;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8579654097557068;0.6235432028770447;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8113404512405396;0.7001327276229858;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8197970390319824;0.753840446472168;
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8763723373413086;0.6636301279067993;0.5005987882614136
+Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8148207664489746;0.5530272126197815;
+Remove unused variable parameters in <file_name> (<pr_link>);unused;Remove unused code  ;unused;Similar;0.8071141839027405;1.0;
+Remove unused variable parameters in <file_name> (<pr_link>);unused;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Similar;0.8184298276901245;0.5407501459121704;
+Remove unused variable parameters in <file_name> (<pr_link>);unused;Reduce object allocation for <method_name>;"-
+None";Similar;0.8902338743209839;0.9139323830604553;
+Remove unused variable parameters in <file_name> (<pr_link>);unused;Remove unused import for unit test;clear unused import;Similar;0.8123664855957031;0.7636955976486206;
+Remove unused variable parameters in <file_name> (<pr_link>);unused;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8586018681526184;0.33100882172584534;
+fix typo:<iden> ( <pr_link> );typo;use revision in  <file_name>  ( <pr_link> );Revision use;Similar;0.840624213218689;0.744056224822998;
+fix typo:<iden> ( <pr_link> );typo;Fix <issue_link> ( <pr_link> );fix;Similar;0.9139914512634276;0.75819993019104;
+fix typo:<iden> ( <pr_link> );typo;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.8707234263420105;0.7843494415283203;
+fix typo:<iden> ( <pr_link> );typo;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8922238349914551;0.5544750690460205;
+fix typo:<iden> ( <pr_link> );typo;Fix typo;typo;Similar;0.8558938503265381;1.0;
+fix typo:<iden> ( <pr_link> );typo;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8109784722328186;0.5233287811279297;0.6274689435958862
+fix typo:<iden> ( <pr_link> );typo;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8150671124458313;0.5622863173484802;
+Fix issue#5411 (<pr_link>);Fix;Fix <issue_link> ( <pr_link> );fix;Similar;0.8178542256355286;1.0;
+use revision in  <file_name>  ( <pr_link> );Revision use;add <file_name> rule to check import order;<pr_link>;Similar;0.8061293959617615;0.7809522151947021;
+use revision in  <file_name>  ( <pr_link> );Revision use;Fix <issue_link> ( <pr_link> );fix;Similar;0.811432421207428;0.8519042730331421;
+use revision in  <file_name>  ( <pr_link> );Revision use;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8693093061447144;0.8180102109909058;
+use revision in  <file_name>  ( <pr_link> );Revision use;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8748098611831665;0.6633690595626831;
+use revision in  <file_name>  ( <pr_link> );Revision use;modify consumer  <file_name> : param type from string to map;param type from string to map;Similar;0.8234776854515076;0.6409870386123657;
+use revision in  <file_name>  ( <pr_link> );Revision use;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.9112882018089294;0.6562113165855408;
+use revision in  <file_name>  ( <pr_link> );Revision use;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.825800895690918;0.67138671875;
+use revision in  <file_name>  ( <pr_link> );Revision use;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8112945556640625;0.7525033354759216;
+use revision in  <file_name>  ( <pr_link> );Revision use;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8465692400932312;0.5714977979660034;
+add <file_name> rule to check import order;<pr_link>;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8202071785926819;0.6730965375900269;
+add <file_name> rule to check import order;<pr_link>;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.814853310585022;0.6141668558120728;
+add <file_name> rule to check import order;<pr_link>;modify consumer  <file_name> : param type from string to map;param type from string to map;Similar;0.8000408411026001;0.7548098564147949;
+add <file_name> rule to check import order;<pr_link>;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8387595415115356;0.6835878491401672;
+add <file_name> rule to check import order;<pr_link>;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8342767953872681;0.6937899589538574;
+Fix <issue_link> ( <pr_link> );fix;Fix NPE when unexport <iden> ( <pr_link> );NPE;Similar;0.8466060161590576;0.8015164732933044;
+Fix <issue_link> ( <pr_link> );fix;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8940883874893188;0.6243098974227905;
+Fix <issue_link> ( <pr_link> );fix;Fix typo;typo;Similar;0.8454862236976624;0.75819993019104;
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;Similar;0.9616786241531372;0.6419470310211182;
+Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8523600101470947;0.5419049859046936;
+Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8366470336914062;0.6593414545059204;
+Fix hessian-lite spelling mistake  ;spelling mistake;fix comment grammar error;to correct the grammar error;Similar;0.803668200969696;0.6921724081039429;
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Similar;0.8291953206062317;0.5866323709487915;
+fix publish null value when use consul config center  ;fix publish null value;Remove unnecessary null check and fix typo;unnecessary, fix typo;Similar;0.8456501960754395;0.7538692355155945;
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Similar;0.8156508803367615;0.4889809191226959;
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Similar;0.8280006647109985;0.58294677734375;
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8494306802749634;0.47571861743927;
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8143294453620911;0.5700764060020447;
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.821648359298706;0.7180643081665039;
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8328003883361816;0.6598736047744751;
+Correct <file_name> version  ;Correct;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8398855924606323;0.518363356590271;
+Remove unused code  ;unused;Reduce object allocation for <method_name>;"-
+None";Similar;0.8398367166519165;0.9139323830604553;
+Remove unused code  ;unused;Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8908120393753052;0.5258044600486755;
+Remove unused code  ;unused;Remove unused import for unit test;clear unused import;Similar;0.861553966999054;0.7636955976486206;
+Remove unused code  ;unused;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.87462317943573;0.33100882172584534;
+Remove unnecessary null check and fix typo;unnecessary, fix typo;Remove unused import for unit test;clear unused import;Similar;0.8058973550796509;0.7068569660186768;
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8331328630447388;0.6129193902015686;
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8189122080802917;0.6396923661231995;
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.815468430519104;0.7065840363502502;
+<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8527349233627319;0.44533613324165344;
+remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8131699562072754;0.5412749648094177;
+modify consumer  <file_name> : param type from string to map;param type from string to map;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Similar;0.8151147365570068;0.6774095296859741;
+fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;fix protocol register set false not work ( <pr_link> );not work;Similar;0.8714758157730103;0.7434687614440918;
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Similar;0.8121321797370911;0.7809131145477295;
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Similar;0.8116360306739807;0.7264185547828674;
+Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.804818868637085;0.28094223141670227;
+Reduce object allocation for <method_name>;"-
+None";Refactor: remove;and replace it with <method_name> ( <pr_link> );Similar;0.8075862526893616;0.4715743958950043;0.644738495349884
+Reduce object allocation for <method_name>;"-
+None";Remove unused import for unit test;clear unused import;Similar;0.8178287744522095;0.7698398232460022;
+Reduce object allocation for <method_name>;"-
+None";remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8969687223434448;0.27918529510498047;0.5987668037414551
+Refactor: remove;and replace it with <method_name> ( <pr_link> );Remove unused import for unit test;clear unused import;Similar;0.8008731007575989;0.45252639055252075;
+Refactor: remove;and replace it with <method_name> ( <pr_link> );remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8866569399833679;0.5840358138084412;
+Remove unused import for unit test;clear unused import;remove the space ( <pr_link> );follow up for pr#4339;Similar;0.8242831230163574;0.26162993907928467;
+switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8345868587493896;0.33977481722831726;
+Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation;Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8008075952529907;0.4206172823905945;
+Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";Change <iden> to regular list in <file_name> (<pr_link>);to regular list;Similar;0.8483456373214722;0.45102694630622864;0.9034736156463623

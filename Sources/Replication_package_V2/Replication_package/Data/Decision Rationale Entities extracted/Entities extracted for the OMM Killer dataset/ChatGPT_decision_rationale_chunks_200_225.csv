@@ -1,0 +1,26 @@
+Decision;Rationale
+Fix this by always printing the nodemask;always printing the nodemask
+None;None
+None;too restrictive
+The mask is printed even for NUMA configurations ;To prevent ugly ifdefs
+fix oom_killer_disable vs;None
+None;we no longer need to warn when we raced with disabling the OOM killer
+not invoke OOM killer as much as possible;there is simply no reliable way to detect whether more reclaim retries make sense
+allow oom reaper also to tasks which share their mm with kthreads;This means that we can finally allow
+make sure that kthreads will not refault oom reaped memory;not refault oom reaped memory
+Make sure that no kthread context (users of use_mm) can ever see corrupted data because of the oom reaper and hook into the page fault path;checking MMF_UNSTABLE mm flag
+SIGBUS is triggered;the flag is set
+None;Regular tasks do not need this protection because all which share the mm are killed when the mm is reaped and so the corruption will not outlive them
+Enforce the API to always work on the current;There are no users of exit_oom_victim on !current task anymore
+Let's get rid of the signal_struct counter;We do not need it anymore
+None;exit_oom_victim doesn't hide the process from the oom killer anymore
+Rename MMF_OOM_REAPED to MMF_OOM_SKIP;Make it more generic
+__oom_reap_task_mm as well as oom_scan_process_thread do not have to rely on find_lock_task_mm anymore;they will have a reliable reference to the mm struct
+All the OOM specific communication inside the OOM killer can be done via tsk->signal->oom_mm;N/A
+Increasing the signal_struct for something as unlikely as the oom killer;far from ideal but this approach will make the code much more reasonable and long term we even might want to move task->mm into the signal_struct anyway
+do not attempt to reap a task twice;do not attempt to reap a task twice
+reduce find_lock_task_mm() usage;mm, oom_reaper
+__oom_reap_task() can be simplified a bit if it receives a valid mm from oom_reap_task();also uses that mm when __oom_reap_task() failed
+Drop one find_lock_task_mm() call and make the __oom_reap_task() code flow easier to follow;None
+Pinning mm's mm_count for longer time;not really harmful because this will not pin much memory
+fix task_will_free_mem() comment;None

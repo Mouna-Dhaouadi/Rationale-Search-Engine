@@ -1,0 +1,28 @@
+Decision;Rationale
+None;None
+None;Most gfp.h inclusion directives were ignored as stuff from gfp.h was usually wildly available and often used in preprocessor macros.
+Build test were done on the following configurations and failures were fixed ;None
+CONFIG_GCOV_KERNEL was turned off for all tests;"my distributed build env didn't work with gcov compiles
+
+Decision: a few more options had to be turned off depending on archs"
+percpu.h modifications were reverted;so that it could be applied as a separate patch and serve as bisection point
+I'm fairly confident about the coverage of this conversion patch;Given the fact that I had only a couple of failures from tests on step 6
+fix oom kill behavior;None
+handle panic_on_oom=always case;None
+clean up mm_counter;None
+modify implementation of per-mm counter;reducing patch size in future patch
+fix oom killing a child process in an other cgroup;memcg, oom killing, child process, other cgroup
+This patch fixes it.;None
+avoid oom-killing innocent task in case of use_hierarchy;None
+fix for this bug;fix
+fixes the arg for mem_cgroup_print_oom_info();fixes
+Print information of mem_cgroup;The task being killed, not current, belongs to mem_cgroup
+fix NUMA constraint check with nodemask;NUMA constraint check with nodemask
+Fix node-oriented allocation handling in oom-kill.c;bugfix
+adds vsz and rss information to the oom log;to help this analysis
+This patch displays the oom killer header whenever it panics;bug reports can include pertinent information to debug the issue, if possible
+Don't need to care multi thread in here;None
+oom_score should be calculated as per-process;None
+select_bad_process();it makes consistency more and makes speed up
+select_bad_process() must select killable task;killable task
+it should be per-process value;OOM-killer kill a process, not thread

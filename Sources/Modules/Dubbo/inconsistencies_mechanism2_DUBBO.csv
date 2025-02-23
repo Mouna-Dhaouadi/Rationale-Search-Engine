@@ -1,0 +1,72 @@
+Decision1;Rationale1;Decision2;Rationale2;Relationship;Alpha;similarity_rationales
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;Contradicts;0.8084060549736023;0.5974264740943909
+Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8991764783859253;0.6970428228378296
+add <iden> for dynamically created class;dynamically created;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8413644433021545;0.5398381352424622
+add <iden> for dynamically created class;dynamically created;rename package name from <iden> to impl;-;Contradicts;0.964984655380249;0.7704286575317383
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.9614311456680298;0.24888098239898682
+"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9146355390548706;0.6813156604766846
+add switch of generic invocation with class info  ;fix;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9165763854980468;0.654775857925415
+add switch of generic invocation with class info  ;fix;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.813592255115509;0.6677268147468567
+add comment for <file_name>;see <issue_link>;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.9962360262870787;0.5270093083381653
+add start status for <iden> server  ;-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8858646154403687;0.5989702939987183
+add start status for <iden> server  ;-;Close all servers/ports after tests finish  ;Ensure proper cleanup;Contradicts;0.8400682210922241;0.4728875756263733
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9625242948532104;0.6004143953323364
+add gpg signing plugin for protobuf compiler ;for protobuf compiler;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8069577813148499;0.3106857240200043
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.8508493304252625;0.27083319425582886
+implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8744178414344788;0.5637588500976562
+Save <file_name> allocation;Performance tuning;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.8602511286735535;0.2824694812297821
+Save <file_name> allocation;Performance tuning;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.848916232585907;0.691650927066803
+Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;Ignore unit test <file_name> (no zk server);no zk server;Contradicts;0.9365214705467224;0.46215760707855225
+Add <file_name> name and fix <file_name> error  ;error;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9837716221809388;0.5915126204490662
+Add <file_name> name and fix <file_name> error  ;error;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.866204023361206;0.6780120730400085
+Add package support for dubbo-remoting-netty4 module;package support;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9440608024597168;0.604995846748352
+add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8390505313873291;0.6460415124893188
+"add the router key in <file_name> (<pr_link>)
+";-;dont set port attribute; <file_name>  is null;Contradicts;0.8353673219680786;0.5377982258796692
+"add the router key in <file_name> (<pr_link>)
+";-;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.8751055598258972;0.6560064554214478
+"add the router key in <file_name> (<pr_link>)
+";-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9812387228012084;0.5989702939987183
+"add the router key in <file_name> (<pr_link>)
+";-;remove the space ( <pr_link> );follow up for pr#4339;Contradicts;0.8390427827835083;0.4159466028213501
+"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9904719591140748;0.5524942874908447
+Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8032687902450562;0.5978467464447021
+Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8834498524665833;0.7384653091430664
+Adding the overriding rule for <file_name> (<pr_link>);Enhancement;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8374996185302734;0.5441491603851318
+Add `how can I contribute?` section;-;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;Contradicts;0.879477322101593;0.6560064554214478
+Add `how can I contribute?` section;-;Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.9810466170310974;0.5989702939987183
+Add `how can I contribute?` section;-;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8038793206214905;0.7848647832870483
+Modify comments and imports  ;just for [by implication];Refactor: remove;and replace it with <method_name> ( <pr_link> );Contradicts;0.8742811679840088;0.6410367488861084
+add jdk11 to travis ci;upgrade jacoco to support jdk11;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";Contradicts;0.8358012437820435;0.14558546245098114

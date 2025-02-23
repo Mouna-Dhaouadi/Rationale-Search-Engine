@@ -1,0 +1,35 @@
+Decision;Rationale
+remove unnecessary locking in oom_enable();unnecessary locking in oom_enable()
+fix typo in comment;typo in comment
+Alter 'taks' -> 'task';None
+The patch addresses the issue by account PMD tables to the process the same way we account PTE;addresses the issue by account PMD tables to the process the same way we account PTE
+Adjust sanity check on exit(2);None
+make OOM detection in the freezer path raceless;raceless
+None;None
+introduces oom_sem RW lock and turns oom_killer_disable() into a full OOM barrier;None
+oom_killer_disabled check is moved from the allocation path to the OOM level;to take oom_sem for reading for both the check and the whole OOM invocation
+None;acts as the full OOM barrier
+None;it was assumed to be safe before
+it would be better and more robust to not rely on freezing points here;We used to have freezing points deep in file system code which may be reachable from page fault
+Same applies to the memcg OOM killer;None
+This should complete in a finite time;The victim cannot loop in the page fault handler, it cannot loop in the page allocator, and it shouldn't be blocked on any locks held by frozen tasks or kernel threads and work queues are not frozen yet.
+We are not checking whether the task is frozen;that would be racy and __thaw_task does that already
+oom_scan_process_thread doesn't need to care about freezer anymore;TIF_MEMDIE and freezer are excluded completely now
+add helpers for setting and clearing TIF_MEMDIE;None
+This patchset addresses a race;"which was described in the changelog for 5695be142e20 (""OOM, PM: OOM killed task shouldn't escape PM suspend"")"
+None;better (full barrier) semantic without polluting hot paths
+I have tested the series in KVM with 100M RAM;None
+"
+- many small tasks (20M anon mmap) which are triggering OOM continually
+- s2ram which resumes automatically is triggered in a loop
+- echo processors > /sys/power/pm_test
+- while true
+- echo mem > /sys/power/state
+- sleep 1s
+- done
+- simple module which allocates and frees 20M in 8K chunks
+";None
+None;None
+mark_tsk_oom_victim is now called under task_lock;I think this should be OK because __thaw_task shouldn't interfere with any locking down wake_up_process
+None;None
+simple cleanups for OOM;None

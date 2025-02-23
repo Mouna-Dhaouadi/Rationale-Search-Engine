@@ -1,0 +1,26 @@
+Decision;Rationale
+fix oom killer kills current every time if there is memory-less-node take2;None
+contstrained_alloc() should get memory_less_node into count;memory_less_node into count
+fix it;fix
+Elaborate the API for calling cpuset_zone_allowed();users have to explicitly choose between the two variants
+This patch removes the cpuset_zone_allowed() call;to force the caller to explicitly choose between the hardwall and the softwall case
+It should save a few instructions executed for the calls that turned into calls of cpuset_zone_allowed_hardwall;thanks to not having to set (before the call) then check (within the call) the __GFP_HARDWALL flag
+reduce this chance of hitting a sleeping with irq off complaint again;Not a perfect win, but seems worth it
+Don't cause all threads in all other thread groups to gain TIF_MEMDIE;otherwise we'll get a thundering herd eating our memory reserve
+None;fits our policy of allowing just one TIF_MEMDIE in the system at once
+cleanup messages;oom
+Clean up the OOM killer messages;to be more consistent
+don't kill unkillable children or siblings;None
+Having this test here;"prevents any OOM_DISABLE child of the ""selected"" process from being killed."
+We don't want the PF_EXITING task, even if it is 'current', to access mem reserves if there is already a TIF_MEMDIE process in the system sucking up reserves;None
+None;make the commenting a little bit clearer, note that our current scheme of effectively single threading the OOM killer is not itself perfect
+cleanup ->mm checks;None
+cleanup 'releasing' check;None
+No logic changes, but imho easier to read.;easier to read
+kill a bogus PF_DEAD/TASK_DEAD check;bogus PF_DEAD/TASK_DEAD check
+Introduce a new state, TASK_DEAD;to avoid a confusion
+None;None
+an updated version of Eric Biederman's is_init() patch;None
+removes dependency on Eric's other patches for now;checks pid and thus
+Introduce is_init;to capture this case
+None;optimize the lookup in the future.

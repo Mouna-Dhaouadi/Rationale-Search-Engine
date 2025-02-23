@@ -1,0 +1,29 @@
+Decision;Rationale
+initialize it before;should
+Add SPDX license identifier for missed files;SPDX license identifier for missed files
+Have no license information of any form;GPL v2 only
+"do the initial mechanical conversion of all the places that call mmu_notifier_range_init to also provide the default MMU_NOTIFY_UNMAP event as well as the vma
+";most invalidation happens against a given vma
+Passing down the vma;allows the users of mmu notifier to inspect the new vma page protection
+The MMU_NOTIFY_UNMAP is always the safe default;users of mmu notifier should assume that every for the range is going away when that event happens
+This is done as 2 patches;so that no call site is forgotten especialy as it uses this following coccinelle patch
+Check if setting global init process to some memory cgroup is technically possible;Possible
+fix use-after-free in oom_kill_process;use-after-free
+Get/put across the for_each_thread() on the selected task;The easiest fix is
+do not enqueue same task twice;None
+Fix this bug;"using an approach used by commit 855b018325737f76 (""oom, oom_reaper: disable oom_reaper for oom_kill_allocating_task"")"
+None;None
+We can trivially add both the oom memcg and task_memcg.;Now that we have a single line for the oom context.
+reorganize the oom report in dump_header;None
+An admin can easily get the full oom context at a single line;makes parsing much easier
+fix missing tlb_finish_mmu() in __oom_reap_task_mm();missing tlb_finish_mmu() in __oom_reap_task_mm()
+call tlb_finish_mmu;there is no real reason to skip tlb_finish_mmu on early skip either
+refactor oom_kill_process();None
+None;None
+None;"limited functionality in comparison to what now
+resides in the mm tree, doesn't change the victim task selection
+algorithm, doesn't look at memory stats on cgroup level, simpler and more straightforward"
+None;None
+Split oom_kill_process();With an intention to re-use the second half
+We don't need to print the debug information for the each task, as well as play with task selection (considering task's children), so we can't use the existing oom_kill_process();Not mentioned in the sentence
+clean up oom_reap_task_mm();None

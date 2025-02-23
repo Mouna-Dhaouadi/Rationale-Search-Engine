@@ -1,0 +1,266 @@
+Decision;Rationale
+remove slob.c;
+Remove the SLOB implementation;
+__alloc_size attribute was added to allocators;In the effort to help the compiler reason about buffer sizes
+For most allocations, this works well, as the vast majority of callers are not expecting to use more memory than what they asked for;The vast majority of callers are not expecting to use more memory than what they asked for
+it wants to minimize the number of calls to krealloc(), so it just uses ksize() plus some additional bytes, forcing the realloc into the next bucket size  ;so it can learn how large it is now
+Use all the space available in the chosen bucket immediately;to avoid needing to reallocate later
+kmalloc(size) might give us more room than requested;might give us more room than requested
+Put skb_shared_info exactly at the end of allocated zone;to allow max possible filling before reallocation
+"the ""how much was actually allocated?"" question is answered after the allocation";the compiler hinting is not in an easy place to make the association any more
+This mismatch between the compiler's view of the buffer length and the code's intention about how much it is going to actually use has already caused problems;caused problems
+"reordering the use of the ""actual size"" information";fix this
+"Code can ask ""how large an allocation would I get for a given size?""";instead
+Introduce kmalloc_size_roundup();"serve this function so we can start replacing the ""anticipatory resizing"" uses of ksize()"
+Remove export symbol and move declaration to mm/slab.h  ;we don't want to grow its callers
+unify NUMA and UMA version of tracepoints;mm/slab_common
+cleanup kmalloc_track_caller();
+Make kmalloc_track_caller() wrapper of kmalloc_node_track_caller();-
+Remove CONFIG_NUMA ifdefs for common kmalloc functions;Now that slab_alloc_node() is available for SLAB when CONFIG_NUMA=n
+Slab caches marked with SLAB_ACCOUNT force accounting for every allocation from this cache  ;even if __GFP_ACCOUNT flag is not passed
+increase the minimum slab alignment to 16;When CONFIG_KASAN_HW_TAGS is enabled
+This happens even if MTE is not supported in hardware or disabled via kasan=off;which creates an unnecessary memory overhead in those cases
+waiting for quiescence after a full Android boot;with a kernel built with CONFIG_KASAN_HW_TAGS
+list_lru does not need the capability of tracking every memcg on every superblock;For these systems with huge container counts
+Introduce kmem_cache_alloc_lru to allocate objects and its list_lru;to allocate objects
+Remove unnecessary page_mapcount_reset() function call;unnecessary
+Use unused field for units;instead
+use struct folio instead of struct page;Where non-slab page can appear
+don't introduce wrappers for PageSlobFree in mm/slab.h;"just for the single callers being wrappers in mm/slob.c
+
+Decision: fix NULL pointer deference"
+By using the slab type instead of the page type  ;we make it obvious that this can only be called for slabs
+;
+Don't build mm_dump_obj() on CONFIG_PRINTK=n kernels;CONFIG_PRINTK=n
+mem_dump_obj() messages will be suppressed;kernels built with CONFIG_PRINTK=n
+This patch adds the slab name to trace_kmem_cache_free();to trace_kmem_cache_free
+kmem_cache_free;We can use it to understand what the RCU core is going to free
+Add mem_dump_obj() to print source of memory block;to print source of memory block
+There are kernel facilities such as per-CPU reference counts that give error messages in generic handlers or callbacks  ;messages are unenlightening
+this is not a problem when creating a new use of this facility  ;the bug is almost certainly in the code implementing that new use
+"This pointer can reference the middle of the block as well as the beginning of the block, as needed by things like RCU callback functions and timer handlers that might not know where the beginning of the memory block is
+";as needed by things like RCU callback functions and timer handlers that might not know where the beginning of the memory block is
+These functions and handlers can use mem_dump_obj();to print out better hints as to where the problem might lie
+The information printed can depend on kernel configuration;depend on kernel configuration
+the allocation return address can be printed only for slab and slub  ;only when the necessary debug has been enabled
+build with CONFIG_DEBUG_SLAB=y and either use sizes with ample space to the next power of two or use the SLAB_STORE_USER when creating the kmem_cache structure;For slab
+Use CONFIG_STACKTRACE for slub  ;to enable printing of the allocation-time stack trace.
+extract might_alloc() debug check;
+have some use eventually for annotations in drivers/gpu;I might
+Updates gfpflags_allow_blocking();There's a ton of callers all over the place for that already.
+Slab pages will be shared between multiple cgroups;global and node counters will reflect the total number of slab pages
+The size of slab memory shouldn't exceed 4Gb on 32-bit machines;it will fit into atomic_long_t we use for vmstats
+I want to use this in a memory allocation tracker in drm for stuff that's tied to the lifetime of a drm_device, not the underlying struct device;slab does this already
+CONFIG_SLUB_DEBUG or CONFIG_SLOB, and blocks stop being aligned  ;blocks stop being aligned
+make the kmalloc() alignment to size explicitly guaranteed for power-of-two sizes under all configurations;provide to mm users what they need without difficult workarounds or own reimplementations
+patch ensures alignment on all arches and cache sizes;Still
+CONFIG_SLUB_DEBUG and boot parameter for the particular kmalloc cache;
+improve memory accounting;improve
+Modifying a counter on page allocation and freeing should be acceptable even for the small system scenarios SLOB is intended for;SLOB is intended for
+it might look like a memory leak  ;As they also don't appear in /proc/slabinfo
+"SLAB doesn't actually use page allocator directly
+";no change there
+Make working with compound pages easier;
+add three helpers, convert the appropriate places;these three patches
+to find out the size of a potentially huge page;It's unnecessarily hard
+union of slab_list and lru;slab_list and lru are the same bits
+verify that this change is safe to do by examining the object file produced from slob.c before and after this patch is applied;safe to do
+configure and build (select SLOB allocator);SLOB allocator
+build;
+Use slab_list list_head instead of the lru list_head for maintaining lists of slabs  ;maintain
+Add a return parameter to slob_page_alloc();to signal that the list was modified
+Add a return parameter to slob_page_alloc()  ;to signal that the allocation used up the whole page and that the page was removed from the free list
+remove an unnecessary check for __GFP_ZERO;unnecessary
+Remove the unnecessary NULL pointer check;unnecessary
+Add SPDX GPL-2.0 license identifier to files with no license;License cleanup
+;
+to be applied to the file;a file by file comparison of the scanner
+Make and config files were included as candidates if they contained >5 lines of source;File already had some variant of a license header in it (even if <5 lines)
+All documentation files were explicitly excluded;explicitly excluded
+the top level COPYING file license applied;both scanners couldn't find any license traces, file was considered to have no license information
+For non */uapi/* files;that summary was
+Kate also obtained a third independent scan of the 4.13 code base from FOSSology, and compared selected files where the other two scanners disagreed against that SPDX file;to see if there was new insights
+Thomas wrote a script to parse the csv files and add the proper SPDX tag to the file  ;in the format that the file expected
+Greg ran the script using the .csv files to generate the patches;to detect more types of files automatically and to distinguish between header and source .c files
+Rework FS_RECLAIM annotation;
+reducing the 'irq' states;allows reducing the 'irq' states and will reduce the amount of __bfs() lookups we do
+And by moving this annotation out of the lockdep code;it becomes easier for the mm people to extend
+"reported chasing a bug
+";their assumption that SLAB_DESTROY_BY_RCU provided an existence guarantee
+SLAB_DESTROY_BY_RCU only prevents freeing of an entire slab of blocks;Instead
+renames SLAB_DESTROY_BY_RCU to SLAB_TYPESAFE_BY_RCU;to avoid future instances of this sort of confusion
+call synchronize_sched() just once;it's enough to call it just once - after setting cpu_partial for all caches and before shrinking them
+move it out of the slab_mutex  ;which we have to hold for iterating over the slab cache list
+Adjust API to return type 'int' instead of previously type 'bool';previously type 'bool'
+allow future extension of the bulk alloc API;is done to
+We always end up returning some objects at the cost of another cmpxchg  ;Else
+"To keep compatible with future users of this API linking against an older kernel when using the new flag, we need to return the number of allocated objects with this API change.
+";to keep compatible
+rename alloc_pages_exact_node() to __alloc_pages_node();
+hiding potentially buggy callers;except temporarily
+Add the basic infrastructure for alloc/free operations on pointer arrays;for alloc/free operations on pointer arrays
+These optimizations may avoid taking locks repeatedly and bypass metadata creation if all objects in slab pages can be used to provide the objects required;avoid taking locks repeatedly and bypass metadata creation if all objects in slab pages can be used to provide the objects required
+Remove the EXPORT_SYMBOL and make slob_alloc_node() static  ;
+Make dead caches discard free slabs immediately;slub
+SLUB may store empty slabs in per cpu/node partial lists instead of freeing them immediately;To speed up further allocations
+resurrects approach first proposed in [1];To fix this issue
+setting kmem_cache's cpu_partial and min_partial constants to 0 and tuning put_cpu_partial();Achieving dropping frozen empty slabs immediately if cpu_partial = 0
+make put_cpu_partial() call unfreeze_partials() after freezing a slab that belongs to an offline memory cgroup;touch relatively cold functions, only make this specific call
+slab freezing exists;to avoid moving slabs from/to a partial list on free/alloc
+The original patch was accepted well and even merged to the mm tree;
+I do not see it as an option;SLUB shrinker would be too costly to call since SLUB does not keep free slabs on a separate list
+"Introduce much more complexity to both SLUB and memcg
+";than this small patch
+Thanks to list_lru reparenting, we no longer keep entries for offline cgroups in per-memcg arrays;We do not have to bother if a per-memcg cache will be shrunk a bit later than it could be
+Track caller if tracing or slab debugging is enabled;Tracing or slab debugging is enabled
+it's okay to change this situation;default slab allocator, SLUB, doesn't use this technique
+turn on/off CONFIG_DEBUG_SLAB without full kernel build and remove some complicated '#if' defintion;After this change, simplify the process and reduce complexity
+;It looks more beneficial to me.
+slab_mutex for kmem_cache_shrink is removed;after it's applied, there is no need in taking the slab_mutex
+unioned together;Conveniently
+That code can use them interchangeably;Gets horribly confusing like with this nugget from slab.c
+This patch makes the slab and slub code use page->lru universally instead of mixing ->list and ->lru;mixing ->list and ->lru
+The new rule is: page->lru is what you use;if you want to keep your page on a list
+function naming changes;requires some
+Call the ctor() method only if allocation succeeded;The solution is to only call the ctor() method if allocation succeeded
+use DIV_ROUND_UP where possible;
+Rename the function names page_xchg_last_nid(), page_last_nid(), and reset_page_last_nid() to a struct_field_op style pattern;The function names were judged to be inconsistent
+rename reset_page_mapcount() to page_mapcount_reset();it looked jarring to have them beside each other
+a rename would likely cause more conflicts than it is worth  ;as it is used throughout the arch code
+If we start chaining caches, this information will always be more trustworthy than whatever is passed into the function.;this information will always be more trustworthy
+The definition of ARCH_SLAB_MINALIGN is architecture dependent and can be either of type size_t or int;architecture dependent
+using the size_t type to compare them is safe  ;"both are always small positive integer numbers; gets rid of the warning"
+this patch also drops the EXPORT_SYMBOL tag;Since now it's static, inline, header-defined function
+Improve trace accuracy;by correctly tracing reported size
+Drop usage of page->private for storing page-sized allocations;
+ksize() can simply return PAGE_SIZE << compound_order(page);There is no need to store the allocated size
+fix build breakage in __kmalloc_node_track_caller;
+Add the function `__kmalloc_track_caller()`  ;This breaks Pekka's slab/next tree
+Fix build breakage in __kmalloc_node_track_caller;gfp is undeclared
+Fix it  ;
+kmalloc_track_caller() is correctly implemented;tracing the specified caller
+This will allow us to push more processing into common code later;improve readability
+can be done in __kmem_cache_shutdown;What is done there
+This affects RCU handling;somewhat
+This is possible now;the acquisition of the mutex was moved into kmem_cache_create()
+Fix early boot kernel crash;Slob
+Remove various small accessors;various small
+They are no longer needed;They have become so simple
+No need to zero mapping since it is no longer in use;it is no longer in use
+This cleans up numerous of typecasts in slob.c and makes readers aware of slob's use of page struct fields;makes readers aware of slob's use of page struct fields
+cleans up some bitrot in slob.c;Also
+atomic: use <linux/atomic.h>;
+move duplicated code in <asm/atomic.h> to <linux/atomic.h>;to avoid duplication of code
+Fix gfp flags passed to lockdep;lockdep
+Ran a ktest.pl config_bisect;Came up with this config as the problem
+Adding this mask;fixes the bug
+;nasty and error prone API
+fix gfp flags for order-0 page allocations  ;fix for order-0 page allocations
+The bit should be passed to trace_kmalloc_node()  ;as well
+with this patch;
+The result shows an improvement of 1 MB!;tested it on a embeded system with 64 MB, found this path is never called during kernel bootup.
+remove all rcu head initializations;
+Remove all rcu head inits;
+we don't care about the RCU head state before passing it to call_rcu();anyway
+Remove kmemtrace ftrace plugin;tracing
+We remove kmemtrace  ;kmemtrace has been superseded by kmem trace events and perf-kmem
+fix RCU-callback-after-kmem_cache_destroy problem in sl[aou]b  ;to address the issue
+adds alloc_pages_exact_node() that only checks the nid;To avoid a comparison and branch, this patch
+SLOB fix reclaim_state;
+SLOB does not correctly account reclaim_state.reclaimed_slab, so it will break memory reclaim;SLOB does not correctly account reclaim_state.reclaimed_slab
+refactor code for future changes;Impact
+include/linux/kmemtrace.h: header file for kmemtrace, include/trace/kmem.h: definition of kmem tracepoints;header file for kmemtrace, definition of kmem tracepoints
+use tracepoints;kmemtrace
+We no longer need to use format specifiers to pass arguments;
+annotate reclaim context (__GFP_NOFS), fix SLOB;lockdep
+fix typo in mm/slob.c;build fix
+fix lockup in slob_free()  ;lockup
+added reclaim context annotation to kswapd, and allocation tracing to slab allocators  ;which may only ever reach the page allocator in rare cases, so it is good to put annotations here too
+;
+have some improvement  ;the concept is no less complete than discovery of a lock's interrupt contexts
+Not tainted 2.6.28-rc6-00007-ged31348-dirty #26;
+"Commit 7b2cd92adc5430b0c1adeb120971852b4ea1ab08 (""crypto: api - Fix zeroing on free"")";added modular user of ksize()
+Compile tests only;
+This patch adapts kmemtrace raw events tracing to the unified tracing API;Impact: new tracer plugin
+enable and use this tracer;To enable and use this tracer
+I find it more readable  ;personal opinion
+Drop it  ;if you want
+fix bogus ksize calculation fix  ;SLOB
+fixes the previous fix  ;completely wrong on closer inspection
+Bring it in sync;
+fix bogus ksize calculation;bogus
+unexport ksize;
+removes the obsolete and no longer used exports of ksize  ;obsolete and no longer used
+Pass only pointer to the object  ;"Nobody uses this ""feature"", nor does anybody use passed kmem cache in a non-trivial way"
+;
+record page flag overlays explicitly;slob
+Fix to return wrong pointer;Fix
+"slob: fix bug - when slob allocates ""struct kmem_cache"", it does not force alignment";it does not force alignment
+reduce external fragmentation by using three free lists;slob
+By putting smaller objects on their own list, we greatly reduce overall external fragmentation and increase repeatability;we greatly reduce overall external fragmentation and increase repeatability
+This reduces total SLOB overhead;from > 50% to ~6% on a simple boot test
+fix free block merging at head of subpage;
+Avoid double memclear() in SLOB/SLUB;
+fix memory corruption;memory corruption
+resolves the following crash;
+remove useless ctor parameter and reorder parameters;useless
+return 0 but we really should BUG() on attempts to determine the size of something nonexistent;
+Handle that separately in krealloc();separately
+let's use unlikely() for the condition check in SLUB's and SLOB's kfree();Considering kfree(NULL) would normally occur only in error paths and kfree(ZERO_SIZE_PTR) is uncommon as well, so let's use unlikely() to optimize for the common case
+reduce list scanning;slob
+starting each page search where the last one left off;to evenly distribute the allocations and greatly shorten the average search
+This rips out support for the dtor pointer from kmem_cache_create() completely and fixes up every single callsite in the kernel  ;there were about 224 callsites
+Cleanup zeroing allocations;Slab allocators
+add the necessary logic to all slab allocators to support __GFP_ZERO;support __GFP_ZERO
+Make slub return NULL like the other allocators if a too large memory segment is requested via __kmalloc;other allocators
+;
+improved alignment handling;improved
+Use __alignof__ (unsigned long) for the default alignment  ;This allows relaxed alignment architectures to take better advantage of SLOB's small minimum alignment
+remove bigblock tracking;slob
+Allocation size is stored in page->private;makes ksize more accurate than it previously was
+rework freelist handling;slob
+can be slightly faster too;skip almost-full freelist pages completely
+None  ;
+we don't encode seperate size and next fields into each slob block;"use the sign bit to distinguish between ""size"" or ""next"""
+"size 1 blocks contain a ""next"" offset; others contain the ""size"" in the first unit and ""next"" in the second unit  ";description of how the blocks are structured
+"align them to word size
+";it is best in practice
+make kmalloc use its own slob_block at the front of the allocation  ;to encode allocation size, rather than rely on not overwriting slob's existing header block
+;things are faster after the patch
+Code size goes up about 1K;dynamic memory usage should be lower even on relatively small memory systems
+No point in checking it  ;
+"Taking a spinlock in a destructor is a bit risky
+";since the slab allocators may run the destructors anytime they decide a slab is no longer needed
+"
+Use a destructor will BUG()
+";"
+Any attempt to"
+The SLOB allocator should implement SLAB_DESTROY_BY_RCU correctly;even on UP, RCU freeing semantics are not equivalent to simply freeing immediately
+SLOB to be used on SMP  ;allows
+fix page order calculation on not 4KB page;-
+This patch fixes it with using get_order() instead of find_order()  ;which is SLOB version of get_order()
+Remove obsolete SLAB_MUST_HWCACHE_ALIGN;obsolete
+This patch was recently posted to lkml and acked by Pekka;
+handle SLAB_PANIC flag;slob
+Introduce krealloc();reallocates memory while keeping the contents unchanged
+added a simple non-optimized version for mm/slob.c for compatibility;compatibility
+[PATCH] MM: SLOB is broken by recent cleanup of slab.h;recent cleanup of slab.h
+"This routine cannot be removed after init in the case of slob.c -- it serves as a timer callback
+";it serves as a timer callback
+Cleanup slab headers / API  ;to allow easy addition of new slab allocators
+Patch is against 2.6.19-git11;
+This patch cleans up the slab header definitions;cleans up the slab header definitions
+add several empty functions to slob.c and rename slob's kmalloc to __kmalloc;In order to get a greater set of common functions
+Slob does not need any special definitions;since we introduce a fallback case
+Redo a lot of comments;Also
+If it will be decided to BUG in this case, BUG should be put in generic code;put in generic code
+Remove the atomic counter for slab_reclaim_pages and replace the counter and NR_SLAB with two ZVC counter that account for unreclaimable and reclaimable slab pages: NR_SLAB_RECLAIMABLE and NR_SLAB_UNRECLAIMABLE;account for unreclaimable and reclaimable slab pages
+simplifies SLOB;at this point slob may be broken
+This should fix it;
+[PATCH] mm/slob.c: for_each_possible_cpu(), not NR_CPUS  ;correction in function call
+Introduce a memory-zeroing variant of kmem_cache_alloc;memory-zeroing variant
+fix;SLOB=y && SMP=y fix
+fix CONFIG_SLOB=y (when CONFIG_SMP=y): get rid of the 'align' parameter from its __alloc_percpu() implementation;
+SLOB saving nearly half a megabyte of RAM;Comparison for otherwise identical builds
+Compare the sizes of vmlinux-slab and vmlinux-slob;to analyze memory consumption
+Fix 32-bitness bugs in mm/slob.c;bugs

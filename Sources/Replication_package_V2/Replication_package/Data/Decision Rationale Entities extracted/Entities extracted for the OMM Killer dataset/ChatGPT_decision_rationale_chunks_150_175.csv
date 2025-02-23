@@ -1,0 +1,29 @@
+Decision;Rationale
+fix memory corruption;None
+Fix this issue by providing a new mm_is_oom_victim() helper;operates on the mm struct rather than a task
+use this helper in place of tsk_is_oom_victim;Any context which operates on a remote mm struct should use this helper
+The flag is set in mark_oom_victim and never cleared;so it is stable in the exit_mmap path
+gather each vma to prevent leaking TLB entry;prevent leaking TLB entry
+The behavior of oom reaper become similar to munmapping before do_exit;should be safe for all archs
+simplify nodemask printing;None
+Teach nodemask_pr_args to handle NULL nodemask carefully;printk already handles NULL pointers properly
+Simplification of both alloc_warn() and dump_header() and getting rid of pr_cont altogether;Allows simplification
+remove pointless kthread_run() error check;pointless
+"
+Call panic() instead of waking up the OOM reaper
+";"
+Memory allocation failure for creating the OOM reaper kernel thread"
+consolidate page table accounting;None
+None;None
+None;calculate oom_badness() more correctly for machines which have different size of page tables depending on level or where page tables are less than a page in size
+None;I wouldn't lose sleep over this.
+introduce wrappers to access mm->nr_ptes;None
+add wrappers for ->nr_ptes with the same interface as for nr_pmd and nr_pud;same interface as for nr_pmd and nr_pud
+The patch expands accounting to PUD level.;None
+None;None
+make the mm_has_notifiers check under the oom_lock and have a little nap before failing to give the current oom victim some more time to exit.;to not fail too early
+let oom_reap_task and exit_mmap run concurrently;None
+None;None
+exit_mmap will wait for oom_reap_task() to finish in down_write;before taking down mm structures that would make the oom_reap_task fail with use after free
+Giving TIF_MEMDIE only to the main thread and the currently allocating task;To reduce the risk 
+None;grant only partial access to memory reserves because there are reasonable chances of the parallel memory freeing

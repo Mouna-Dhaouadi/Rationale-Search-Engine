@@ -1,0 +1,222 @@
+Decision1;Rationale1;Decision2;Rationale2;Relationship;Alpha;similarity_rationales;contradiction_rationales
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Similar;0.8429775238037109;0.32068896293640137;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Similar;0.8630412220954895;0.29423820972442627;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Adopt idiomatic <iden> in <file_name>;idiomatic;Similar;0.8765808939933777;0.8887679576873779;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Similar;0.9773801565170288;0.6027973890304565;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8258926272392273;0.5191152095794678;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Rename <method_name> to <iden()>;I prefer signed;Similar;0.8651348948478699;0.5438671708106995;0.5257165431976318
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Fix some get prefixes on <file_name> and <method_name>;"-
+None";Similar;0.8020975589752197;0.5196962356567383;0.7969778776168823
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8352831602096558;0.28066885471343994;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.850605845451355;0.4685380756855011;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Expose <iden> directly on <method_name>  ;direct;Similar;0.8072469830513;0.7113803625106812;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.832575261592865;0.3665589392185211;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Return <file_name> to previous (e.g. KitKat) behavior;this change required to handle this <iden> scenario;Similar;0.8102736473083496;0.6097626686096191;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.9773801565170288;0.6670135259628296;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.979337215423584;0.5460637807846069;
+Convert <file_name> to Kotlin ( <pr_link> );Idiomatic Kotlin;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.877721905708313;0.5772225856781006;
+Update README.md  ;<iden> moved to Github;update proguard rules on README.md ( <pr_link> );-;Similar;0.8192455172538757;0.3021583557128906;
+Update README.md  ;<iden> moved to Github;fix README.md typo;README.md typo;Similar;0.8931903839111328;0.6231354475021362;
+Fix nullability (override default parameter nullability set at package-info);response receives null explicitly from several catch clauses;Make error-prone validate missing override annotations;error-prone, missing override annotations;Similar;0.8183120489120483;0.6667572259902954;
+Fix nullability (override default parameter nullability set at package-info);response receives null explicitly from several catch clauses;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8181828260421753;0.35006871819496155;
+Fix nullability (override default parameter nullability set at package-info);response receives null explicitly from several catch clauses;Fix bug where request body isnt sent when it should  ;request body isnt sent when it should;Similar;0.8292263150215149;0.49286818504333496;
+snapshot() method removing entries that are being cached  ;because cleanFiles dont exist yet;Remove <iden>-mode <iden> cipher suites;This removes the following cipher suites as supported-by-default;Similar;0.8072991371154785;0.46341070532798767;
+Remove obsolete <iden>;obsolete;Remove <iden>-mode <iden> cipher suites;This removes the following cipher suites as supported-by-default;Similar;0.8292649984359741;0.5031536221504211;
+Remove obsolete <iden>;obsolete;Remove <iden> 2 warnings;Small docs fixes;Similar;0.840761661529541;0.5293543338775635;
+Remove obsolete <iden>;obsolete;Remove old <iden> protocol method;old;Similar;0.8829680681228638;0.6936666965484619;
+Remove obsolete <iden>;obsolete;Drop unused dependencies;unused;Similar;0.8461574912071228;0.9178112745285034;
+Remove obsolete <iden>;obsolete;Remove unnecessary use of grouping parentheses  ;Lets remove warnings found by errorprone.;Similar;0.8274843096733093;0.6564749479293823;
+Wrap <iden> addresses with [] and return / path URIs for proxy CONNECT;Fix MockWebserver for <iden> addresses;Support client authentication in <file_name>;client authentication;Similar;0.8272972106933594;0.6582459807395935;
+Make  <file_name>  more capable.;more capable;Adopt idiomatic <iden> in <file_name>;idiomatic;Similar;0.8216081857681274;0.7317607402801514;
+Make  <file_name>  more capable.;more capable;Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8089792728424072;0.5740146040916443;
+Make  <file_name>  more capable.;more capable;Fixup <file_name> so that its worthy of production use.;This changes the default from the insecure 1024-bit <iden> to a secure 256-bit <iden> key. It adds a new option to use <iden> keys for interoperating with older clients.;Similar;0.8032547235488892;0.23505952954292297;
+Make  <file_name>  more capable.;more capable;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8398206233978271;0.21388991177082062;
+Make  <file_name>  more capable.;more capable;Add convenience overload for <iden>-backed <method_name>;convenience;Similar;0.8416121006011963;0.7084183692932129;
+Make  <file_name>  more capable.;more capable;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8028213977813721;0.4823795557022095;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Similar;0.9399679899215698;0.43138593435287476;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Adopt idiomatic <iden> in <file_name>;idiomatic;Similar;0.9184510707855223;0.3315977454185486;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Similar;0.8341234922409058;0.25984764099121094;0.6200699210166931
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8696999549865723;0.3674188256263733;0.6946576237678528
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Similar;0.8183294534683228;0.3912351131439209;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Rename <method_name> to <iden()>;I prefer signed;Similar;0.8461126089096069;0.36264848709106445;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8888663053512573;0.2820609509944916;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Move  <file_name>  pooling logic  ;"previously we had this ugly, awkward release() method that attempted to manage  <file_name>  pooling, discarding streams for caching, and closing broken streams; move  <file_name>  reuse to  <file_name>, with policy informed by  <method_name>  specifying what to do when the  <file_name>  becomes idle: pool, close or hold, so the  <file_name>  does what its told.";Similar;0.8145403861999512;0.5078635811805725;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.850824236869812;0.43661803007125854;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Expose <iden> directly on <method_name>  ;direct;Similar;0.8874961137771606;0.27174004912376404;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8127945065498352;0.3270164728164673;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8341234922409058;0.16107769310474396;
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8300237655639648;0.24570471048355103;0.5099031925201416
+Use  <file_name> s built-in <iden> style  <enter>  ;The boilerplate to set this up is unfortunate;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.9286356568336488;0.2429528683423996;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Adopt idiomatic <iden> in <file_name>;idiomatic;Similar;0.9073805809020996;0.25916582345962524;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Similar;0.8694837093353271;0.3044136166572571;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8797539472579956;0.32172542810440063;0.5315578579902649
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Similar;0.8022246956825256;0.5123464465141296;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Rename <method_name> to <iden()>;I prefer signed;Similar;0.869030237197876;0.2393123358488083;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.9023157358169556;0.3992466628551483;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8194610476493835;0.4997069835662842;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Track <file_name> ownership  ;<file_name> ownership is somewhat racy: when an HttpURLConnection reads the last byte of a connection, its ownership is released and given to the <method_name>;Similar;0.8027901649475098;0.6477367877960205;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.8631467819213867;0.624763011932373;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Expose <iden> directly on <method_name>  ;direct;Similar;0.8855987787246704;0.24278824031352997;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Use HTML entity for ampersand;to represent the ampersand symbol in HTML;Similar;0.8104650378227234;0.4186651110649109;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8208762407302856;0.3170982599258423;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8065530061721802;0.30512821674346924;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8694837093353271;0.328976571559906;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8628828525543213;0.3162071108818054;
+Use <iden> in <file_name>  ;The utility here is negligible. Were sharing threads between HTTP, HTTP/2 and web sockets now.;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.9606412649154664;0.5567512512207031;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Make <file_name> accessors final  ;If we want these to be vals to Kotlin, they cant be open. I think the motivation to make these non-final was pretty weak, and I dont mind breaking <iden> compatibility here.;Similar;0.8106222152709961;0.21664121747016907;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Similar;0.8619725704193115;0.4422183930873871;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8970745205879211;0.5137519836425781;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Similar;0.8473001718521118;0.24955220520496368;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Rename <method_name> to <iden()>;I prefer signed;Similar;0.8943504095077515;0.6201057434082031;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Update readme and changelog for <version>;<version>;Similar;0.800493597984314;0.7874414324760437;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8924567103385925;0.1846502423286438;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8245652318000793;-0.027246546000242233;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Move  <file_name>  pooling logic  ;"previously we had this ugly, awkward release() method that attempted to manage  <file_name>  pooling, discarding streams for caching, and closing broken streams; move  <file_name>  reuse to  <file_name>, with policy informed by  <method_name>  specifying what to do when the  <file_name>  becomes idle: pool, close or hold, so the  <file_name>  does what its told.";Similar;0.8179054260253906;0.19447652995586395;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.8642762303352356;0.4331928789615631;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Expose <iden> directly on <method_name>  ;direct;Similar;0.879074215888977;0.8387515544891357;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Add convenience overload for <iden>-backed <method_name>;convenience;Similar;0.8201199173927307;0.7309871912002563;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8627616167068481;0.2976230978965759;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8619725704193115;0.5739769339561462;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8723697066307068;0.3990425765514374;
+Adopt idiomatic <iden> in <file_name>;idiomatic;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.9105337858200072;0.5810750126838684;
+Fix a regression in combining cache headers;This was introduced with our migration to Kotlin. Iterating over the indices of the header names doesnt work because header names are not distinct.;Add error-prone compiler and fix its found issues;error-prone, its found issues;Similar;0.8022259473800659;0.3816719055175781;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Similar;0.8174008727073669;0.4792014956474304;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Rename <method_name> to <iden()>;I prefer signed;Similar;0.856165885925293;0.424846351146698;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8312495350837708;0.3182065486907959;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.829817533493042;0.7007049918174744;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8098671436309814;0.3146718740463257;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;1.0;0.7455853819847107;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.9855733513832092;0.9379360675811768;
+Convert <file_name> to Kotlin;"to Kotlin
+
+Decision: Rename <file_name> to .kt";Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8696914911270142;0.5381677150726318;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Similar;0.93759286403656;0.5862078070640564;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Rename <method_name> to <iden()>;I prefer signed;Similar;0.8776825070381165;0.5102101564407349;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.9622647762298584;0.37218236923217773;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8513545989990234;0.33296075463294983;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.8247865438461304;0.4501882493495941;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Expose <iden> directly on <method_name>  ;direct;Similar;0.9070591926574708;0.5084691047668457;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8277508020401001;0.47549450397491455;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8558824062347412;0.46036237478256226;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8174008727073669;0.42372819781303406;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8267107605934143;0.4979810416698456;
+Introduce <method_name> ;This is the payoff that preceding changes have been working towards.;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8666090369224548;0.47472086548805237;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Rename <method_name> to <iden()>;I prefer signed;Similar;0.8145343661308289;0.3596075773239136;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.8897522687911987;0.48678529262542725;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.8112809062004089;0.49829810857772827;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Expose <iden> directly on <method_name>  ;direct;Similar;0.8724842071533203;0.1991119086742401;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8282937407493591;0.2518380284309387;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8572410941123962;0.5159010291099548;
+Introduce <method_name> responseFailed events;These replace <iden>() / <iden>() in some failure scenarios. They may also be issued in cases where no event was published previously.;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8111620545387268;0.495147168636322;
+Rename <method_name> to <iden()>;I prefer signed;Add <method_name>;Might be useful to expose this bookkeeping to app developers;Similar;0.886548638343811;0.2999747395515442;
+Rename <method_name> to <iden()>;I prefer signed;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8107166290283203;0.18055790662765503;
+Rename <method_name> to <iden()>;I prefer signed;Expose <iden> directly on <method_name>  ;direct;Similar;0.8515671491622925;0.5123689770698547;
+Rename <method_name> to <iden()>;I prefer signed;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8287271857261658;0.5207452178001404;
+Rename <method_name> to <iden()>;I prefer signed;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8914456963539124;0.43877801299095154;
+Rename <method_name> to <iden()>;I prefer signed;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.856165885925293;0.38886481523513794;
+Rename <method_name> to <iden()>;I prefer signed;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8680740594863892;0.4606472849845886;
+Rename <method_name> to <iden()>;I prefer signed;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8851649761199951;0.4925563335418701;
+Remove <iden>-mode <iden> cipher suites;This removes the following cipher suites as supported-by-default;Drop our one remaining <iden> cipher suite;Tracking <iden> and Firefox, which have also dropped this cipher suite;Similar;0.8367103338241577;0.7536815404891968;
+Remove <iden>-mode <iden> cipher suites;This removes the following cipher suites as supported-by-default;Move out of the <file_name> package;To promote the code into AOSP, well keep this package as-is and do the jarjar in <iden> instead;Similar;0.8216295838356018;0.3849177360534668;0.6717100143432617
+Remove <iden>-mode <iden> cipher suites;This removes the following cipher suites as supported-by-default;Remove old <iden> protocol method;old;Similar;0.8496418595314026;0.4497720003128052;
+Inject a leading . for better matching under <file_name> <enter> Closes : <issue_link>;for better matching;Add convenience overload for <iden>-backed <method_name>;convenience;Similar;0.809103786945343;0.6161919832229614;
+Fix some get prefixes on <file_name> and <method_name>;"-
+None";Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8411275148391724;-0.15513192117214203;
+Fix some get prefixes on <file_name> and <method_name>;"-
+None";The changes to <iden>s  <file_name> have been ported  ;Upstream commit of <iden> / <iden> fix, This does not include the introduction of PlatformTest, which will be difficult to write so it works everywhere;Similar;0.8068647384643555;0.13032449781894684;0.8693357110023499
+Fix some get prefixes on <file_name> and <method_name>;"-
+None";Fix source compatibility for some <iden> callsites;supporting existing source patterns is more important;Similar;0.8346084356307983;0.3308829367160797;
+Fix some get prefixes on <file_name> and <method_name>;"-
+None";Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.82420414686203;0.5009392499923706;0.7039796710014343
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Similar;0.8494690656661987;0.5475752949714661;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Move  <file_name>  pooling logic  ;"previously we had this ugly, awkward release() method that attempted to manage  <file_name>  pooling, discarding streams for caching, and closing broken streams; move  <file_name>  reuse to  <file_name>, with policy informed by  <method_name>  specifying what to do when the  <file_name>  becomes idle: pool, close or hold, so the  <file_name>  does what its told.";Similar;0.8028959035873413;0.3799179792404175;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Similar;0.8090704679489136;0.24468392133712769;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Expose <iden> directly on <method_name>  ;direct;Similar;0.8863537311553955;0.047658711671829224;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Add convenience overload for <iden>-backed <method_name>;convenience;Similar;0.8025314807891846;0.21802638471126556;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8208955526351929;0.20162080228328705;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8482534885406494;0.6296092867851257;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8312495350837708;0.2954447865486145;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8418799638748169;0.3899821639060974;
+Add <method_name>;Might be useful to expose this bookkeeping to app developers;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8945944309234619;0.35536545515060425;
+Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Add convenience overload for <iden>-backed <method_name>;convenience;Similar;0.8238540291786194;-0.003775604534894228;
+Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8015931248664856;0.5650444626808167;
+Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Fix source compatibility for some <iden> callsites;supporting existing source patterns is more important;Similar;0.8060399889945984;0.29308590292930603;
+Fix flakiness in <method_name>  ;Theres a race where the HTTP engine has been created, but not yet connected and the cancel isnt as immediate as it could be. Fix the test by making sure theres a response to be retrieved. With the upcoming connection pool changes we might make the implementation more robust.;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8431010842323303;0.29184478521347046;0.5844907760620117
+Fix <iden> post retransmit in the new API  ;We dont buffer response bodies in the new API. But we should retransmit POST bodies when a request fails.;Fix checkstyle issues in new <iden> code;checkstyle issues;Similar;0.834945797920227;0.3477293848991394;
+Move  <file_name>  pooling logic  ;"previously we had this ugly, awkward release() method that attempted to manage  <file_name>  pooling, discarding streams for caching, and closing broken streams; move  <file_name>  reuse to  <file_name>, with policy informed by  <method_name>  specifying what to do when the  <file_name>  becomes idle: pool, close or hold, so the  <file_name>  does what its told.";Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8417710661888123;0.4457501173019409;
+Fix checkstyle issues in new <iden> code;checkstyle issues;Add error-prone compiler and fix its found issues;error-prone, its found issues;Similar;0.8196260333061218;0.7868475914001465;
+Fix checkstyle issues in new <iden> code;checkstyle issues;Fix source compatibility for some <iden> callsites;supporting existing source patterns is more important;Similar;0.8317853212356567;0.5918539762496948;
+Dont use <iden> APIs not in Gingerbread;APIs not in Gingerbread;We dont need no stinkin braces;no stinkin braces;Similar;0.8297960162162781;0.8151080012321472;
+Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Expose <iden> directly on <method_name>  ;direct;Similar;0.8104908466339111;0.42951637506484985;
+Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.829817533493042;0.6222207546234131;
+Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8344882726669312;0.6497299671173096;
+Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8634790778160095;0.6640855669975281;0.6098315119743347
+Introduce a <file_name> interface between engine and connection.;This breaks the direct dependency from <file_name> to <method_name>;Add wildcard hostnames support in <file_name>;support;Similar;0.8170636296272278;0.34246593713760376;
+Move out of the <file_name> package;To promote the code into AOSP, well keep this package as-is and do the jarjar in <iden> instead;Remove old <iden> protocol method;old;Similar;0.8113645911216736;0.2672916352748871;
+Move out of the <file_name> package;To promote the code into AOSP, well keep this package as-is and do the jarjar in <iden> instead;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8065208196640015;0.4312395453453064;
+Expose <iden> directly on <method_name>  ;direct;Transfer to/from <iden> directly from <iden>  ;<pr_link>;Similar;0.8753862977027893;0.6822105646133423;
+Expose <iden> directly on <method_name>  ;direct;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8162170648574829;0.16026175022125244;
+Expose <iden> directly on <method_name>  ;direct;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8090091943740845;0.32762444019317627;
+Expose <iden> directly on <method_name>  ;direct;Just pass the <iden> and <iden> objects in directly;Dont summarize the request and response;Similar;0.8140782117843628;0.6575525403022766;
+Expose <iden> directly on <method_name>  ;direct;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8688902854919434;0.5487171411514282;
+Use HTML entity for ampersand;to represent the ampersand symbol in HTML;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8001756072044373;0.533021867275238;
+Transfer to/from <iden> directly from <iden>  ;<pr_link>;Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Similar;0.8199807405471802;0.25054511427879333;
+Transfer to/from <iden> directly from <iden>  ;<pr_link>;Just pass the <iden> and <iden> objects in directly;Dont summarize the request and response;Similar;0.8539905548095703;0.6247286200523376;
+Transfer to/from <iden> directly from <iden>  ;<pr_link>;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8195908069610596;0.6045246720314026;
+Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Similar;0.8098671436309814;0.2537575960159302;
+Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8312361240386963;0.42192965745925903;
+Move <iden> retries / fallback into <method_name>;The decision is explained by the improvements in handling connection attempts and IOExceptions, making retries smarter in different scenarios.;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8216032981872559;0.43515342473983765;0.5484582781791687
+Return <file_name> to previous (e.g. KitKat) behavior;this change required to handle this <iden> scenario;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.8039604425430298;0.6176273822784424;
+Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Similar;0.9855733513832092;0.7262798547744751;
+Convert <file_name> to Kotlin;<pr_link>, <iden>, <file_name>;Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8696914911270142;0.5929394364356995;
+Convert <file_name>, <file_name> to Kotlin  ;"to Kotlin
+
+Decision: Rename <file_name> <version> to .kt (and others)  ";Refactor <file_name> by using <iden>;We can use <iden> instead of overriding <iden> abstract class;Similar;0.8671493530273438;0.5473275780677795;0.5884580016136169

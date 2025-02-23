@@ -1,0 +1,34 @@
+Decision1;Rationale1;Decision2;Rationale2;Relationship;Alpha
+"fix
+";use find_lock_task_mm too;Fix it.;Fixes;Similar;0.9647775888442993
+"fix
+";use find_lock_task_mm too;fix it;fix;Similar;0.9727684259414673
+"Remove the ""if (!p->mm)"" check in select_bad_process()";it is just wrong;Remove the redundancy in __oom_kill_task();redundancy;Similar;0.9039254784584045
+"Remove the ""if (!p->mm)"" check in select_bad_process()";it is just wrong;remove redundant OOM score normalization in select_bad_process();redundant OOM score normalization;Similar;0.9306643009185791
+Add the new helper, find_lock_task_mm();"finds the live thread which uses the memory and takes task_lock() to pin ->mm
+
+Decision: change oom_badness()";use the newly added pidfd_get_task() helper;Instead of duplicating the same code in two places;Similar;0.9038145542144775
+moves oomkilladj (now more appropriately named oom_adj) from struct task_struct to struct signal_struct;more appropriately named;Move oomkilladj (now more appropriately named oom_adj) from struct task_struct to struct mm_struct;more appropriately named;Similar;0.9773755073547363
+fix possible oom_dump_tasks NULL pointer;possible oom_dump_tasks NULL pointer;fix NULL pointer dereference;NULL pointer dereference;Similar;0.9276682138442993
+There is no need to call for int_sqrt;if argument is 0;Theres no need to fill the ring buffer with this information;if its already been printed and the condition that triggered the previous OOM killer has not yet been alleviated.;Similar;0.9147766828536987
+There is no need to call for int_sqrt;if argument is 0;Theres no need to call schedule_timeout_interruptible();task must die ASAP;Similar;0.9592934846878052
+Fix it.;Fixes;fix it;fix;Similar;0.9912862181663513
+Remove the redundancy in __oom_kill_task();redundancy;remove redundant OOM score normalization in select_bad_process();redundant OOM score normalization;Similar;0.9078729152679443
+Remove this dubious PF_EXITING check;dubious;remove unnecessary exit_state check;unnecessary;Similar;0.9148856401443481
+do not attempt to reap a task more than twice;do not attempt to reap a task more than twice;do not attempt to reap a task twice;do not attempt to reap a task twice;Similar;0.9789882302284241
+remove unused argument from oom_scan_process_thread();unused argument;Remove the PT_TRACE_EXIT check in oom_scan_process_thread();"It was added to handle the case when coredumping was ""frozen"" by ptrace, but it doesnt really work";Similar;0.9157769083976746
+remove unused argument from oom_scan_process_thread();unused argument;Remove unused start/end arguments from tlb_finish_mmu();unused;Similar;0.9289190769195557
+remove deprecated oom_adj;deprecated;remove task_t, convert to struct task_struct;cleanup, remove;Similar;0.9025689363479614
+remove deprecated oom_adj;deprecated;Remove the parameter @mem;removed since v2.6.26;Similar;0.902563214302063
+remove deprecated oom_adj;deprecated;removes PF_OOM_ORIGIN;behavior is equivalent to setting the processs oom_score_adj to OOM_SCORE_ADJ_MAX;Similar;0.9209129214286804
+Theres no need to fill the ring buffer with this information;if its already been printed and the condition that triggered the previous OOM killer has not yet been alleviated.;Theres no need to call schedule_timeout_interruptible();task must die ASAP;Similar;0.917081356048584
+Prepare for new header dependencies before moving code to <linux/sched/coredump.h>;Prepare for new header dependencies;Prepare for new header dependencies before moving code to <linux/sched/mm.h>;Prepare for new header dependencies;Similar;0.992728590965271
+Create a trivial placeholder <linux/sched/coredump.h> file that just maps to <linux/sched.h>;to make this patch obviously correct and bisectable;Create a trivial placeholder <linux/sched/mm.h> file;to make this patch obviously correct and bisectable;Similar;0.942794680595398
+Include the new header in the files that are going to need it;files that are going to need it;Include the new header in the files that are going to need it;that are going to need it;Similar;0.9999998211860657
+removes the __GFP_NOFAIL special case;more clear semantic without surprising side effects;removes PF_OOM_ORIGIN;behavior is equivalent to setting the processs oom_score_adj to OOM_SCORE_ADJ_MAX;Similar;0.9080530405044556
+Remove unnecessary locking in exit_oom_victim();unnecessary locking in exit_oom_victim();remove unnecessary exit_state check;unnecessary;Similar;0.910933256149292
+Remove unnecessary locking in exit_oom_victim();unnecessary locking in exit_oom_victim();remove unnecessary locking in oom_enable();unnecessary locking in oom_enable();Similar;0.9311291575431824
+fix for this bug;fix;Fix this bug;"using an approach used by commit 855b018325737f76 (""oom, oom_reaper: disable oom_reaper for oom_kill_allocating_task"")";Similar;0.9740132093429565
+remove task_t, convert to struct task_struct;cleanup, remove;Remove the parameter @mem;removed since v2.6.26;Similar;0.9023247957229614
+Remove the unused arguments and update all callers.;unused.;Remove the unused arguments and update all callers.;unused;Similar;0.9999998807907104
+fix typo in comment;typo in comment;fix typos in comments;typos in comments;Similar;0.9594662189483643

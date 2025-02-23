@@ -1,0 +1,188 @@
+﻿commit ID,text,predicted_decision,predicted_rationale,Agree decision ? ,Agree rationale ?
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,ACPI: make remove callback of ACPI driver void,1,0,yes,yes
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"For bus-based driver, device removal is implemented as",0,0,yes,yes
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"1 device_remove()->
+2   bus->remove()->
+3     driver->remove()
+Driver core needs no inform from callee(bus driver) about the
+result of remove callback",1,1,yes,yes
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"In that case, commit fc7a6209d571
+(""bus: Make remove callback return void"") forces bus_type::remove
+be void-returned",1,0,no,yes
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"Now we have the situation that both 1 & 2 of calling chain are
+void-returned, so it does not make much sense for 3(driver->remove)
+to return non-void to its caller",0,0,yes,no
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"So the basic idea behind this change is making remove() callback of
+any bus-based driver to be void-returned",1,0,yes,yes
+C_kwDOACN7MtoAKDZjMGViNWJhMzUwMGY2ZGEzNjczNTFmZjNjNDQ1MmMwMjljYjcyZmE,"This change, for itself, is for device drivers based on acpi-bus.",0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,ACPI: button: Add DMI quirk for Lenovo Yoga 9 (14INTL5),1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,The Lenovo Yoga 9 (14INTL5)'s ACPI _LID is bugged,0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,After hibernation the lid is initially reported as closed,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,"Once closing and then reopening the lid reports the lid as
+open again",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,"This leads to the conclusion that the initial
+notification of the lid is missing but subsequent
+notifications are correct",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYTIwZDQwOWM4NzQyNTUwODZlMmY0MmE3Mjk4MjZkNDkwMjk0Yzkx,"In order fo the Linux LID code to handle this device properly
+the lid_init_state must be set to ACPI_BUTTON_LID_INIT_OPEN.",0,0,no,no
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,ACPI: button: Add DMI quirk for Medion Akoya E2228T,1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,"The Medion Akoya E2228T's ACPI _LID implementation is quite broken,
+it has the same issues as the one from the Medion Akoya E2215T",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,1,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,"For notifications it uses an ActiveLow Edge GpioInt, rather then
+   an ActiveBoth one, meaning that the device is only notified when the
+   lid is closed, not when it is opened",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,2,1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,"Matching with this its _LID method simply always returns 0 (closed)
+In order for the Linux LID code to work properly with this implementation,
+the lid_init_state selection needs to be set to ACPI_BUTTON_LID_INIT_OPEN,
+add a DMI quirk for this",0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3ZGFhYTA2MzU3YmY3ZjE4NzRiNjJiYjFlYTlkNjZhNTFkNGU1Njdl,"While working on this I also found out that the MD60### part of the model
+number differs per country/batch while all of the E2215T and E2228T models
+have this issue, so also remove the "" MD60198"" part from the E2215T quirk.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxMzZhNGRmZTg3Y2QzNGRiMjE1MzMzMGFhODRkYmJjMjEwZWIzNmI2,ACPI: button: Drop no longer necessary Acer SW5-012 lid_init_state quirk,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxMzZhNGRmZTg3Y2QzNGRiMjE1MzMzMGFhODRkYmJjMjEwZWIzNmI2,"Commit 78a5b53e9fb4 (""Input: soc_button_array - work around DSDTs which
+modify the irqflags"") adds a workaround for DSDTs with a _LID method
+which play tricks with the irqflags, assuming that the OS is using
+an irq-type of IRQ_TYPE_LEVEL_LOW",1,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODoxMzZhNGRmZTg3Y2QzNGRiMjE1MzMzMGFhODRkYmJjMjEwZWIzNmI2,"Now that this workaround is in place, we no longer need to disable the
+lid functionality on the Acer SW5-012.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,ACPI: button: fix handling lid state changes when input device closed,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,"The original intent of 84d3f6b76447 was to delay evaluating lid state until
+all drivers have been loaded, with input device being opened from userspace
+serving as a signal for this condition",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,"Let's ensure that state updates
+happen even if userspace closed (or in the future inhibited) input device",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,"Note that if we go through suspend/resume cycle we assume the system has
+been fully initialized even if LID input device has not been opened yet",0,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,"This has a side-effect of fixing access to input->users outside of
+input->mutex protections by the way of eliminating said accesses and using
+driver private flag",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODoyMTk4OGE4ZTUxNDc5Y2VmZmU3YjA1NjhiMTcwZWZmYWJiNzA4ZGZl,"Fixes: 84d3f6b76447 (""ACPI / button: Delay acpi_lid_initialize_state() until first user space open"")",0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoyYjYwMjJhMzJlMWM2ZTc0MGE1OTI5OTUxZDlkOGNiZWQzYjE2MmIx,ACPI: button: Drop no longer necessary Asus T200TA lid_init_state quirk,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyYjYwMjJhMzJlMWM2ZTc0MGE1OTI5OTUxZDlkOGNiZWQzYjE2MmIx,"Commit 17e5888e4e18 (""x86: Select HARDIRQS_SW_RESEND on x86"") fixes
+the edge-triggered embedded-controller (WC) IRQ not being replayed after
+resume when woken by opening the lid, which gets signaled by the EC",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyYjYwMjJhMzJlMWM2ZTc0MGE1OTI5OTUxZDlkOGNiZWQzYjE2MmIx,"This means that the lid_init_state=ACPI_BUTTON_LID_INIT_OPEN quirk for
+the Asus T200TA is no longer necessary, the lid now works properly
+without it, so drop the quirk",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoyYjYwMjJhMzJlMWM2ZTc0MGE1OTI5OTUxZDlkOGNiZWQzYjE2MmIx,"Fixes: 17e5888e4e18 (""x86: Select HARDIRQS_SW_RESEND on x86"")",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODphYzFjYzZiNDg1NmZmYTdlY2I4MThiM2NlYjgyYmZjNDM1OTdkNjEz,ACPI: button: move HIDs to acpi/button.h,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODphYzFjYzZiNDg1NmZmYTdlY2I4MThiM2NlYjgyYmZjNDM1OTdkNjEz,This makes it possible to use ACPI_BUTTON_HID_POWER in another driver.,0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,ACPI: button: Add DMI quirk for Acer Switch 10 SW5-032 lid-switch,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"The Acer Switch 10 SW5-032 _LID method is quite broken, it looks like this",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"            Method (_LID, 0, NotSerialized)  // _LID: Lid Status
+                If ((STAS & One))
+                    Local0 = One
+                    PBCG |= 0x05000000
+                    HMCG |= 0x05000000
+                Else
+                    Local0 = Zero
+                    PBCG &= 0xF0FFFFFF
+                    HMCG &= 0xF0FFFFFF
+                ^^PCI0.GFX0.CLID = Local0
+                Return (Local0)
+The problem here is the accesses to the PBCG and HMCG, these are the
+pinconf0 registers for the power, resp",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"the home button GPIO,
+e.g",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,PBCG is declared as,0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"            OperationRegion (PWBT, SystemMemory, 0xFED0E080, 0x10)
+            Field (PWBT, DWordAcc, NoLock, Preserve)
+                PBCG,   32,
+                PBV1,   32,
+                PBSA,   32,
+                PBV2,   32
+Where 0xFED0E000 is the base address of the GPO2 device and 0x80 is
+the offset for the pin used for the powerbutton",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,The problem here is this line in _LID,0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"                    PBCG |= 0x05000000
+This changes the trigger flags of the GPIO, changing when it generates
+interrupts",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,Note it does not clear the original flags,1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"Linux uses an
+edge triggered interrupt on both positive and negative edges",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"This |=
+adds the BYT_TRIG_LVL flag to this, so now it is turned into a level
+interrupt which fires both when low and high, iow it simply always
+fires leading to an interrupt storm, the tablet immediately waking up
+from suspend again, etc",1,1,no,no
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"There is nothing we can do to fix this, except for a DSDT override,
+which the user needs to do manually",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"The only thing we can do is
+never call _LID, which requires disabling the lid-switch functionality
+altogether",0,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"This commit adds a quirk for this, as no lid-switch function is better
+then the interrupt storm",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MGVkOWM2MzljMWI1MzU1NmY4N2IxYzUwMzFjN2U0YzU3Mjg1YTky,"A user manually applying a DSDT override can
+also override the quirk on the kernel cmdline.",1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODplMzQ2ZDBjZjJjMGEyZGM5ZTYzZDViOTA4MjRiYmU1YWMwY2M0M2Uy,ACPI: button: Remove unused acpi_lid_notifier_[un]register() functions,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODplMzQ2ZDBjZjJjMGEyZGM5ZTYzZDViOTA4MjRiYmU1YWMwY2M0M2Uy,"There are no users of the acpi_lid_notifier_[un]register functions,
+so lets remove them.",1,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODowMGUyNTAzNjdjYzZjNGFiODBmZWE2ZWM2MDVkNDY0ZTYyNGJkNTIw,ACPI: button: Add DMI quirk for Asus T200TA,1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODowMGUyNTAzNjdjYzZjNGFiODBmZWE2ZWM2MDVkNDY0ZTYyNGJkNTIw,"The Asus T200TA lid has some weird behavior where _LID keeps reporting
+closed after every second openening of the lid",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODowMGUyNTAzNjdjYzZjNGFiODBmZWE2ZWM2MDVkNDY0ZTYyNGJkNTIw,"Causing immediate
+re-suspend after opening every other open",0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODowMGUyNTAzNjdjYzZjNGFiODBmZWE2ZWM2MDVkNDY0ZTYyNGJkNTIw,"I've looked at the AML code but it involves talking to the EC and we
+have no idea what the EC is doing",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODowMGUyNTAzNjdjYzZjNGFiODBmZWE2ZWM2MDVkNDY0ZTYyNGJkNTIw,"Setting lid_init_state to
+ACPI_BUTTON_LID_INIT_OPEN fixes the unwanted behavior, so this commit
+adds a DMI based quirk to use ACPI_BUTTON_LID_INIT_OPEN on the T200TA.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozZjM5NDJhY2E2ZGEzNTFhMTI1NDNhYTc3NjQ2Nzc5MWI2M2IzYTc4,"proc: introduce proc_create_single{,_data}",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozZjM5NDJhY2E2ZGEzNTFhMTI1NDNhYTc3NjQ2Nzc5MWI2M2IzYTc4,"Variants of proc_create{,_data} that directly take a seq_file show
+callback and drastically reduces the boilerplate code in the callers",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozZjM5NDJhY2E2ZGEzNTFhMTI1NDNhYTc3NjQ2Nzc5MWI2M2IzYTc4,All trivial callers converted over.,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,ACPI / button: Add quirks for initial lid state notification,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,"Linux userspace (systemd-logind) keeps on rechecking lid state when the
+lid state is closed",0,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,"If it failed to update the lid state to open after
+boot/resume, the system suspending right after the boot/resume could be
+resulted",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,"Graphics drivers also use the lid notifications to implment
+MODESET_ON_LID_OPEN option",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,"Before the situation is improved from the userspace and from the graphics
+driver, users can simply configure ACPI button driver to send initial
+""open"" lid state using button.lid_init_state=open to avoid such kind of
+issues",0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3,"And our ultimate target should be making button.lid_init_state=ignore
+the default behavior",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODozNTQwYzMyYTlhZTRjYjIzYWI3MGY3Nzk4ZjQ1YWZmYzAyNzYyZmE3," This patch implements the 2 options and keep the
+old behavior (button.lid_init_state=method).",1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODplZTdlMjI2NTNmNTA3NzE2OWVjNzA2YjVhMTQwYTNiZTlkYjM4MWU3,ACPI / button: Refactor functions to eliminate redundant code,0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODplZTdlMjI2NTNmNTA3NzE2OWVjNzA2YjVhMTQwYTNiZTlkYjM4MWU3,"(Correct a wrong macro usage.)
+This patch simplies the code by merging some redundant code",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODplZTdlMjI2NTNmNTA3NzE2OWVjNzA2YjVhMTQwYTNiZTlkYjM4MWU3,No functional changes.,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWZhYzgzODhhMDMyNWE0M2YwYWU2NzQ1M2VjZTJjMzczZTJlYzI4,ACPI: Remove useless type argument of driver .remove() operation,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWZhYzgzODhhMDMyNWE0M2YwYWU2NzQ1M2VjZTJjMzczZTJlYzI4,"The second argument of ACPI driver .remove() operation is only used
+by the ACPI processor driver and the value passed to that driver
+through it is always available from the given struct acpi_device
+object's removal_type field",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo1MWZhYzgzODhhMDMyNWE0M2YwYWU2NzQ1M2VjZTJjMzczZTJlYzI4," For this reason, the second ACPI driver
+.remove() argument is in fact useless, so drop it.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MTJiNzQyN2ZjMTM0NjdiYWMwNDJjYzcyZjJlY2NiZGJjMzlkNzcz,ACPI button: remove unused procfs I/F,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MTJiNzQyN2ZjMTM0NjdiYWMwNDJjYzcyZjJlY2NiZGJjMzlkNzcz,Remove unused ACPI button procfs interface,1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo5MTJiNzQyN2ZjMTM0NjdiYWMwNDJjYzcyZjJlY2NiZGJjMzlkNzcz,Only /proc/acpi/button/lid/LID/state remains.,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxM2MxOTljMGQwY2Y3OGIyNzU5Mjk5MTEyOWZiOGNiY2ZjNTE2NGRl,ACPI: Use the return result of ACPI lid notifier chain correctly,0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoxM2MxOTljMGQwY2Y3OGIyNzU5Mjk5MTEyOWZiOGNiY2ZjNTE2NGRl,"On some laptops it will return NOTIFY_OK(non-zero) when calling the ACPI LID
+notifier",1,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoxM2MxOTljMGQwY2Y3OGIyNzU5Mjk5MTEyOWZiOGNiY2ZjNTE2NGRl,"Then it is used as the result of ACPI LID resume function, which
+will complain the following warning message in course of suspend/resume",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODoxM2MxOTljMGQwY2Y3OGIyNzU5Mjk5MTEyOWZiOGNiY2ZjNTE2NGRl,"     >PM: Device PNP0C0D:00 failed to resume: error 1
+This patch is to eliminate the above warning message.",1,1,yes,no
+MDY6Q29tbWl0MjMyNTI5ODpkZjMxNmU5MzkxMDBlNzg5YjNjNWQ0ZDEwMjYxOWNjZjU4MzRiZDAw,ACPI: Always report a sync event after a lid state change,0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODpkZjMxNmU5MzkxMDBlNzg5YjNjNWQ0ZDEwMjYxOWNjZjU4MzRiZDAw,"Currently not always an EV_SYN event is reported to userland
+after the EV_SW SW_LID event has been sent",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODpkZjMxNmU5MzkxMDBlNzg5YjNjNWQ0ZDEwMjYxOWNjZjU4MzRiZDAw,"This is easy to verify
+by using âinput-eventsâ from input-utils and just closing and opening
+the lid.",1,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYmE5MGUzYTg3YzQ2NTAwNjIzYWZkYzM4OTg1NzNlNGE1ZWJiMjFi,ACPI: autoload modules - Create __mod_acpi_device_table symbol for all ACPI drivers,1,0,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODoxYmE5MGUzYTg3YzQ2NTAwNjIzYWZkYzM4OTg1NzNlNGE1ZWJiMjFi,modpost is going to use these to create e.g,0,0,yes,no
+MDY6Q29tbWl0MjMyNTI5ODoxYmE5MGUzYTg3YzQ2NTAwNjIzYWZkYzM4OTg1NzNlNGE1ZWJiMjFi,"acpi:ACPI0001
+in modules.alias.",1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3Y2RhOTNlMDA4ZTFhNDc3OTcwYWRiZjgyZGJhODFhNWQ0ZjBhZTQw,ACPI: delete extra #defines in /drivers/acpi/ drivers,0,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3Y2RhOTNlMDA4ZTFhNDc3OTcwYWRiZjgyZGJhODFhNWQ0ZjBhZTQw,Cosmetic only,1,1,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo3Y2RhOTNlMDA4ZTFhNDc3OTcwYWRiZjgyZGJhODFhNWQ0ZjBhZTQw,"Except in a single case, #define ACPI_*_DRIVER_NAME
+were invoked 0 or 1 times.",0,1,yes,yes
+MDY6Q29tbWl0MjMyNTI5ODo0YmU0NGZjZDNiZjY0OGI3ODJmNDQ2MGZkMDZkZmFlNmM0MmRlZDRi,[ACPI] Lindent all ACPI files,0,0,no,yes
+MDY6Q29tbWl0MjMyNTI5ODo0YmU0NGZjZDNiZjY0OGI3ODJmNDQ2MGZkMDZkZmFlNmM0MmRlZDRi,,0,0,yes,yes

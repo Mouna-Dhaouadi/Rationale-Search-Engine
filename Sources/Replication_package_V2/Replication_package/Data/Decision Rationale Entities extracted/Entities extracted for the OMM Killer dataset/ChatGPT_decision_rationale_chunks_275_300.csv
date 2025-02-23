@@ -1,0 +1,27 @@
+Decision;Rationale
+make the oom_reaper thread freezable;In order to close this race
+None;None
+Use a single linked list;Save a word in task_struct
+This patch fixes the issue by introducing a new MMF_OOM_KILLED mm flag which is set in oom_kill_process atomically and oom reaper is disabled if the flag was already set.;Fixes the issue by introducing a new MMF_OOM_KILLED mm flag and disabling the oom reaper if the flag was already set.
+wake_oom_reaper used a more robust queuing;The situation would improve considerably
+Implements this patch;None
+report success/failure;None
+Inform about the successful/failed oom_reaper attempts and dump all the held locks;to tell us more who is blocking the progress
+This patch reduces the probability of such a lockup by introducing a specialized kernel thread (oom_reaper) which tries to reclaim additional memory by preemptively reaping the anonymous or swapped out memory owned by the oom victim.;under an assumption that such a memory won't be needed when its owner is killed and kicked from the userspace anyway
+considered a reasonable constrain;the overall system health is more important than debugability of a particular application
+A kernel thread has been chosen;we need a reliable way of invocation so workqueue context is not appropriate because all the workers might be busy
+allocating memory;None
+Kswapd which sounds like another good fit is not appropriate as well;it might get blocked on locks during reclaim as well
+oom_reaper has to take mmap_sem on the target task for reading;the semaphore might be held or blocked for write but the probability is reduced considerably wrt
+None;basically any, lock blocking forward progress as described above
+Using only a trylock and retry 10 times with a short sleep in between;To prevent from blocking on the lock without any forward progress
+"Users of mmap_sem which need it for write should be carefully reviewed to use _killable waiting as much as possible and reduce allocations requests done with the lock held to absolute minimum
+";to reduce the risk even further
+limit it to the necessary minimum;the operation is potentially disruptive
+None;None
+checking for SIGKILL is preferable than TIF_MEMDIE;None
+Add a missing newline;missing
+adds MM_SHMEMPAGES counter to mm_rss_stat;to account for shmem pages separately from MM_FILEPAGES
+None;None
+avoid attempting to kill init sharing same memory;avoid attempting to kill init
+None;it's better not to try to kill init and allow the machine to panic due to unkillable processes

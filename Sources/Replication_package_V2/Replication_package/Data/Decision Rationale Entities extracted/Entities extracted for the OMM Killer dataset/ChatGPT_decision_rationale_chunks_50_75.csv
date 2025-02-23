@@ -1,0 +1,31 @@
+Decision;Rationale
+Remove the unused arguments and update all callers.;unused.
+Remove unused start/end arguments from tlb_finish_mmu();unused
+Remove the unused arguments and update all callers.;unused
+Show some helpful information;to indicate why this happens
+make the calculation of oom badness more accurate;more accurate
+To fix this issue;make the calculation of oom point more accurate
+better document the use_mm/unuse_mm API contract;none
+give the functions a kthread_ prefix;to better document the use case
+Convert comments that reference old mmap_sem APIs to reference corresponding new mmap locking APIs instead.;None
+converts the existing mmap_sem rwsem calls to use the new mmap locking API;None
+integrate classzone_idx and high_zoneidx;None
+integrate them and add some comment to struct alloc_context;reduce future confusion about the meaning of this variable
+The accessor, ac_classzone_idx() is also removed;it isn't needed after integration
+Renames high_zoneidx to highest_zoneidx;Represents more precise meaning
+dump stack of victim when reaping failed;reaping failed
+Dump the stack trace;Find related occurrences in the same kernel code and hopefully solve the issue that is making it wedged
+fix pgtables units mismatch in Killed process message;pgtables units mismatch in Killed process message
+fix the value rather than the string;everything else is printed in kB
+Introduce MADV_COLD and MADV_PAGEOUT;None
+None;hot starts will always be significantly less power hungry as well as faster
+None;to bypass the inaccuracy of the kernel's LRUs for pages, known to be cold from userspace, and avoid races with lmkd by reclaiming apps as soon as they entered the cached state
+Introduce two new options for madvise;To achieve the goal
+One is MADV_COLD which will deactivate activated pages and the other is MADV_PAGEOUT which will reclaim private pages instantly;None
+None;complement MADV_DONTNEED and MADV_FREE by adding non-destructive ways to gain some free memory space
+"
+MADV_PAGEOUT is similar to MADV_DONTNEED 
+MADV_COLD is similar to MADV_FREE 
+";"
+it hints the kernel that memory region is not currently needed and should be reclaimed immediately 
+it hints the kernel that memory region is not currently needed and should be reclaimed when memory pressure rises"

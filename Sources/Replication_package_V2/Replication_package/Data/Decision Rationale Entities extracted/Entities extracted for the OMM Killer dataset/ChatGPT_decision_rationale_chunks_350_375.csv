@@ -1,0 +1,26 @@
+Decision;Rationale
+Patches 3 and 4 should go in ditto;trivial printk -> pr_info conversion
+None;None
+Give the oom victim access to the memory reserves;That shouldn't be necessary
+checking task->mm and setting TIF_MEMDIE flag under task_lock;serialize the OOM killer with exit_mm which sets task->mm to NULL
+Setting the flag for current is not necessary;check and set is not racy
+It will trigger an OOM livelock;if its parent is unable to reap it due to doing an allocation and waiting for the OOM killer to kill it
+kill the insufficient and no longer needed PT_TRACE_EXIT check;insufficient and no longer needed
+Remove the PT_TRACE_EXIT check in oom_scan_process_thread();"It was added to handle the case when coredumping was ""frozen"" by ptrace, but it doesn't really work"
+check all threads which could share the same ->mm;to make it more or less correct
+Change the PF_EXITING checks to take SIGNAL_GROUP_COREDUMP into account;None
+fatal_signal_pending() can be true;because of SIGNAL_GROUP_COREDUMP so out_of_memory() and mem_cgroup_out_of_memory() shouldn't blindly trust it
+drop bogus RCU locking from mem_cgroup_same_or_subtree();None
+Rename the leftover helper to mem_cgroup_is_descendant() to match cgroup_is_descendant();To make the API change clear
+simplify cpuset_node_allowed API;None
+simplify the API back to the single check;to simplify the API back
+OOM killed task shouldn't escape PM suspend;OOM
+Reduce the race window by checking all tasks after OOM killer has been disabled;checking all tasks after OOM killer has been disabled
+None;None
+Full synchronization of OOM and freezer is too heavy weight;for this highly unlikely case
+The counter is updated so early to reduce the race window;to reduce the race window
+push the re-check loop out of freeze_processes into check_frozen_processes;to make the code more readable as per Rafael
+remove unnecessary exit_state check;unnecessary
+Clear TIF_MEMDIE after exit_mm()'s mmput();so that an oom killed process is no longer considered for oom kill, but only until exit_mm() has returned
+Rename try_set_zonelist_oom() to oom_zonelist_trylock() and rename clear_zonelist_oom() to oom_zonelist_unlock();to imply there is proper locking semantics
+Convert oom_zonelist_trylock() to return bool instead of int;Only success and failure are tested
