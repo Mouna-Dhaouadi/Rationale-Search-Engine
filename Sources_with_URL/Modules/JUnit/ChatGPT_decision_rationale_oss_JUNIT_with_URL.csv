@@ -1,0 +1,146 @@
+;Decision;Rationale;url
+0;Fixed typo;;https://github.com/junit-team/junit4/commit/6b97cfa77503a00416f401ad47f375f087e8c3cb
+1;Fix <method_name> ( <pr_link> );<method_name> should not match when the given <iden> has no failures;https://github.com/junit-team/junit4/commit/363755060f75d3d5cce21bd05d49110e02bc1ba2
+2;Wrap the invocation of <iden>() within a try-catch block  ;Exceptions from <iden>() were causing unrooted tests;https://github.com/junit-team/junit4/commit/a90b496a6595856066504baf4f737fb853a6e45d
+3;Fix dead link to the ant task in <file_name> (<pr_link>);"The link is dead; task has been moved to another location";https://github.com/junit-team/junit4/commit/24dfdd762e753c83babca3768d4b508cf5c6a86c
+4;Fix many warnings (Eclipse <version>/Juno based);Enh: add new 'staticondemandthreshold' setting to eclipse project jdt.ui preference settings file;https://github.com/junit-team/junit4/commit/0733bbffdadf05a6ebe0c38942904071a4060af4
+5;changed the <iden>() method to accept a <iden> instead of an explicit <iden>;made some documentation changes;https://github.com/junit-team/junit4/commit/6b943e564adcc9a7106e54c24eb5d022bed1462f
+6;Updated URL to <iden>'s code style repository. Document indent size. Updating code style as per <pr_link> ;;https://github.com/junit-team/junit4/commit/392c673b5f35c2c72f74a15b24afff338ba4e3a7
+7;Remove redundant field <iden> ;redundant;https://github.com/junit-team/junit4/commit/3189af007b26d74ca459f823d57ef77b9c1697b8
+8;Implemented the changes proposed by davidhart82;proposed by davidhart82;https://github.com/junit-team/junit4/commit/ebb9d7f536a5b1be8364c6cb7367cac8c3849caa
+9;Fixes imports;;https://github.com/junit-team/junit4/commit/dda4d08fc64933a8e4af33b745bd8219682b7bcb
+10;Restore backward compatibility with sub class of <file_name> that override <iden> method and Add <file_name> to <file_name> suite;To ensure backward compatibility with subclasses and include <file_name> in the <file_name> suite;https://github.com/junit-team/junit4/commit/2b6fa701e84625c511b03079296774cc0904ef1a
+11;`<file_name>` should be in junit*.zip  ;;https://github.com/junit-team/junit4/commit/8760e505d64d69534073f28bdf47886d20dbca4e
+12;Updated <file_name>;;https://github.com/junit-team/junit4/commit/7e77e49c40afb951ae5a5cbdf75ebb4a478e2bb7
+13;Better validation in <file_name> ;Improve validation;https://github.com/junit-team/junit4/commit/50b9c949876189d8c4871471ec346988e4ccae06
+14;A <file_name> can be explicitly passed to a <iden> class that needs one in its constructor.;This eliminates the ugly global constant <file_name> in <file_name>, and breaks the cyclic dependency between runners and requests;https://github.com/junit-team/junit4/commit/d148bce8682505082a3cc634acbd36ac13a10c9a
+15;Invalid assumptions, failed tests, and ignored tests now all print similarly;;https://github.com/junit-team/junit4/commit/a916d4133c7e394130d7953da427aae9917ab92c
+16;Remove unnecessary comments;unnecessary;https://github.com/junit-team/junit4/commit/5af049cac0c976c586d955607fa459aacb778d3c
+17;New <iden> implementation makes <file_name> crazy simple;;https://github.com/junit-team/junit4/commit/5e4f8e7fb82919d992887fca1741bb04ef1c8f4a
+18;<file_name> handles filtering and sorting for all runners, now including <file_name>;handles filtering and sorting for all runners;https://github.com/junit-team/junit4/commit/42beed3ad166a9cceefc59f6c79a16844cae0d02
+19;Ignored tests should be shown differently in stack trace section of report;ignored;https://github.com/junit-team/junit4/commit/8a8008c96936d468a2f579bcea9a71e965558d57
+20;Moved <file_name> into proper package;proper;https://github.com/junit-team/junit4/commit/9a5dfd996ab7007994fcf60752441835dbdbb5d0
+21;No matching parameters is now an assumption failure, not an assertion failure;an assumption failure;https://github.com/junit-team/junit4/commit/81ef67251efba98fd6bb1065e9ab97c102dbcc24
+22;Now includes filtering;;https://github.com/junit-team/junit4/commit/897fa2227e26f221e5efa4f95a805f7ff1ccac5f
+23;Pull <iden> up into <file_name>;reorganization of code;https://github.com/junit-team/junit4/commit/a6368e40e787e7a23c9f1e58d6a47bf9fa2d0a2c
+24;Fixed a bug in <file_name> classes with constructor parameters  ;where the method parameters and constructor parameters were switched;https://github.com/junit-team/junit4/commit/4cb9a65f450efa5f2a42128856c7b56e6d283386
+25;Removed  <file_name> , replaced with  <file_name> , which moved to model package with  <file_name> ;moved to model package;https://github.com/junit-team/junit4/commit/4d9c88e37dfed614a1bd1ae2ca2ecc86122aa9f1
+26;Renamed link classes  ;Absolute actions are verbs, ActionModifiers are modifying phrases, Moved isShadowedBy(List) to <file_name>;https://github.com/junit-team/junit4/commit/44e7458b19d5cd1900a765a440c96e85b81d25fc
+27;Created a separate <file_name> directory for new <file_name> scripts, including FTP upload;Organizing and structuring directories for new scripts;https://github.com/junit-team/junit4/commit/24eacde6262fbb3ce096fe59e8df93907b7622ae
+28;Updated README  ;about Enclosed;https://github.com/junit-team/junit4/commit/57f06901cde6ec806d4f4381670466ab5fbac300
+29;Deprecate rule  <file_name>  ( <pr_link> )  ;The method Assert.assertThrows provides a nicer way for verifying exceptions. In addition the use of  <file_name>  is error-prone when used with other rules like TestWatcher because the order of rules is important in that case.;https://github.com/junit-team/junit4/commit/5785d9df8fe25f68567272850cd65b4dc07da617
+30;Disable parts of doclint for the site's javadoc;That commit is missing to apply the doclint rules to site generation. Hence the site goal fails because of doclint issues. Now doclint is disabled for all groups but accessibility and reference for the site generation.;https://github.com/junit-team/junit4/commit/16a2b51b9d9425cd7dacad85e2df97985996ca8d
+31;Adding additional javadoc context for deprecated <method_name>, Adding <file_name> entry for pholser, Starting <version> release notes;for deprecated <method_name>, for pholser, starting release notes;https://github.com/junit-team/junit4/commit/89ffd7eda43f939f7dc210cfe21a196067ab08d6
+32;Use Field#getType();;https://github.com/junit-team/junit4/commit/01716157f2683f5610d721929a687e7dc3aee558
+33;Move emptySuite method to <file_name>;;https://github.com/junit-team/junit4/commit/58723f03198f62f079cd242f7110a94713a5a90b
+34;beef up <file_name> with checkThat and checkPasses  ;Advance version;https://github.com/junit-team/junit4/commit/50b77b1f3108aa77af0906162d552e513936c322
+35;Added suggestions by dsaff, Removed the Markdown syntax, changed import order, removed confusing <iden> section;;https://github.com/junit-team/junit4/commit/ab1eb66505631ec2ad8010cc071e0f625b2ad95d
+36;Added <iden> check for MultiPointsMethod;Fix for issue <issue_link>;https://github.com/junit-team/junit4/commit/48aabe1b16bd288f74ac4ff92e3a38792533be39
+37;ExpectedException allows multiple exceptions;multiple exceptions;https://github.com/junit-team/junit4/commit/2e9a239f419fa60779b5f1ab191561108e1fe3d4
+38;<method_name> creates any type;none;https://github.com/junit-team/junit4/commit/c9e0f1a3a519bdab2d71b48635a9cc7df3cff3fa
+39;Fix regression in <method_name> for paths with slashes;In JUnit <version>, <iden>(String) was changed to no longer support paths with a file separator. This has been fixed.;https://github.com/junit-team/junit4/commit/c85c6147ada5ad1afdd3be10769670d309730132
+40;Added <file_name> <iden>;;https://github.com/junit-team/junit4/commit/507e7b1799801409104fa5054b3bc6ac3fe82e7d
+41;;;https://github.com/junit-team/junit4/commit/ff2ff9176dfb18887a8e6e463e49b00c6f3acc5f
+42;Updated to <version> final;;https://github.com/junit-team/junit4/commit/469dcc78a7610916ffa29e2cefc21f80430df8c0
+43;minor changes in test;;https://github.com/junit-team/junit4/commit/445ea85dd748e4e83cf7be5940b41df95b3ffa8d
+44;minor refactoring;;https://github.com/junit-team/junit4/commit/fd1ef3ca8069bd149ca63c9660587918aa28c7cd
+45;added the since <version> where appropriate;;https://github.com/junit-team/junit4/commit/f5e7e1ff180bb17e4f9df702a038e06a974f78f6
+46;adding annotation validators functionality;validators;https://github.com/junit-team/junit4/commit/48af7e797dbefa1fc47e80394c7f74ef87c3c7ab
+47;Added more Javadoc to <file_name> for messages and when they are displayed;Put versiontag back into <method_name>;https://github.com/junit-team/junit4/commit/591fcae09c6470a03ade7d608773f8f633409bc2
+48;Added two simple tests for boolean <iden>;to test for boolean values;https://github.com/junit-team/junit4/commit/02371d1154f29f894cd2c7f83ce6743f4abbe76a
+49;Only use a property where multiple entries need syncing  ;Using properties to define a shared version across multiple dependencies causes less issues when you have multiple dependencies that need to be kept in sync;https://github.com/junit-team/junit4/commit/e15b287ccec2a1f4866a8bd1cd2a313a6163163d
+50;Fix distribution management;distribution management;https://github.com/junit-team/junit4/commit/a664c207facb1cddcd5ab130fc14edbae3f33d30
+51;<iden> added;file_name;https://github.com/junit-team/junit4/commit/26fa0a4207e21f058d220c84f8195ee25943400c
+52;No  <file_name>  class, interceptors turned on by default;interceptors turned on by default;https://github.com/junit-team/junit4/commit/e6769d4009db8030661815965e2e22829a4619ff
+53;Remove throws from <method_name>  ;;https://github.com/junit-team/junit4/commit/38f920506399298a945ed38e08e18e1dafb62520
+54;Fixed lost names;;https://github.com/junit-team/junit4/commit/59baeed4cb3d24211960ad01fd3ee9e534b0e1da
+55;Added  <file_name>  logo  ;;https://github.com/junit-team/junit4/commit/01831e8f96e42c72e5abe5838e13554e9d48f3ee
+56;Added <file_name> large logo;to enhance appearance;https://github.com/junit-team/junit4/commit/ce7ce514aa79a7a3be067552359722626937fe8f
+57;Add tests for serialization of <method_name>;serialization;https://github.com/junit-team/junit4/commit/eb75886b2be7edf709441962bf3272e4319823c5
+58;Remove <iden> from <file_name> and related methods;<iden> is no longer needed;https://github.com/junit-team/junit4/commit/bbacbd93334540a5054bb50488f662c3f81a9c00
+59;Delete all constructors created since <version> was released. Fix style issues.;Create a <iden> for <method_name> <enter>;https://github.com/junit-team/junit4/commit/d96a05f8d33ed781c701c58dd285bf6464112719
+60;Make serialization of <file_name> compatible with <version>;compatibility;https://github.com/junit-team/junit4/commit/f6149a9236d9a2778bf2fd6db927fd9f498a79c8
+61;Fix method names;in <method_name>;https://github.com/junit-team/junit4/commit/f15ee64ef898f26775b90e4baf19251a76e5b1e0
+62;Improve error message when <method_name> fails;;https://github.com/junit-team/junit4/commit/a5acc2defe0134d179cf15424202b5403eef74d4
+63;Make  <file_name>  abstract  ;Fix issue 30;https://github.com/junit-team/junit4/commit/e857122bff2a9774c4f44df4a7d531b902e406df
+64;Create <file_name> in org.junit.runners.model and deprecate the one in org.junit.internal.runners.model. Update <file_name> to have a useful message. This allows developers who write custom runners to properly handle multiple exceptions without depending on internal classes.;Provides a more organized structure for custom runners and reduces dependencies on internal classes.;https://github.com/junit-team/junit4/commit/b3789b3f879d34bbe968d5aa51d15c8856b9d102
+65;Improve error message  ;the thrown exception has the same class but the classes are loaded from different class loaders;https://github.com/junit-team/junit4/commit/4042487e40bb441ad4388373e5c91d727b74e0db
+66;Cleaning up compile errors;from reverting hamcrest change;https://github.com/junit-team/junit4/commit/c618504adee4bc91b3bd7e0ff06be6e1fa9d88cc
+67;drastically simplified  ;;https://github.com/junit-team/junit4/commit/d5af0e46c1cd912ef0932ce868517b1e8335531e
+68;Make  <file_name>  more beautiful by creating a <iden>  <enter> extension point in  <file_name>  <enter>;beautiful;https://github.com/junit-team/junit4/commit/13bda470bfa1fe989ce80d616fb096af1b937146
+69;Incorporated <iden>'s patch for <file_name>;<enter>;https://github.com/junit-team/junit4/commit/fdc9cd5ea91f5ae1d7e5991abadd1b3f989626f7
+70;Finishing the work of <file_name>  ;;https://github.com/junit-team/junit4/commit/44e2ed65cd904fc03aecd3b0763856009294bdec
+71;Fix javadoc on <file_name>;-;https://github.com/junit-team/junit4/commit/f9168cb066a53dc63f7346f6bb3d25a46d0ccbed
+72;javadoc'ed, and with better names;;https://github.com/junit-team/junit4/commit/46036e7146f9dd0ca44baaec490692b967edd0ce
+73;Multiple categories on tests, inheritance, production classes in production package  ;;https://github.com/junit-team/junit4/commit/ce810b763e5021629248702993f226e3bf969db8
+74;Removed unused import;unused;https://github.com/junit-team/junit4/commit/758ec7fdc2ea8db0c3cb57b83c2a1a069ee214b6
+75;Multiple categories on tests, inheritance, production classes in production package;;https://github.com/junit-team/junit4/commit/9eab1418bf073556414f8654a8b66d65d784ed71
+76;reuse code properly from <file_name>;CategoriesMark2;https://github.com/junit-team/junit4/commit/1bbab715de4c64943948ecc3739c8d5569378672
+77;;;https://github.com/junit-team/junit4/commit/99a84a542f2ac532a8425fa0a77884902b1c01b0
+78;file_name takes iden target;;https://github.com/junit-team/junit4/commit/734ab5187c068599352e5fdc7374c1334d484fef
+79;Rule name changes;Fixing <file_name>;https://github.com/junit-team/junit4/commit/409a8e06c9f2ec5aa0d9db8a3d413f394c290f6d
+80;<method_name> to replace <iden>( <file_name> );;https://github.com/junit-team/junit4/commit/b33b4b090c224c14415d0ffb68a078a097aeaf71
+81;<file_name> takes <iden> target  ;;https://github.com/junit-team/junit4/commit/8e313a1e58a56694c0441b2fa60974fa8e1bfe31
+82;Simplify <iden> implementation for backward compatibility;for backward compatibility;https://github.com/junit-team/junit4/commit/870289f3272917f312de6902b8b6bdc43552d4b7
+83;Simplify <file_name> implementations;;https://github.com/junit-team/junit4/commit/2f9b53dbecad010dbb7e7cfff3a11476b7d2208a
+84;removed spaces before period in comment;;https://github.com/junit-team/junit4/commit/561fb840af9d00abab5449f704a77fd6a7f2509d
+85;no inline comment  ;comment space;https://github.com/junit-team/junit4/commit/f851c3ee43e1966903ff66ecda3fa7f66c2d2ecb
+86;no #<iden>, no inline comment, added space in comment  ;added space in comment;https://github.com/junit-team/junit4/commit/78f5fa85b492353ad062f54d1f0ceec745537761
+87;removed <file_name>, updated <file_name> and <file_name>;;https://github.com/junit-team/junit4/commit/59f3fa6ea11433ffd914e6c2032cdad0036f435e
+88;excluded internal packages;same as ANT;https://github.com/junit-team/junit4/commit/d24e5d821964508246b9670a08affab50e3ca87c
+89;Improved <iden>: <file_name>  ;fails few times;https://github.com/junit-team/junit4/commit/c236a9e019a814b3542dcfe3a3a61b036c14d252
+90;sorting tests globally;;https://github.com/junit-team/junit4/commit/85578d48f6459a05665329faa9b52a861e9142cb
+91;first attempt at dogfooding failed;AllTests passes, but Eclipse doesn't cal <file_name>;https://github.com/junit-team/junit4/commit/df48b66e73c740acb15f065eb7a4bad433930891
+92;Brought in old <file_name> for compatibility. Renamed new <file_name> to <method_name>  ;for compatibility;https://github.com/junit-team/junit4/commit/078e45bd31a9920e00633ad6ce658e22529304f2
+93;Move <file_name> to experimental;Adding javadoc;https://github.com/junit-team/junit4/commit/ef32d036d0ff96328f622942514ca73b5f69556d
+94;Tweaked <file_name> a bit  ;It still seems strange that the class runner creates a statement which creates another class runner (or perhaps more class runners?);https://github.com/junit-team/junit4/commit/73015005c155a0a7efdfe9edef87a95bb6fcc2de
+95;Comparing arrays declared as <iden> now uses array comparison. There was also a strange change to the <file_name> file that I reverted.;<none>;https://github.com/junit-team/junit4/commit/398bf2652efda067329f9fdedd13cd8e466c3be4
+96;'...' in <file_name>  ;;https://github.com/junit-team/junit4/commit/ba28bf0f0384ba8b2fc377ef612545f411a56ec4
+97;Fix for JUnit <version> does not compile with JDK <version>;does not compile;https://github.com/junit-team/junit4/commit/ece77fa477a6d322bb5b37c7e2367f4c4dfbf9f3
+98;Enhanced missing test.jar error message;missing test.jar error message;https://github.com/junit-team/junit4/commit/0be4c31f80dc38ddf8decbc8d6d13bd23d3ae8b1
+99;deleted duplicate <file_name>;;https://github.com/junit-team/junit4/commit/bfd54d62251a67c6709be3ec4f02a31a02ac5a45
+100;Create a class <method_name>  ;This class keeps the data together that are needed for creating a runner for a single data set of a <file_name> test.;https://github.com/junit-team/junit4/commit/3e08f69912d69189e895c279b1bece0c7c0840f4
+101;Move <file_name> to package org.junit.runners.model  ;It is common to add tests to the same package as the class under test;https://github.com/junit-team/junit4/commit/41092ce4e01cc57d8aa1911e2f1169e0f355b1ae
+102;Revert changes of <otherCommit_link>;Still fixes <issue_link>, but the original fix was superfluous.;https://github.com/junit-team/junit4/commit/bb13b318cd79a68470e93c79635090c7bb565475
+103;Delete <file_name> files;because we're using Git now;https://github.com/junit-team/junit4/commit/fa35d6d84a0b2c59254cb479633d0e20bc6e12e9
+104;Deleted dead <file_name> link  ;;https://github.com/junit-team/junit4/commit/6fe93c1a2717ce06b252d8a45d7ca020d3dc3fb3
+105;Master now builds on windows;fix for <issue_link>;https://github.com/junit-team/junit4/commit/9a82d0027247d7be667966766b01d4a24e4b834f
+106;Fixes <issue_link>;Fix <version> release notes, make sure markdown errors halt <file_name>;https://github.com/junit-team/junit4/commit/ce0195c3d81d32bc2fd4d7a0c15aa78aaaa47605
+107;Updated version to <version>;;https://github.com/junit-team/junit4/commit/cc617b399f369a0254edc714beb3551905fe799f
+108;"Update version in <file_name>; delete obsolete <file_name>; remove duplication in <file_name>";obsolete, duplication;https://github.com/junit-team/junit4/commit/a4c19ea7000b620dbb9f54c6cb625ddad1f8f33e
+109;Update <file_name>;to test 'ant profile';https://github.com/junit-team/junit4/commit/6ee76dc22e56457cb5904eb6c5c0bf97939880cb
+110;Update <iden> version, improve <file_name> javadoc, update release notes;improve <file_name> javadoc, update release notes;https://github.com/junit-team/junit4/commit/b310cd56f1039389aa360fbf51c6349e7a8e1f02
+111;further documentation cleanup;especially around <file_name>;https://github.com/junit-team/junit4/commit/8d26b450670647c847aa0ba1dd47a9c54865c63d
+112;Adding bogus markdown;should be removed later;https://github.com/junit-team/junit4/commit/ce034f7167462706062dfc010fde052a89c4eb6d
+113;Fix  <method_name>  javadoc  ;Thanks to lacostej for initial pull, Closes <pr_link>;https://github.com/junit-team/junit4/commit/62a2a56c293fd154f152da6dad498d1fc222b352
+114;alpha-ready implementation of <file_name>;;https://github.com/junit-team/junit4/commit/f09cff79b941a525271f3f2838a9742b4c5c8d36
+115;;;https://github.com/junit-team/junit4/commit/592b71c7e7cc3c10de2d6c331854a751b25879a6
+116;Fix compilation errors;Compilation errors;https://github.com/junit-team/junit4/commit/1d86784cd452e8d9e30d812255cadb75ef8dae15
+117;Use %n in string.format();it is generally preferable better to use %n, which will produce the platform-specific line separator;https://github.com/junit-team/junit4/commit/638e82435a01af83e77c23e9f8d7b658a89eb4bf
+118;Remove useless variable ( <pr_link> )  ;useless;https://github.com/junit-team/junit4/commit/b1d37670892cd885b87a7c62d7c5808517fd20b6
+119;Change links to point directly to junit4/5 repos;;https://github.com/junit-team/junit4/commit/e22bd95ab7e452245d4844f5e9b05564fe189f68
+120;Use new logo and link to new website;Updated branding and improved user experience;https://github.com/junit-team/junit4/commit/3bd79f0cb669617dd883db354c3f05ead0fa3d6f
+121;Remove 11;Omit signing;https://github.com/junit-team/junit4/commit/78029cd90a5a7be76fc54aa725be94f87f35927e
+122;Add <file_name>  ;;https://github.com/junit-team/junit4/commit/8e05e94956c1820e7a72d55795c5198835afca0e
+123;Add more contributors;increase contributors;https://github.com/junit-team/junit4/commit/a2ea00d745f2770ff3b443f77ef72572d37209df
+124;List more contributor names;more;https://github.com/junit-team/junit4/commit/c7313b19a24165f4e6b39c3eb2c8165a02f1e108
+125;Add <file_name> <iden>;;https://github.com/junit-team/junit4/commit/1079730d32227eaed5c69a908770572285ad6301
+126;Add type wildcard;wildcard;https://github.com/junit-team/junit4/commit/dfbf2ae868049c041c926f2bf2d7633056af5820
+127;Fix indentation;Fix;https://github.com/junit-team/junit4/commit/b978f680cfa3eb9b526cc8bd25c68a3eb6db3c45
+128;Fix <issue_link>;correct link to <version> release notes;https://github.com/junit-team/junit4/commit/18b23a7ed22080e7412e24060c66cef7fc3b1b93
+129;Fix javac build, Replace both() with <iden>()  ;Fix, <iden>();https://github.com/junit-team/junit4/commit/ab9caa3650a262ef4399cfd7f0d7fdc366d6e327
+130;Fix typo in test name;Typo;https://github.com/junit-team/junit4/commit/fe10c8a264e6585d9d8a92e5d5fa9a6e10aa298f
+131;hasCause() and hasMessage() describe mismatches;Both;https://github.com/junit-team/junit4/commit/5e9467c59b235ce84e7c7753c43609dea069e932
+132;Rename <iden>() to isException()/isThrowable();Following suggestion by @sf105;https://github.com/junit-team/junit4/commit/a37fd9ac8b2afc54384fd32f470b54aa69dc620a
+133;Add <method_name> back;;https://github.com/junit-team/junit4/commit/34701f7aedd60ace43171a9c56c14c8ef1f7bd15
+134;Add  <method_name>  and  <method_name> <enter> Closes <pr_link>;;https://github.com/junit-team/junit4/commit/bdb1799a6b58c4ab40c418111333f4e8e1816e7e
+135;Update <file_name> to make the 'name' field volatile;This ensures that the name is published across threads correctly--for instance, if a parallelized runner is used.;https://github.com/junit-team/junit4/commit/eedd1f68fbd014beca60c979e8173c271ea5cf2d
+136;Added better <file_name>;;https://github.com/junit-team/junit4/commit/d9ffa8ab1807c8419f8fc2b5f91fa810113a9a85
+137;<method_name> did not work reliably.;Was assuming that the <iden> used for JUnit could also load test classes.;https://github.com/junit-team/junit4/commit/8134371705a43fa2b2a8913678d4336d867f6647
+138;'each' instead of 'f' for the variable name;for the variable name;https://github.com/junit-team/junit4/commit/56b5463c6adf89a03f489f3525a9a343bc43d960
+139;Adding <iden> annotation for field parameters;Pull request <pr_link> && <pr_link>;https://github.com/junit-team/junit4/commit/cbf46b88c2937aece7018fa50ba4dbb133e03d06
+140;Remove fast-tests maven target;Many of our tests store data in static fields, so the tests cannot be run in parallel;https://github.com/junit-team/junit4/commit/9ee381470d56efa800420e5e22721e402aca01c2
+141;surefire and javadoc maven plugin updates;updates;https://github.com/junit-team/junit4/commit/fb7925bf75ffe9f802f54e2d717af11b58c75725
+142;Reused <iden> instead of own defined class <enter> (they were the same) and relocated the changes to a better location in the file which is more inline with the rest of the file. And, of course, removed the superfluous brackets.;more inline with the rest of the file;https://github.com/junit-team/junit4/commit/bd6dc3aff19a3d8e8e555d16a05a42557a755e0a
+143;Removed the unnecessary <iden>: block in javadoc;unnecessary;https://github.com/junit-team/junit4/commit/ec9bccf9521a6ccdd074f2618626507528a43bc9
+144;remove 'f' prefix from field names, add <file_name>, change <file_name>;reformatting and standardizing field names;https://github.com/junit-team/junit4/commit/df00d5eced3a7737b88de0f6f9e3673f0cf88f88

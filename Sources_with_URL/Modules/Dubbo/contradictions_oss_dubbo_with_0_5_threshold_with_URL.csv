@@ -1,0 +1,755 @@
+;Decision1;Rationale1;URL1;Decision2;Rationale2;URL2;Relationship;Alpha
+0;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Contradicts;0.5040726065635681
+1;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;Contradicts;0.5626276731491089
+2;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Contradicts;0.6888749599456787
+3;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.7631999254226685
+4;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.5641369223594666
+5;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;use revision in  <file_name>  ( <pr_link> );Revision use;https://github.com/apache/dubbo/commit/c98abb2f95d90bffb3ee40690c2a290f62905c63;Contradicts;0.5117369890213013
+6;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.628835141658783
+7;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.5636022686958313
+8;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.7404307126998901
+9;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-;https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5921270251274109
+10;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Contradicts;0.500141978263855
+11;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.6512745022773743
+12;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5077376961708069
+13;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.6994048357009888
+14;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems;https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5692172050476074
+15;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Contradicts;0.8084060549736023
+16;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.7689834833145142
+17;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.5588220953941345
+18;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.608629584312439
+19;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Correct <file_name> version  ;Correct;https://github.com/apache/dubbo/commit/0d00ef25a230f0f252045fa700ec007fb4c52c6b;Contradicts;0.5147377848625183
+20;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.5622124671936035
+21;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;Contradicts;0.5196601152420044
+22;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8991764783859253
+23;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5820300579071045
+24;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Merge pull request  ;fix QoS port can only be configured by identity property problem;https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Contradicts;0.5210570096969604
+25;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.7016911506652832
+26;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;Contradicts;0.5056796073913574
+27;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.6577451229095459
+28;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Fix issue#5411 (<pr_link>);Fix;https://github.com/apache/dubbo/commit/4704413b37ecdeafde73de0b6915aaa0d0b54b1c;Contradicts;0.5552086234092712
+29;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6397112011909485
+30;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6113067865371704
+31;Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;https://github.com/apache/dubbo/commit/5668d740766f6303e789f072100cd235e4b67582;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5183560848236084
+32;Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;https://github.com/apache/dubbo/commit/5668d740766f6303e789f072100cd235e4b67582;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6329020261764526
+33;Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;https://github.com/apache/dubbo/commit/5668d740766f6303e789f072100cd235e4b67582;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6417329907417297
+34;Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error;https://github.com/apache/dubbo/commit/5668d740766f6303e789f072100cd235e4b67582;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6890775561332703
+35;The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;https://github.com/apache/dubbo/commit/f9f10ba5225e80c34953f56123ac1702c13e45c7;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5603100657463074
+36;The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;https://github.com/apache/dubbo/commit/f9f10ba5225e80c34953f56123ac1702c13e45c7;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.6861371397972107
+37;The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;https://github.com/apache/dubbo/commit/f9f10ba5225e80c34953f56123ac1702c13e45c7;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.650942325592041
+38;The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check;https://github.com/apache/dubbo/commit/f9f10ba5225e80c34953f56123ac1702c13e45c7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6257707476615906
+39;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5937725901603699
+40;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.6679627895355225
+41;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8413644433021545
+42;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7549942135810852
+43;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;rename package name from <iden> to impl;-;https://github.com/apache/dubbo/commit/0d1ef9b411ea06e6b8c30439a96e0290b0b9dbf6;Contradicts;0.964984655380249
+44;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.7615297436714172
+45;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6155044436454773
+46;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5846908688545227
+47;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6692759990692139
+48;fix test case DUBBO-135  ;test case glitch fix;https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7295998930931091
+49;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Fix NPE in <file_name>  ;Fix;https://github.com/apache/dubbo/commit/bdfc5007fa5cad80d22b5c0422e55c1fcb745dc4;Contradicts;0.5248178243637085
+50;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.9614311456680298
+51;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.7282512187957764
+52;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Fix <issue_link> ( <pr_link> );fix;https://github.com/apache/dubbo/commit/88e52067774526637b1da973b60583607172f544;Contradicts;0.6019917130470276
+53;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5559963583946228
+54;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.6781466007232666
+55;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.6428055763244629
+56;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9146355390548706
+57;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.7390826344490051
+58;reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;https://github.com/apache/dubbo/commit/a5cc7a26179aab97b3bee3fcc93fe90ac0ecb29f;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.5898419618606567
+59;reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log;https://github.com/apache/dubbo/commit/a5cc7a26179aab97b3bee3fcc93fe90ac0ecb29f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5696312785148621
+60;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6021525859832764
+61;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5385092496871948
+62;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9165763854980468
+63;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.813592255115509
+64;Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;https://github.com/apache/dubbo/commit/2e660dfef7282b43bc58113df39e61b7a79bdf0e;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.7302521467208862
+65;Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;https://github.com/apache/dubbo/commit/2e660dfef7282b43bc58113df39e61b7a79bdf0e;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5343967080116272
+66;Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;https://github.com/apache/dubbo/commit/2e660dfef7282b43bc58113df39e61b7a79bdf0e;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5099112391471863
+67;Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed;https://github.com/apache/dubbo/commit/2e660dfef7282b43bc58113df39e61b7a79bdf0e;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5283148884773254
+68;Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;https://github.com/apache/dubbo/commit/6491ed01b7ba7cdcf2c26934ca806df3a89cf2a9;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6434628963470459
+69;Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;https://github.com/apache/dubbo/commit/6491ed01b7ba7cdcf2c26934ca806df3a89cf2a9;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5615065693855286
+70;Reduce memory allocation during address change notification;reduce allocation during export and refer at start up;https://github.com/apache/dubbo/commit/6491ed01b7ba7cdcf2c26934ca806df3a89cf2a9;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7367498278617859
+71;return default value if not implemented;not implemented;https://github.com/apache/dubbo/commit/2d0d71385d2cd26b97e07c699f84cd58b862cef9;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6236183047294617
+72;return default value if not implemented;not implemented;https://github.com/apache/dubbo/commit/2d0d71385d2cd26b97e07c699f84cd58b862cef9;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5670816898345947
+73;return default value if not implemented;not implemented;https://github.com/apache/dubbo/commit/2d0d71385d2cd26b97e07c699f84cd58b862cef9;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6747992038726807
+74;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.6983977556228638
+75;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.5585363507270813
+76;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5204379558563232
+77;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5467069149017334
+78;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.6916444301605225
+79;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5966588258743286
+80;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6652204990386963
+81;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5357597470283508
+82;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix;https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.5014616250991821
+83;Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;https://github.com/apache/dubbo/commit/5576991be387d00fa707655b0a0de0010b1f13a7;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.676775336265564
+84;Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;https://github.com/apache/dubbo/commit/5576991be387d00fa707655b0a0de0010b1f13a7;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5798516273498535
+85;Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;https://github.com/apache/dubbo/commit/5576991be387d00fa707655b0a0de0010b1f13a7;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6959670782089233
+86;Revert [Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> ) ( <pr_link> )  ;This reverts commit <otherCommit_link>;https://github.com/apache/dubbo/commit/5576991be387d00fa707655b0a0de0010b1f13a7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5458411574363708
+87;add comment for <file_name>;see <issue_link>;https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6634865999221802
+88;add comment for <file_name>;see <issue_link>;https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5288899540901184
+89;add comment for <file_name>;see <issue_link>;https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7351986765861511
+90;add comment for <file_name>;see <issue_link>;https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.9962360262870787
+91;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5314281582832336
+92;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8858646154403687
+93;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6474823951721191
+94;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.8400682210922241
+95;add gpg signing plugin for protobuf compiler ;for protobuf compiler;https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5045346021652222
+96;add gpg signing plugin for protobuf compiler ;for protobuf compiler;https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9625242948532104
+97;add gpg signing plugin for protobuf compiler ;for protobuf compiler;https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8069577813148499
+98;fix parameters could be null;fix parameters could be null;https://github.com/apache/dubbo/commit/87547793e0530aabdf429218629def9001347252;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.7064862251281738
+99;fix parameters could be null;fix parameters could be null;https://github.com/apache/dubbo/commit/87547793e0530aabdf429218629def9001347252;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5815228223800659
+100;fix parameters could be null;fix parameters could be null;https://github.com/apache/dubbo/commit/87547793e0530aabdf429218629def9001347252;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6862720847129822
+101;Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> );https://github.com/apache/dubbo/commit/873432056b9a93d51bd678b501739d234e3869a6;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6230316162109375
+102;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Remove call of deprecated method;Deprecated;https://github.com/apache/dubbo/commit/a8aba7c71f49beaa3865e63c592c3509eed82e67;Contradicts;0.5840749740600586
+103;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.8508493304252625
+104;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5681923627853394
+105;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;https://github.com/apache/dubbo/commit/d8db928d0a080767fe7ad4a3398d17ec39ec9614;Contradicts;0.5563873052597046
+106;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8744178414344788
+107;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6027210354804993
+108;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.647977888584137
+109;revert (<pr_link>);performance tuning;https://github.com/apache/dubbo/commit/faec551df75cb22c65970c0d83d446e306184926;Enhancement;file_name, pr_link;https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;Contradicts;0.5496729016304016
+110;revert (<pr_link>);performance tuning;https://github.com/apache/dubbo/commit/faec551df75cb22c65970c0d83d446e306184926;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5247220993041992
+111;revert (<pr_link>);performance tuning;https://github.com/apache/dubbo/commit/faec551df75cb22c65970c0d83d446e306184926;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5252816081047058
+112;revert (<pr_link>);performance tuning;https://github.com/apache/dubbo/commit/faec551df75cb22c65970c0d83d446e306184926;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.5116015672683716
+113;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.8602511286735535
+114;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.7239245176315308
+115;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5187241435050964
+116;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.848916232585907
+117;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5814936757087708
+118;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5133165717124939
+119;fix conflicts after merged master;after merged master;https://github.com/apache/dubbo/commit/f7b3e2e649562a78573ab0932e3d7fe444391626;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5746659636497498
+120;fix conflicts after merged master;after merged master;https://github.com/apache/dubbo/commit/f7b3e2e649562a78573ab0932e3d7fe444391626;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5151078701019287
+121;fix conflicts after merged master;after merged master;https://github.com/apache/dubbo/commit/f7b3e2e649562a78573ab0932e3d7fe444391626;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6794342994689941
+122;Solve compile problem in java11  ;java11;https://github.com/apache/dubbo/commit/18eb69e96475c05be9bb8b5d7a0c7bcdafa97405;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5932151675224304
+123;Solve compile problem in java11  ;java11;https://github.com/apache/dubbo/commit/18eb69e96475c05be9bb8b5d7a0c7bcdafa97405;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6431695222854614
+124;Solve compile problem in java11  ;java11;https://github.com/apache/dubbo/commit/18eb69e96475c05be9bb8b5d7a0c7bcdafa97405;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7015150785446167
+125;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.9365214705467224
+126;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5929237008094788
+127;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6259680390357971
+128;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7562258243560791
+129;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5497158169746399
+130;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.716414213180542
+131;Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;https://github.com/apache/dubbo/commit/c18b1cfb465181b0a446eb37cb12e5a4eab1d617;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.5063690543174744
+132;Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;https://github.com/apache/dubbo/commit/c18b1cfb465181b0a446eb37cb12e5a4eab1d617;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5062598586082458
+133;Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;https://github.com/apache/dubbo/commit/c18b1cfb465181b0a446eb37cb12e5a4eab1d617;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6454108357429504
+134;Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE;https://github.com/apache/dubbo/commit/c18b1cfb465181b0a446eb37cb12e5a4eab1d617;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6748501062393188
+135;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.5608768463134766
+136;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;Contradicts;0.5983012318611145
+137;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5712565183639526
+138;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.7063578963279724
+139;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5740331411361694
+140;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6468715071678162
+141;Check config instance in <file_name> before create a new one;"-
+
+None";https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5409402251243591
+142;Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;https://github.com/apache/dubbo/commit/66fbb3c3bb7af4fe092722c0ce3f5d73dbd16d6f;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.7564400434494019
+143;Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;https://github.com/apache/dubbo/commit/66fbb3c3bb7af4fe092722c0ce3f5d73dbd16d6f;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6579881310462952
+144;Config optimization.  ;add, hold reference of, change from-spring to include-spring-env;https://github.com/apache/dubbo/commit/66fbb3c3bb7af4fe092722c0ce3f5d73dbd16d6f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7322376370429993
+145;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;https://github.com/apache/dubbo/commit/b5408b752631644d5934971f4ba11d165c776536;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.6779086589813232
+146;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;https://github.com/apache/dubbo/commit/b5408b752631644d5934971f4ba11d165c776536;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.5620463490486145
+147;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;https://github.com/apache/dubbo/commit/b5408b752631644d5934971f4ba11d165c776536;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7208361625671387
+148;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>;https://github.com/apache/dubbo/commit/b5408b752631644d5934971f4ba11d165c776536;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.689184308052063
+149;fix NPE when no listeners registered for key;no listeners registered for key;https://github.com/apache/dubbo/commit/23f0e52486e21ff8af15820fb9274ce93570b86c;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5794114470481873
+150;fix NPE when no listeners registered for key;no listeners registered for key;https://github.com/apache/dubbo/commit/23f0e52486e21ff8af15820fb9274ce93570b86c;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6586716175079346
+151;fix NPE when no listeners registered for key;no listeners registered for key;https://github.com/apache/dubbo/commit/23f0e52486e21ff8af15820fb9274ce93570b86c;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5330785512924194
+152;fix NPE when no listeners registered for key;no listeners registered for key;https://github.com/apache/dubbo/commit/23f0e52486e21ff8af15820fb9274ce93570b86c;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6565091609954834
+153;Fix configurator bug;configurator;https://github.com/apache/dubbo/commit/9f02b97ee00b80ffdb501d8fd48c794e88388d32;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6080691814422607
+154;Fix configurator bug;configurator;https://github.com/apache/dubbo/commit/9f02b97ee00b80ffdb501d8fd48c794e88388d32;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7291638851165771
+155;Fix NPE in <file_name>  ;Fix;https://github.com/apache/dubbo/commit/bdfc5007fa5cad80d22b5c0422e55c1fcb745dc4;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6304284334182739
+156;Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;https://github.com/apache/dubbo/commit/93b1cf014af7cce13f12816ab7114881765d4471;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6092666387557983
+157;Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;https://github.com/apache/dubbo/commit/93b1cf014af7cce13f12816ab7114881765d4471;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7718001008033752
+158;Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules;https://github.com/apache/dubbo/commit/93b1cf014af7cce13f12816ab7114881765d4471;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.575930118560791
+159;Fix comments;Fix;https://github.com/apache/dubbo/commit/4c51b0d885d732793e0ca80d166c59eb7c49be0d;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5878952741622925
+160;Remove useless config item;useless;https://github.com/apache/dubbo/commit/3747cc36fada387a52363fc7dfc97a4c6c2b2670;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.641369640827179
+161;Fix compilation problem;Fix;https://github.com/apache/dubbo/commit/7edb71c06ee2208d0772331ad010b3147279d99d;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5338699221611023
+162;Fix compilation problem;Fix;https://github.com/apache/dubbo/commit/7edb71c06ee2208d0772331ad010b3147279d99d;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6991245746612549
+163;Remove duplicate ut classes;duplicate;https://github.com/apache/dubbo/commit/6f70f03f35643910f1d214a180573bee511e3368;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6175821423530579
+164;Remove duplicate ut classes;duplicate;https://github.com/apache/dubbo/commit/6f70f03f35643910f1d214a180573bee511e3368;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6762892007827759
+165;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;https://github.com/apache/dubbo/commit/01ce1b3bf4ae94ef594ed96716d60f746ce33ac2;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.6599014401435852
+166;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;https://github.com/apache/dubbo/commit/01ce1b3bf4ae94ef594ed96716d60f746ce33ac2;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5261342525482178
+167;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;https://github.com/apache/dubbo/commit/01ce1b3bf4ae94ef594ed96716d60f746ce33ac2;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6164432168006897
+168;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  ;https://github.com/apache/dubbo/commit/01ce1b3bf4ae94ef594ed96716d60f746ce33ac2;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5566273927688599
+169;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.7968453168869019
+170;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5358115434646606
+171;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.52171790599823
+172;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6059818267822266
+173;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9837716221809388
+174;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.866204023361206
+175;Remove call of deprecated method;Deprecated;https://github.com/apache/dubbo/commit/a8aba7c71f49beaa3865e63c592c3509eed82e67;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5494762063026428
+176;Fix UT problems after structure change  ;after structure change;https://github.com/apache/dubbo/commit/c94198b090cb78fb296a270742ac898a53858071;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5540695190429688
+177;Fix UT problems after structure change  ;after structure change;https://github.com/apache/dubbo/commit/c94198b090cb78fb296a270742ac898a53858071;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5273609161376953
+178;Fix UT problems after structure change  ;after structure change;https://github.com/apache/dubbo/commit/c94198b090cb78fb296a270742ac898a53858071;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7886086106300354
+179;Remove the shutdown logic from spring bean destroy  ;avoid competition;https://github.com/apache/dubbo/commit/635bc7983287d47d1d2c637a85fe21aabacdcd27;Enhancement;file_name, pr_link;https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;Contradicts;0.5553661584854126
+180;Remove the shutdown logic from spring bean destroy  ;avoid competition;https://github.com/apache/dubbo/commit/635bc7983287d47d1d2c637a85fe21aabacdcd27;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5401307344436646
+181;Remove the shutdown logic from spring bean destroy  ;avoid competition;https://github.com/apache/dubbo/commit/635bc7983287d47d1d2c637a85fe21aabacdcd27;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6358261704444885
+182;Remove the shutdown logic from spring bean destroy  ;avoid competition;https://github.com/apache/dubbo/commit/635bc7983287d47d1d2c637a85fe21aabacdcd27;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6470233798027039
+183;Translate missing content and add apache license;missing content and apache license;https://github.com/apache/dubbo/commit/7322f3ead103c4acbe2123404add364745a0a054;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5796419382095337
+184;Translate missing content and add apache license;missing content and apache license;https://github.com/apache/dubbo/commit/7322f3ead103c4acbe2123404add364745a0a054;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5054426789283752
+185;Translate missing content and add apache license;missing content and apache license;https://github.com/apache/dubbo/commit/7322f3ead103c4acbe2123404add364745a0a054;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6554045677185059
+186;Translate missing content and add apache license;missing content and apache license;https://github.com/apache/dubbo/commit/7322f3ead103c4acbe2123404add364745a0a054;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6971108913421631
+187;Remove unnecessary dependencies ;unnecessary;https://github.com/apache/dubbo/commit/09722e3a93ad4ba40edf38ebdbfd7afee4977ee6;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5856988430023193
+188;Fixed typo in \<file_name\>  ;mDeamo;https://github.com/apache/dubbo/commit/22385dc804d550ea9f415bc9f96c2d6d10139e92;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.585010826587677
+189;Fixed typo in \<file_name\>  ;mDeamo;https://github.com/apache/dubbo/commit/22385dc804d550ea9f415bc9f96c2d6d10139e92;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.562004566192627
+190;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Enable <file_name> ( <pr_link> );Enable;https://github.com/apache/dubbo/commit/c8cf56bb75a9eda4aef8a649acfbb639e9ff9e1f;Contradicts;0.5241795182228088
+191;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;polish <file_name> ;remove test profile and jvm permSize args;https://github.com/apache/dubbo/commit/b09a150d3d54590c2203d5c7da25ff925a9521dc;Contradicts;0.6434260010719299
+192;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Fix <issue_link> ( <pr_link> );fix;https://github.com/apache/dubbo/commit/88e52067774526637b1da973b60583607172f544;Contradicts;0.5031241774559021
+193;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5112384557723999
+194;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.528157114982605
+195;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;https://github.com/apache/dubbo/commit/7234078e8cf49f4ee0231b6cd0237fb730446dd1;Contradicts;0.6263512969017029
+196;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6203967928886414
+197;Add package support for dubbo-remoting-netty4 module;package support;https://github.com/apache/dubbo/commit/de5dfbbfd14ccf6b1f898c9f8d6ec5802ee323b0;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9440608024597168
+198;Add package support for dubbo-remoting-netty4 module;package support;https://github.com/apache/dubbo/commit/de5dfbbfd14ccf6b1f898c9f8d6ec5802ee323b0;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7625906467437744
+199;Add package support for dubbo-remoting-netty4 module;package support;https://github.com/apache/dubbo/commit/de5dfbbfd14ccf6b1f898c9f8d6ec5802ee323b0;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.509386420249939
+200;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;https://github.com/apache/dubbo/commit/49af203aa20667a0568a19566c1e9892166435ae;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6186056137084961
+201;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;https://github.com/apache/dubbo/commit/49af203aa20667a0568a19566c1e9892166435ae;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5980962514877319
+202;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;https://github.com/apache/dubbo/commit/49af203aa20667a0568a19566c1e9892166435ae;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7509425282478333
+203;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>;https://github.com/apache/dubbo/commit/49af203aa20667a0568a19566c1e9892166435ae;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5233515501022339
+204;fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;https://github.com/apache/dubbo/commit/d961a3e5e305e5147cb5bd837dbccd3b7dfde257;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5032857060432434
+205;fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;https://github.com/apache/dubbo/commit/d961a3e5e305e5147cb5bd837dbccd3b7dfde257;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5874566435813904
+206;fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable;https://github.com/apache/dubbo/commit/d961a3e5e305e5147cb5bd837dbccd3b7dfde257;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.572685182094574
+207;fix compiler bug;bug;https://github.com/apache/dubbo/commit/50edbb0d1cd905c1131b783992081d1681017105;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5713584423065186
+208;fix compiler bug;bug;https://github.com/apache/dubbo/commit/50edbb0d1cd905c1131b783992081d1681017105;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5567489862442017
+209;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;https://github.com/apache/dubbo/commit/7c85e785b57d5d25707894d5874cbef9879e88cc;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5360947251319885
+210;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;https://github.com/apache/dubbo/commit/7c85e785b57d5d25707894d5874cbef9879e88cc;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8390505313873291
+211;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;https://github.com/apache/dubbo/commit/7c85e785b57d5d25707894d5874cbef9879e88cc;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5722782015800476
+212;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.8353673219680786
+213;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5491615533828735
+214;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.8751055598258972
+215;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9812387228012084
+216;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;remove the space ( <pr_link> );follow up for pr#4339;https://github.com/apache/dubbo/commit/b4afeb982b943ca8c6bbd261302a9e161c2e98a9;Contradicts;0.8390427827835083
+217;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.7553756833076477
+218;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.7025781273841858
+219;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5198103785514832
+220;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7145496010780334
+221;fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;https://github.com/apache/dubbo/commit/ab5cf3dfb74fbcfaa6f453a5a3222faa32e10fe1;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6251338720321655
+222;fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package;https://github.com/apache/dubbo/commit/ab5cf3dfb74fbcfaa6f453a5a3222faa32e10fe1;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7532915472984314
+223;fix wrong telnet command package;wrong;https://github.com/apache/dubbo/commit/b5cc276c25a254bd1c44869a861e63f86b27cc3a;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.666266143321991
+224;fix wrong telnet command package;wrong;https://github.com/apache/dubbo/commit/b5cc276c25a254bd1c44869a861e63f86b27cc3a;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6013602614402771
+225;fix wrong telnet command package;wrong;https://github.com/apache/dubbo/commit/b5cc276c25a254bd1c44869a861e63f86b27cc3a;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7141243815422058
+226;fix typo ( <pr_link> );typo;https://github.com/apache/dubbo/commit/9396ace4fc00ca8f2e331b49ddabcb1e138e9e1c;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5913905501365662
+227;fix typo ( <pr_link> );typo;https://github.com/apache/dubbo/commit/9396ace4fc00ca8f2e331b49ddabcb1e138e9e1c;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6919678449630737
+228;Enhancement;file_name, pr_link;https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.556365430355072
+229;Enhancement;file_name, pr_link;https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6047012209892273
+230;Enhancement;file_name, pr_link;https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7528699636459351
+231;Enable <file_name> ( <pr_link> );Enable;https://github.com/apache/dubbo/commit/c8cf56bb75a9eda4aef8a649acfbb639e9ff9e1f;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.627816379070282
+232;Enable <file_name> ( <pr_link> );Enable;https://github.com/apache/dubbo/commit/c8cf56bb75a9eda4aef8a649acfbb639e9ff9e1f;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7302998900413513
+233;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5371142029762268
+234;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.6426885724067688
+235;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.6356722116470337
+236;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.693217933177948
+237;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling;https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.5814226865768433
+238;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;https://github.com/apache/dubbo/commit/7f95cd5290ec46ec63c0dc78c04a26336e2e80d6;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6493613123893738
+239;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;https://github.com/apache/dubbo/commit/7f95cd5290ec46ec63c0dc78c04a26336e2e80d6;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5473008155822754
+240;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition;https://github.com/apache/dubbo/commit/7f95cd5290ec46ec63c0dc78c04a26336e2e80d6;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7883819937705994
+241;Remove unused variable parameters in <file_name> (<pr_link>);unused;https://github.com/apache/dubbo/commit/5b4816dfa6ae92d0b94af4ed41c07ca6c9d0fcb9;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.5126621127128601
+242;Remove unused variable parameters in <file_name> (<pr_link>);unused;https://github.com/apache/dubbo/commit/5b4816dfa6ae92d0b94af4ed41c07ca6c9d0fcb9;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5991387963294983
+243;fix typo:<iden> ( <pr_link> );typo;https://github.com/apache/dubbo/commit/3308a197751eeb97baddf157f53813a3447d159f;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Contradicts;0.7722331285476685
+244;fix typo:<iden> ( <pr_link> );typo;https://github.com/apache/dubbo/commit/3308a197751eeb97baddf157f53813a3447d159f;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5112501978874207
+245;fix typo:<iden> ( <pr_link> );typo;https://github.com/apache/dubbo/commit/3308a197751eeb97baddf157f53813a3447d159f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6754335761070251
+246;Fix issue#5411 (<pr_link>);Fix;https://github.com/apache/dubbo/commit/4704413b37ecdeafde73de0b6915aaa0d0b54b1c;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6058869957923889
+247;use revision in  <file_name>  ( <pr_link> );Revision use;https://github.com/apache/dubbo/commit/c98abb2f95d90bffb3ee40690c2a290f62905c63;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.6052901148796082
+248;use revision in  <file_name>  ( <pr_link> );Revision use;https://github.com/apache/dubbo/commit/c98abb2f95d90bffb3ee40690c2a290f62905c63;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5892215371131897
+249;use revision in  <file_name>  ( <pr_link> );Revision use;https://github.com/apache/dubbo/commit/c98abb2f95d90bffb3ee40690c2a290f62905c63;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5408173203468323
+250;Fix zk client create logic  ;fix;https://github.com/apache/dubbo/commit/882a8c430f2a495c8ba7f29c8038781963c93fdf;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6871613264083862
+251;Fix zk client create logic  ;fix;https://github.com/apache/dubbo/commit/882a8c430f2a495c8ba7f29c8038781963c93fdf;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5902390480041504
+252;Fix zk client create logic  ;fix;https://github.com/apache/dubbo/commit/882a8c430f2a495c8ba7f29c8038781963c93fdf;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.54960697889328
+253;Fix zk client create logic  ;fix;https://github.com/apache/dubbo/commit/882a8c430f2a495c8ba7f29c8038781963c93fdf;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7825419306755066
+254;polish <file_name> ;remove test profile and jvm permSize args;https://github.com/apache/dubbo/commit/b09a150d3d54590c2203d5c7da25ff925a9521dc;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6872463226318359
+255;polish <file_name> ;remove test profile and jvm permSize args;https://github.com/apache/dubbo/commit/b09a150d3d54590c2203d5c7da25ff925a9521dc;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.518118143081665
+256;polish <file_name> ;remove test profile and jvm permSize args;https://github.com/apache/dubbo/commit/b09a150d3d54590c2203d5c7da25ff925a9521dc;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6439007520675659
+257;add <file_name> rule to check import order;<pr_link>;https://github.com/apache/dubbo/commit/a7cf7373863498b2b01a560a3fe0cca78ad53f0a;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Contradicts;0.6326786875724792
+258;add <file_name> rule to check import order;<pr_link>;https://github.com/apache/dubbo/commit/a7cf7373863498b2b01a560a3fe0cca78ad53f0a;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5485777854919434
+259;add <file_name> rule to check import order;<pr_link>;https://github.com/apache/dubbo/commit/a7cf7373863498b2b01a560a3fe0cca78ad53f0a;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7896027565002441
+260;add <file_name> rule to check import order;<pr_link>;https://github.com/apache/dubbo/commit/a7cf7373863498b2b01a560a3fe0cca78ad53f0a;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5516533255577087
+261;Fix <issue_link> ( <pr_link> );fix;https://github.com/apache/dubbo/commit/88e52067774526637b1da973b60583607172f544;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6307511925697327
+262;Fix <issue_link> ( <pr_link> );fix;https://github.com/apache/dubbo/commit/88e52067774526637b1da973b60583607172f544;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5148595571517944
+263;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5860984325408936
+264;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Correct <file_name> version  ;Correct;https://github.com/apache/dubbo/commit/0d00ef25a230f0f252045fa700ec007fb4c52c6b;Contradicts;0.5420296788215637
+265;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Modify comments and imports  ;just for [by implication];https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;Contradicts;0.5218878984451294
+266;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;modify consumer  <file_name> : param type from string to map;param type from string to map;https://github.com/apache/dubbo/commit/0aebefec3d4653c5144e4e68e77049d7b1198b1d;Contradicts;0.5527145266532898
+267;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;Contradicts;0.5928500890731812
+268;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Reduce object allocation for <method_name>;"-
+None";https://github.com/apache/dubbo/commit/c0d62ed7a83347fa469c2b2a7d75287a5feb799b;Contradicts;0.5585222840309143
+269;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.643919825553894
+270;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5477515459060669
+271;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );https://github.com/apache/dubbo/commit/b30bddb464344bdefad4034d06ed1ddba5d00aef;Contradicts;0.5315267443656921
+272;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Merge pull request  ;fix QoS port can only be configured by identity property problem;https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Contradicts;0.5754581689834595
+273;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change;https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6881600022315979
+274;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;https://github.com/apache/dubbo/commit/529713305fc7807dd1600f18199ff4e7442f955f;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.5001028180122375
+275;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;https://github.com/apache/dubbo/commit/529713305fc7807dd1600f18199ff4e7442f955f;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6558706164360046
+276;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;https://github.com/apache/dubbo/commit/529713305fc7807dd1600f18199ff4e7442f955f;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5301697254180908
+277;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix;https://github.com/apache/dubbo/commit/529713305fc7807dd1600f18199ff4e7442f955f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7375730872154236
+278;`<file_name>` class should be consistent with the writing of the ExecutionChannelHandler class;fix <issue_link>;https://github.com/apache/dubbo/commit/c9f12ca17770d7035f1f9bf0a27c18fd6c4dce5a;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5888717174530029
+279;`<file_name>` class should be consistent with the writing of the ExecutionChannelHandler class;fix <issue_link>;https://github.com/apache/dubbo/commit/c9f12ca17770d7035f1f9bf0a27c18fd6c4dce5a;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5077927112579346
+280;support get system load on windows ( <pr_link> );fix <issue_link>;https://github.com/apache/dubbo/commit/d73831895bc8dc9e85d6818571d6fa17a27ba404;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Contradicts;0.527237057685852
+281;support get system load on windows ( <pr_link> );fix <issue_link>;https://github.com/apache/dubbo/commit/d73831895bc8dc9e85d6818571d6fa17a27ba404;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5047860741615295
+282;support get system load on windows ( <pr_link> );fix <issue_link>;https://github.com/apache/dubbo/commit/d73831895bc8dc9e85d6818571d6fa17a27ba404;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5906705260276794
+283;support get system load on windows ( <pr_link> );fix <issue_link>;https://github.com/apache/dubbo/commit/d73831895bc8dc9e85d6818571d6fa17a27ba404;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7063088417053223
+284;Fix hessian-lite spelling mistake  ;spelling mistake;https://github.com/apache/dubbo/commit/3516df569777b2ec6fbe20f130f3c342caf3f476;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5334848165512085
+285;Fix hessian-lite spelling mistake  ;spelling mistake;https://github.com/apache/dubbo/commit/3516df569777b2ec6fbe20f130f3c342caf3f476;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5239555239677429
+286;Fix hessian-lite spelling mistake  ;spelling mistake;https://github.com/apache/dubbo/commit/3516df569777b2ec6fbe20f130f3c342caf3f476;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7532326579093933
+287;"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5965115427970886
+288;"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9904719591140748
+289;"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7815558910369873
+290;"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6339869499206543
+291;Fix NPE when unexport <iden> ( <pr_link> );NPE;https://github.com/apache/dubbo/commit/a2e5102657a8abe03812f0b025f457ca3d994921;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6426284313201904
+292;Fix NPE when unexport <iden> ( <pr_link> );NPE;https://github.com/apache/dubbo/commit/a2e5102657a8abe03812f0b025f457ca3d994921;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.504450798034668
+293;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5077520608901978
+294;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5289928913116455
+295;fix publish null value when use consul config center  ;fix publish null value;https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6240249276161194
+296;Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;https://github.com/apache/dubbo/commit/c39eeb57aef6d2cb046a031a47dbd37e43b4b056;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8032687902450562
+297;Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;https://github.com/apache/dubbo/commit/c39eeb57aef6d2cb046a031a47dbd37e43b4b056;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6141976118087769
+298;Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;https://github.com/apache/dubbo/commit/c39eeb57aef6d2cb046a031a47dbd37e43b4b056;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6423122882843018
+299;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.5010876655578613
+300;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5483737587928772
+301;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8834498524665833
+302;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5744472146034241
+303;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;https://github.com/apache/dubbo/commit/7234078e8cf49f4ee0231b6cd0237fb730446dd1;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6169556379318237
+304;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;https://github.com/apache/dubbo/commit/7234078e8cf49f4ee0231b6cd0237fb730446dd1;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8374996185302734
+305;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.879477322101593
+306;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5621325373649597
+307;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9810466170310974
+308;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8038793206214905
+309;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6695542335510254
+310;Correct <file_name> version  ;Correct;https://github.com/apache/dubbo/commit/0d00ef25a230f0f252045fa700ec007fb4c52c6b;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5492568612098694
+311;Remove unused code  ;unused;https://github.com/apache/dubbo/commit/c1b686545cc1adaa1ff69c1493a094b751cad52f;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5251442193984985
+312;Remove unnecessary null check and fix typo;unnecessary, fix typo;https://github.com/apache/dubbo/commit/6ec0225cfa9b45c8349d19019f965d5c52d40a09;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5565875172615051
+313;Remove unnecessary null check and fix typo;unnecessary, fix typo;https://github.com/apache/dubbo/commit/6ec0225cfa9b45c8349d19019f965d5c52d40a09;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5795278549194336
+314;Consider removing <iden> later  ;<iden> is unstable;https://github.com/apache/dubbo/commit/203078981bb23517703e7bbb60925b8542bc8983;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5203226208686829
+315;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5354358553886414
+316;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times;https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6190635561943054
+317;Modify comments and imports  ;just for [by implication];https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.6290314793586731
+318;Modify comments and imports  ;just for [by implication];https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8742811679840088
+319;Modify comments and imports  ;just for [by implication];https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6857988238334656
+320;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Contradicts;0.5256681442260742
+321;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Merge pull request  ;fix QoS port can only be configured by identity property problem;https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Contradicts;0.5436240434646606
+322;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;modify consumer  <file_name> : param type from string to map;param type from string to map;https://github.com/apache/dubbo/commit/0aebefec3d4653c5144e4e68e77049d7b1198b1d;Contradicts;0.5069682002067566
+323;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.7832515835762024
+324;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;add jdk11 to travis ci;upgrade jacoco to support jdk11;https://github.com/apache/dubbo/commit/737f7a7ea67832d7f17517326fb2491d0a086dd7;Contradicts;0.5016062259674072
+325;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6607085466384888
+326;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> );https://github.com/apache/dubbo/commit/b30bddb464344bdefad4034d06ed1ddba5d00aef;Contradicts;0.5978575348854065
+327;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Merge pull request  ;fix QoS port can only be configured by identity property problem;https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Contradicts;0.5406176447868347
+328;fix qos configuration cannot work after added qos-enable style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added qos-enable style support;https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.7012573480606079
+329;modify consumer  <file_name> : param type from string to map;param type from string to map;https://github.com/apache/dubbo/commit/0aebefec3d4653c5144e4e68e77049d7b1198b1d;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.5779624581336975
+330;fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>;https://github.com/apache/dubbo/commit/d8db928d0a080767fe7ad4a3398d17ec39ec9614;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.706809401512146
+331;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6564203500747681
+332;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5290403366088867
+333;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>;https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.501920223236084
+334;fix protocol register set false not work ( <pr_link> );not work;https://github.com/apache/dubbo/commit/8798d3852ed0e9e82f037e89f9b8cd8b96a17e49;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.6599229574203491
+335;fix protocol register set false not work ( <pr_link> );not work;https://github.com/apache/dubbo/commit/8798d3852ed0e9e82f037e89f9b8cd8b96a17e49;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5491567850112915
+336;Reduce object allocation for <method_name>;"-
+None";https://github.com/apache/dubbo/commit/c0d62ed7a83347fa469c2b2a7d75287a5feb799b;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.5186173319816589
+337;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;add unit test for parsing path;-;https://github.com/apache/dubbo/commit/66139d567eef8198101368b5d8ea37458767cae4;Contradicts;0.782502293586731
+338;Minor improvement on test cases: ( <pr_link> )  ;Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4), Use assertTrue and other assert methods through static import to make codes easier to read;https://github.com/apache/dubbo/commit/8b6f4456d5664f4e7f32b0e772befc4b12086aaa;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.7145577073097229
+339;Minor improvement on test cases: ( <pr_link> )  ;Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4), Use assertTrue and other assert methods through static import to make codes easier to read;https://github.com/apache/dubbo/commit/8b6f4456d5664f4e7f32b0e772befc4b12086aaa;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6542170643806458
+340;Simplify code with Lambda;code simplification;https://github.com/apache/dubbo/commit/8be896e663812f9b981010295d47fa730af51428;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.6227183938026428
+341;add jdk11 to travis ci;upgrade jacoco to support jdk11;https://github.com/apache/dubbo/commit/737f7a7ea67832d7f17517326fb2491d0a086dd7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8358012437820435
+342;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Merge pull request  ;fix QoS port can only be configured by identity property problem;https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Contradicts;0.7055535912513733
+343;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.6772854328155518
+344;Port <pr_link> into main trunk (<pr_link>);Fixes <issue_link>;https://github.com/apache/dubbo/commit/d5c517607b5bb5360c56b8d619799b2795594040;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.7483031153678894
+345;rename package name from <iden> to impl;-;https://github.com/apache/dubbo/commit/0d1ef9b411ea06e6b8c30439a96e0290b0b9dbf6;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>";https://github.com/apache/dubbo/commit/bbacab0b32b74ba4beb90f9100980b184ac70c71;Contradicts;0.5350198149681091

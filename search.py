@@ -19,6 +19,7 @@ st.write('Similarities_file `%s`' % sim_file)
 sim_file_path = os.path.join(module, sim_file)
 
 df_sim = pd.read_csv(sim_file_path, sep=';', dtype=str)
+df_sim.drop("Unnamed: 0",axis=1, inplace=True)
 st.write(df_sim)
 
 col1, col2 = st.columns(2, border=True)
@@ -52,6 +53,7 @@ st.write('Contradictions_file `%s`' % cont_file)
 cont_file_path = os.path.join(module, cont_file)
 
 df_cont = pd.read_csv(cont_file_path, sep=';', dtype=str)
+df_cont.drop("Unnamed: 0",axis=1, inplace=True)
 st.write(df_cont)
 
 col3, col4 = st.columns(2, border=True)
@@ -90,6 +92,7 @@ m1_container.write('Inconsistencies_M1_file `%s`' % incon_m1_file)
 incon_m1_file_path = os.path.join(module, incon_m1_file)
 df_incon_m1 = pd.read_csv(incon_m1_file_path, sep=';', dtype=str)
 df_incon_m1.drop(columns= {'similarity_rationales'}, inplace = True)
+df_incon_m1.drop("Unnamed: 0",axis=1, inplace=True)
 df_incon_m1.rename(columns= {'contradiction_rationales':'contradiction_rationales (Beta)'}, inplace = True)
 
 col5, col6 = m1_container.columns(2)
@@ -110,6 +113,7 @@ m2_container.write('Contradictory Decisions But Similar Rationales')
 m2_container.write('Inconsistencies_M2_file `%s`' % incon_m2_file)
 incon_m2_file_path = os.path.join(module, incon_m2_file)
 df_incon_m2 = pd.read_csv(incon_m2_file_path, sep=';', dtype=str)
+df_incon_m2.drop("Unnamed: 0",axis=1, inplace=True)
 # Rename column for consistency
 df_incon_m2.rename(columns= {'similarity_rationales':'similarity_rationales (Beta)'}, inplace = True)
 

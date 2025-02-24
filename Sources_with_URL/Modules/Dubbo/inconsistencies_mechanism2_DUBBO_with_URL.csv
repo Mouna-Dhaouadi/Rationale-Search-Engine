@@ -1,0 +1,72 @@
+;Decision1;Rationale1;URL1;Decision2;Rationale2;URL2;Relationship;Alpha;similarity_rationales
+0;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix;https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Contradicts;0.8084060549736023;0.5974264740943909
+1;Fix <issue_link> Java <iden> use _ split language, country, variant. ( <pr_link> );use _ split language, country, variant;https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8991764783859253;0.6970428228378296
+2;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8413644433021545;0.5398381352424622
+3;add <iden> for dynamically created class;dynamically created;https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;rename package name from <iden> to impl;-;https://github.com/apache/dubbo/commit/0d1ef9b411ea06e6b8c30439a96e0290b0b9dbf6;Contradicts;0.964984655380249;0.7704286575317383
+4;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.9614311456680298;0.2488809823989868
+5;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries;https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9146355390548706;0.6813156604766846
+6;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9165763854980468;0.654775857925415
+7;add switch of generic invocation with class info  ;fix;https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.813592255115509;0.6677268147468567
+8;add comment for <file_name>;see <issue_link>;https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.9962360262870787;0.5270093083381653
+9;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8858646154403687;0.5989702939987183
+10;add start status for <iden> server  ;-;https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;Close all servers/ports after tests finish  ;Ensure proper cleanup;https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Contradicts;0.8400682210922241;0.4728875756263733
+11;add gpg signing plugin for protobuf compiler ;for protobuf compiler;https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9625242948532104;0.6004143953323364
+12;add gpg signing plugin for protobuf compiler ;for protobuf compiler;https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8069577813148499;0.3106857240200043
+13;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.8508493304252625;0.2708331942558288
+14;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.;https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8744178414344788;0.5637588500976562
+15;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.8602511286735535;0.2824694812297821
+16;Save <file_name> allocation;Performance tuning;https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.848916232585907;0.691650927066803
+17;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>;https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Ignore unit test <file_name> (no zk server);no zk server;https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Contradicts;0.9365214705467224;0.4621576070785522
+18;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9837716221809388;0.5915126204490662
+19;Add <file_name> name and fix <file_name> error  ;error;https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.866204023361206;0.6780120730400085
+20;Add package support for dubbo-remoting-netty4 module;package support;https://github.com/apache/dubbo/commit/de5dfbbfd14ccf6b1f898c9f8d6ec5802ee323b0;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9440608024597168;0.604995846748352
+21;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin;https://github.com/apache/dubbo/commit/7c85e785b57d5d25707894d5874cbef9879e88cc;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8390505313873291;0.6460415124893188
+22;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;dont set port attribute; <file_name>  is null;https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;Contradicts;0.8353673219680786;0.5377982258796692
+23;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.8751055598258972;0.6560064554214478
+24;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9812387228012084;0.5989702939987183
+25;"add the router key in <file_name> (<pr_link>)
+";-;https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;remove the space ( <pr_link> );follow up for pr#4339;https://github.com/apache/dubbo/commit/b4afeb982b943ca8c6bbd261302a9e161c2e98a9;Contradicts;0.8390427827835083;0.4159466028213501
+26;"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module";https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9904719591140748;0.5524942874908447
+27;Revert fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )  ;fix wrong check;https://github.com/apache/dubbo/commit/c39eeb57aef6d2cb046a031a47dbd37e43b4b056;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8032687902450562;0.5978467464447021
+28;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> );https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8834498524665833;0.7384653091430664
+29;Adding the overriding rule for <file_name> (<pr_link>);Enhancement;https://github.com/apache/dubbo/commit/7234078e8cf49f4ee0231b6cd0237fb730446dd1;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8374996185302734;0.5441491603851318
+30;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>;https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;Contradicts;0.879477322101593;0.6560064554214478
+31;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.9810466170310974;0.5989702939987183
+32;Add `how can I contribute?` section;-;https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8038793206214905;0.7848647832870483
+33;Modify comments and imports  ;just for [by implication];https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;Refactor: remove;and replace it with <method_name> ( <pr_link> );https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Contradicts;0.8742811679840088;0.6410367488861084
+34;add jdk11 to travis ci;upgrade jacoco to support jdk11;https://github.com/apache/dubbo/commit/737f7a7ea67832d7f17517326fb2491d0a086dd7;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None";https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;Contradicts;0.8358012437820435;0.1455854624509811

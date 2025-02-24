@@ -1,0 +1,184 @@
+url;new_message1;Decision;Rationale
+https://github.com/apache/dubbo/commit/7f262f960b830db3b80d35451f259430ae56b1c8;simplify map empty judgment ( <pr_link> ) ;simplify map empty judgment;
+https://github.com/apache/dubbo/commit/dfa84998968f7f9bfc25b935b531fcf8c67fe854;fix  <method_name>  bug ( <pr_link> ) ;fix <method_name> bug ( <pr_link> );
+https://github.com/apache/dubbo/commit/c21cc05ec9ff4f96f34af9027714bb525cd0edf5;replace  <file_name>  log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify  <file_name>  code segment ;replace <file_name> log.isInfoEnabled->log.isWarnEnabled ( <pr_link> ) <enter> simplify <file_name> code segment;-
+https://github.com/apache/dubbo/commit/317e62f73fd0a9bac4b34eb8b2c31bbae591ef91;Fix concurrency problems in  <file_name>  and  <file_name>  ( <pr_link> ) ;Fix concurrency problems in <file_name> and <file_name> (<pr_link>);Concurrency problems
+https://github.com/apache/dubbo/commit/6a7717970fd3abde99651d405dc1fd75bedfac1c;Update  <file_name> <enter> fix the bug: cant enable override ;Update <file_name> and fix the bug: cant enable override;
+https://github.com/apache/dubbo/commit/71e04fb634bf76d47c9ae55637db72fd7de50076;Fix <issue_link> Java <iden> use '_' split language, country, variant. ( <pr_link> ) ;Fix <issue_link> Java <iden> use '_' split language, country, variant. ( <pr_link> );use '_' split language, country, variant
+https://github.com/apache/dubbo/commit/d6672afbee70a9fea98a876a225ccb7ea17e028a;polish  <method_name>  ( <pr_link> ) ;polish <method_name> ( <pr_link> );
+https://github.com/apache/dubbo/commit/15d808446d4bebc3b87f986ccc657f9e5baff728;Fix Dubbo-3990 <issue_link> ( <pr_link> ) ;Fix Dubbo-3990 <issue_link> ( <pr_link> );Fix
+https://github.com/apache/dubbo/commit/53dca537089441e84160391c8f7efd7b40dd9155;Remove redundant judgment ( <pr_link> ) ;Remove redundant judgment ( <pr_link> );redundant
+https://github.com/apache/dubbo/commit/5668d740766f6303e789f072100cd235e4b67582;Fix export provider error, change to catch throwable, handle NoClassDefFoundError ( <pr_link> ) ;Change to catch throwable, handle NoClassDefFoundError  ;Fix export provider error
+https://github.com/apache/dubbo/commit/bcb6eeec1d978d6d572ebec875d34dc64aeb5121;fix return type ( <pr_link> ) ;fix return type ( <pr_link> );
+https://github.com/apache/dubbo/commit/f9f10ba5225e80c34953f56123ac1702c13e45c7;In order to facilitate the consumer to better locate the failure of provider token check, the token value called by consumer will be printed out in the exception information ( <pr_link> ) ;The token value called by consumer will be printed out in the exception information  ;In order to facilitate the consumer to better locate the failure of provider token check
+https://github.com/apache/dubbo/commit/624d3aea9c1f1f7759c71b00dd38a9bdb720cd8d;Support protocol config for  <file_name>  annotation ( <pr_link> ) ;Support protocol config for <file_name> annotation  ;
+https://github.com/apache/dubbo/commit/7a73b3f86a0fbf75f7c190b813dace642bd4a9c7;[Dubbo-5592] simplify code for getExtensionLoader method ( <pr_link> ) ;simplify code for getExtensionLoader method  ;
+https://github.com/apache/dubbo/commit/841f6c2612d049ac0aa8bcbb6a00dad8d77a6fca;add <iden> for dynamicly created class ;add <iden> for dynamically created class;dynamically created
+https://github.com/apache/dubbo/commit/2300fca22f4534b11ecaed3a7ba4e5a8de82773f;Package name error ( <pr_link> ) ;Package name error;
+https://github.com/apache/dubbo/commit/bfac27b7fe7fb1e5439604a73e0fe59db01f1457;DUBBO-135 fix test case  <enter> <url> ;fix test case DUBBO-135  ;test case glitch fix
+https://github.com/apache/dubbo/commit/e35084015b6af5b39fe8dca279202e81d59ce082;fix <iden> and retries in  <file_name>  ( <pr_link> ) ;"Fix <iden> and retries in <file_name> ( <pr_link> )
+";Fix and retries
+https://github.com/apache/dubbo/commit/a5cc7a26179aab97b3bee3fcc93fe90ac0ecb29f;reduce the level of request data in timeout log ( <pr_link> )  <enter> to control the size of log ;reduce the level of request data in timeout log ( <pr_link> ) <enter>  ;to control the size of log
+https://github.com/apache/dubbo/commit/3b03c3f29807b654b12af5376ecedd494be12acb;[Dubbo-4863] add switch of generic invocation with class info ( <pr_link> )  <enter> fix <issue_link> ;add switch of generic invocation with class info  ;fix
+https://github.com/apache/dubbo/commit/2e660dfef7282b43bc58113df39e61b7a79bdf0e;Dubbo-3473 Fix Not Properly Closed Resources ( <pr_link> ) ;Fix Not Properly Closed Resources ( <pr_link> );Not Properly Closed
+https://github.com/apache/dubbo/commit/51361d535d11c6a4e201044fa4f859aa0676c861;fix ut ;fix  ;
+https://github.com/apache/dubbo/commit/dd8dacdc1766e8fd118404830e60d9d7eb32d5f6;Fix compilation ( <pr_link> ) ;Fix compilation  ;
+https://github.com/apache/dubbo/commit/6491ed01b7ba7cdcf2c26934ca806df3a89cf2a9;Reduce memory allocation during address change notification. ( <pr_link> )  <enter> 1. Merge  <file_name>  notification events happened in a certain short interval. 2. cache  <file_name>  instances to reduce string ->  <file_name>  recreation 3. reduce allocation during export and refer at start up. 4. add frozen status for  <file_name>  5. use  <file_name>  for unfrozen URLs ;Reduce memory allocation during address change notification;reduce allocation during export and refer at start up
+https://github.com/apache/dubbo/commit/2d0d71385d2cd26b97e07c699f84cd58b862cef9; <file_name> : return default value if not implemented. ( <pr_link> )  <enter> fixes <issue_link> ;return default value if not implemented;not implemented
+https://github.com/apache/dubbo/commit/85ad18fe22c447568f1c9bfb1c58d645c3dd7b9a;bugfix:fix alibaba  <file_name>  setAttachment(<iden>) ( <pr_link> ) ;fix alibaba <file_name> setAttachment(<iden>) ( <pr_link> );bugfix
+https://github.com/apache/dubbo/commit/35ed61592ba9741adb8e51a7e5640087b83d6295;add  <file_name>  file back. ;add  <file_name> file back;
+https://github.com/apache/dubbo/commit/1b937ac1e46d45a6110bc22fd59ba29007a73bea;avoid potential shutdown race condition. ( <pr_link> ) ;avoid potential shutdown race condition;
+https://github.com/apache/dubbo/commit/5576991be387d00fa707655b0a0de0010b1f13a7;Revert '[Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> )' ( <pr_link> ) <enter> This reverts commit  <otherCommit_link> . ;Revert '[Dubbo-5813]prevent <iden> method of <iden> being invoked twice when using Spring ( <pr_link> )' ( <pr_link> )  ;This reverts commit <otherCommit_link>
+https://github.com/apache/dubbo/commit/3bc4508d09756a40c85ddf0c62b94aaf5d957d58;add comment for  <file_name> , see <issue_link> ;add comment for <file_name>;see <issue_link>
+https://github.com/apache/dubbo/commit/efb8e304c77be92d1af4f90689cdab625fc15a99;add start status for <iden> server ;add start status for <iden> server  ;-
+https://github.com/apache/dubbo/commit/562bfcc16a3f63e9f207726b2b7f4981d6aa9df3;Add comments for <iden> implementations ;Add comments for <iden> implementations;
+https://github.com/apache/dubbo/commit/ca8bd0f87e8d3c4f88486f1a5063c7a2d78c27d8;add gpg signing plugin for protobuf compiler ;add gpg signing plugin for protobuf compiler ;for protobuf compiler
+https://github.com/apache/dubbo/commit/35089d863e09a1e28b9a28689a9bc7a968602441;add gradle wrapper jar file ;add gradle wrapper jar file;
+https://github.com/apache/dubbo/commit/429616fb6d1f303c41f6552b0ec8316848947e91;copy invoker to new invocation in  <file_name>  ;copy invoker to new invocation in <file_name>  ;
+https://github.com/apache/dubbo/commit/87547793e0530aabdf429218629def9001347252;fix parameters could be null. ( <pr_link> ) ;fix parameters could be null;fix parameters could be null
+https://github.com/apache/dubbo/commit/1be3c999d112215a1354ab396cb2fbb94f3d2a0e;Refactor: <iden> and <iden> ;Refactor: <iden> and <iden>;
+https://github.com/apache/dubbo/commit/f6993ffd4e4c123cda6b1d164485c0dbb631a70d;revert <pr_link> by logging error msg. ( <pr_link> ) ;revert <pr_link> by logging error msg.;
+https://github.com/apache/dubbo/commit/873432056b9a93d51bd678b501739d234e3869a6;Shorten the life cycle of <iden> to get a better gc effect ( <pr_link> ) ;Shorten the life cycle of <iden>;to get a better gc effect ( <pr_link> )
+https://github.com/apache/dubbo/commit/ed8a36bf695537040acd4bd5ed17bebab3ff5a92; <file_name>  implements future and keep  <file_name>  backward compatibility. ( <pr_link> ) ;implements future and keep  <file_name>  backward compatibility.;future and backward compatibility.
+https://github.com/apache/dubbo/commit/4cf629d96a520d7afea0ac15256e273ab3ca669a;generate urls directly for non-dubbo service instances. ;generate urls directly for non-dubbo service instances;
+https://github.com/apache/dubbo/commit/faec551df75cb22c65970c0d83d446e306184926;performance tuning:  <file_name>  revert ( <pr_link> ) ;revert (<pr_link>);performance tuning
+https://github.com/apache/dubbo/commit/b5a078f186fd2e7f27a3d8c2af1bce3ff2e88e80;performance tuning: save  <file_name>  allocation ( <pr_link> ) ;Save <file_name> allocation;Performance tuning
+https://github.com/apache/dubbo/commit/f7b3e2e649562a78573ab0932e3d7fe444391626;fix conflicts after merged master ;fix conflicts after merged master;after merged master
+https://github.com/apache/dubbo/commit/18eb69e96475c05be9bb8b5d7a0c7bcdafa97405;Solve compile problem in java11 ( <pr_link> ) ;Solve compile problem in java11  ;java11
+https://github.com/apache/dubbo/commit/2245cf70bc89c229a387fd9aa59339bdb947f8d6;Introduce  <file_name>  to distinguish from <iden> ;Introduce  <file_name>  to distinguish from <iden>;distinguish from <iden>
+https://github.com/apache/dubbo/commit/c18b1cfb465181b0a446eb37cb12e5a4eab1d617;Revert code to avoid NPE in RPC wire after providers are cleared. ;Revert code to avoid NPE in RPC wire after providers are cleared  ; avoid NPE
+https://github.com/apache/dubbo/commit/a66784ae12123dbc706e63452fbde74763fc848a;fix <iden> ;Fix ;
+https://github.com/apache/dubbo/commit/c509f1b1fe7cf0327174022594c2afce16e6d84c;Check config instance in  <file_name>  before create a new one. ;Check config instance in <file_name> before create a new one;"-
+
+None"
+https://github.com/apache/dubbo/commit/66fbb3c3bb7af4fe092722c0ce3f5d73dbd16d6f;Config optimization.  <enter> 1. add  <file_name>  2. <iden> hold reference of  <file_name>  3. change from-spring to include-spring-env ;Config optimization.  ;add, hold reference of, change from-spring to include-spring-env
+https://github.com/apache/dubbo/commit/b5408b752631644d5934971f4ba11d165c776536;support handle of exception from <iden> or <iden> ( <pr_link> )  <enter> fix <pr_link> ;support handle of exception from <iden> or <iden> ( <pr_link> ) <enter> fix <pr_link>;handle of exception from <iden> or <iden> <enter> fix <pr_link>
+https://github.com/apache/dubbo/commit/27789cef6b3bf04ffa60140a4fdd3eaaf0358214;duplicate decrease for  <file_name>  <iden> ( <pr_link> ) ;duplicate decrease for  <file_name>  <iden> ( <pr_link> );
+https://github.com/apache/dubbo/commit/23f0e52486e21ff8af15820fb9274ce93570b86c;fix NPE when no listeners registered for key ;fix NPE when no listeners registered for key;no listeners registered for key
+https://github.com/apache/dubbo/commit/9f02b97ee00b80ffdb501d8fd48c794e88388d32;Fix configurator bug ;Fix configurator bug;configurator
+https://github.com/apache/dubbo/commit/5f0d8c8b370404e179852b8b7c49880b2fc3ed51;change how <iden> instance is fetched. ;change how <iden> instance is fetched  ;
+https://github.com/apache/dubbo/commit/bdfc5007fa5cad80d22b5c0422e55c1fcb745dc4;Fix NPE in  <file_name>  ;Fix NPE in <file_name>  ;Fix
+https://github.com/apache/dubbo/commit/4097405882e2d04b206a992ef685f8a312224a19;Add spring annotation support for <iden>. ;Add spring annotation support for <iden>;
+https://github.com/apache/dubbo/commit/93b1cf014af7cce13f12816ab7114881765d4471;Move <iden> in config-api to bootstrap temporarily, to solve the unreasonable dependency problem between modules. For long term run, we should refactor the config-api module to stop it from depending on other modules. ;Move <iden> in config-api to bootstrap temporarily;to solve the unreasonable dependency problem between modules
+https://github.com/apache/dubbo/commit/4c51b0d885d732793e0ca80d166c59eb7c49be0d;fix comments ;Fix comments;Fix
+https://github.com/apache/dubbo/commit/3747cc36fada387a52363fc7dfc97a4c6c2b2670;Remove useless config item in xsd ;Remove useless config item;useless
+https://github.com/apache/dubbo/commit/514fd4e647b804315a5afa1c14414103f2281e4b;Support static tag group in  <file_name>  ;Support static tag group in \<file\_name\>;
+https://github.com/apache/dubbo/commit/7edb71c06ee2208d0772331ad010b3147279d99d;Fix compilation problem ;Fix compilation problem;Fix
+https://github.com/apache/dubbo/commit/6f70f03f35643910f1d214a180573bee511e3368;Remove duplicate ut classes ;Remove duplicate ut classes;duplicate
+https://github.com/apache/dubbo/commit/01ce1b3bf4ae94ef594ed96716d60f746ce33ac2;Change  <file_name>  and  <file_name> : scope and rules ;Change  <file_name>  and  <file_name> : scope and rules  ;scope and rules  
+https://github.com/apache/dubbo/commit/0e133c59ef53c3a92030881045b23e460e93ad1f;Add  <file_name>  name and fix  <file_name>  error. ;Add <file_name> name and fix <file_name> error  ;error
+https://github.com/apache/dubbo/commit/938e52dad95af1286961374a1ae27c502b9a92f1;Add assembly plugin ;Add assembly plugin;
+https://github.com/apache/dubbo/commit/bb8e93ebceaaabe21806683277ca7824b81b9246;Polish distribution  <file_name>  ;Polish distribution <file_name>;
+https://github.com/apache/dubbo/commit/a8aba7c71f49beaa3865e63c592c3509eed82e67;Polish, remove call of deprecated method ;Remove call of deprecated method;Deprecated
+https://github.com/apache/dubbo/commit/c94198b090cb78fb296a270742ac898a53858071;Fix UT problems after structure change ;Fix UT problems after structure change  ;after structure change
+https://github.com/apache/dubbo/commit/635bc7983287d47d1d2c637a85fe21aabacdcd27;Remove the shutdown logic from spring bean destroy to avoid competition. ;Remove the shutdown logic from spring bean destroy  ;avoid competition
+https://github.com/apache/dubbo/commit/1b6743ddfb2f9bf5c460eabc9a51dd902c59eb64;Add comment ;Add comment;
+https://github.com/apache/dubbo/commit/7322f3ead103c4acbe2123404add364745a0a054;Translate missing content and add apache license ;Translate missing content and add apache license;missing content and apache license
+https://github.com/apache/dubbo/commit/09722e3a93ad4ba40edf38ebdbfd7afee4977ee6;Remove unnecessary dependencies ;Remove unnecessary dependencies ;unnecessary
+https://github.com/apache/dubbo/commit/75ed5f539ec321292a2ea23de89c72fc50336422;Delete  <file_name>  ;Delete <file_name>;
+https://github.com/apache/dubbo/commit/22385dc804d550ea9f415bc9f96c2d6d10139e92;Fixed typo in  <file_name> : mDeamo ;Fixed typo in \<file_name\>  ;mDeamo
+https://github.com/apache/dubbo/commit/ee2aaf3ad323b7060760a70160b9299fe9820b28;Ignore unit test  <file_name> (no zk server) ;Ignore unit test <file_name> (no zk server);no zk server
+https://github.com/apache/dubbo/commit/02bdd04cde1b336d34279cca7c0538e7094459fc;Fix config error of heartbeat UT in dubbo-test-examples ;Fix config error of heartbeat UT in dubbo-test-examples;
+https://github.com/apache/dubbo/commit/de5dfbbfd14ccf6b1f898c9f8d6ec5802ee323b0;Add package support for 'dubbo-remoting-netty4' module ;Add package support for 'dubbo-remoting-netty4' module;package support
+https://github.com/apache/dubbo/commit/49af203aa20667a0568a19566c1e9892166435ae;Fixed <pr_link> change  <method_name>  wait/notify to lock/condition ;Change <method_name> wait/notify to lock/condition;Fixed <pr_link>
+https://github.com/apache/dubbo/commit/d961a3e5e305e5147cb5bd837dbccd3b7dfde257;fix(dubbo-admin): webx-<version> not compitable with spring-<version> ;fix(dubbo-admin): webx-<version> not compitable with spring-<version>;not compitable
+https://github.com/apache/dubbo/commit/50edbb0d1cd905c1131b783992081d1681017105;fix compiler bug ;fix compiler bug;bug
+https://github.com/apache/dubbo/commit/7c85e785b57d5d25707894d5874cbef9879e88cc;add maven-compiler-plugin to  <file_name>  ;add maven-compiler-plugin to <file_name>;to use Maven compiler plugin
+https://github.com/apache/dubbo/commit/edfaee1e89d13aca1aaa230025ba0b661fc9ebef;fix misspelling  <enter> <url> ;fix misspelling  ;
+https://github.com/apache/dubbo/commit/fba25d271fe4672a5dceef288f4e1cf2ea923521;move <iden> to  <file_name>  ( <pr_link> ) ;move <iden> to <file_name> ( <pr_link> );
+https://github.com/apache/dubbo/commit/8bf918ff676e2e19e46ea02bf9169e0abf86d15d;add some unit test for dubbo-auth ( <pr_link> ) ;add some unit test for dubbo-auth ( <pr_link> );
+https://github.com/apache/dubbo/commit/8eae30105ca005374683433964318b667d0c290c;add the router key in  <file_name>  ( <pr_link> ) ;"add the router key in <file_name> (<pr_link>)
+";-
+https://github.com/apache/dubbo/commit/8e07686047404ed4729ab1af481fa14984d5ed2b;remove reference destroy guardian ( <pr_link> )  <enter> fix <issue_link> ;remove reference destroy guardian ( <pr_link> ) <enter> fix <issue_link>;
+https://github.com/apache/dubbo/commit/9ae6ed76c9ed7f3e3cf7b9e5f3c79e8f1504b3a0;When using zookeeper and  <file_name>  is null,don't set port attribute ( <pr_link> ) <enter>  fix <issue_link> ;don't set port attribute; <file_name>  is null
+https://github.com/apache/dubbo/commit/ab5cf3dfb74fbcfaa6f453a5a3222faa32e10fe1;fix wrong telnet command package( <issue_link> ) ( <pr_link> ) ;fix wrong telnet command package( <issue_link> ) ( <pr_link> );wrong telnet command package
+https://github.com/apache/dubbo/commit/b5cc276c25a254bd1c44869a861e63f86b27cc3a;fix wrong telnet command package( <issue_link> ) ( <pr_link> ) ;fix wrong telnet command package;wrong
+https://github.com/apache/dubbo/commit/c65b589fc2b5cebed0138386f8e62e3c2528691e;rename dubbo-ops to dubbo-admin ( <pr_link> ) ;rename dubbo-ops to dubbo-admin;
+https://github.com/apache/dubbo/commit/9396ace4fc00ca8f2e331b49ddabcb1e138e9e1c;fix typo ( <pr_link> ) ;fix typo ( <pr_link> );typo
+https://github.com/apache/dubbo/commit/813fed53e8da58beb48bae9ed602f133abb3f747;[Enhancement]:  <file_name>  ( <pr_link> ) ;Enhancement;file_name, pr_link
+https://github.com/apache/dubbo/commit/c8cf56bb75a9eda4aef8a649acfbb639e9ff9e1f;Enable  <file_name>  ( <pr_link> ) ;Enable <file_name> ( <pr_link> );Enable
+https://github.com/apache/dubbo/commit/4fbdc4ff7e628b1132ed8b3e87246a0825d7cba9;Fix random ut falling in  <file_name>  ( <pr_link> ) ;Fix random ut falling in \<file\_name\> ( \<pr\_link\> )  ;random ut falling
+https://github.com/apache/dubbo/commit/7f95cd5290ec46ec63c0dc78c04a26336e2e80d6; Enhance  <file_name>  support generate type definition which contains <iden> or <iden>. ( <pr_link> ) ;Enhance <file_name> support generate type definition which contains <iden> or <iden>;support generate type definition
+https://github.com/apache/dubbo/commit/13e876e40caa0ba658c8204cb2ca9b6321ad8bfa;fix client retry create proxy lead to <iden> ( <pr_link> ) ;fix client retry create proxy lead to <iden> ( <pr_link> );
+https://github.com/apache/dubbo/commit/5b4816dfa6ae92d0b94af4ed41c07ca6c9d0fcb9;fix:Remove unused variable parameters in  <file_name>  ( <pr_link> ) ;Remove unused variable parameters in <file_name> (<pr_link>);unused
+https://github.com/apache/dubbo/commit/3308a197751eeb97baddf157f53813a3447d159f;fix typo:<iden> ( <pr_link> ) ;fix typo:<iden> ( <pr_link> );typo
+https://github.com/apache/dubbo/commit/34d7aa7ab671aa44764022b1bf348922da70d0e1;add <iden> license head ( <pr_link> )  <enter> * add <iden> license head <enter> * add liscense head <enter> * add dependecies to  <file_name>  ;add <iden> license head ( <pr_link> ) <enter> * add <iden> license head <enter> * add liscense head <enter> * add dependecies to <file_name>  ;
+https://github.com/apache/dubbo/commit/8e20d1ca06597e75903cb97c6a01c470686fcf08;<issue_link> Translate the comments of dubbo-remoting module ( <pr_link> ) ;Translate the comments of dubbo-remoting module  ;
+https://github.com/apache/dubbo/commit/4704413b37ecdeafde73de0b6915aaa0d0b54b1c;Fix issue#5411 ( <pr_link> ) ;Fix issue#5411 (<pr_link>);Fix
+https://github.com/apache/dubbo/commit/c98abb2f95d90bffb3ee40690c2a290f62905c63;use revision in  <file_name>  ( <pr_link> ) ;use revision in  <file_name>  ( <pr_link> );Revision use
+https://github.com/apache/dubbo/commit/882a8c430f2a495c8ba7f29c8038781963c93fdf;[Dubbo-4991] Fix zk client create logic ( <pr_link> )  <enter> fix <issue_link> ;Fix zk client create logic  ;fix
+https://github.com/apache/dubbo/commit/b09a150d3d54590c2203d5c7da25ff925a9521dc;polish  <file_name>  (remove test profile and jvm permSize args) ( <pr_link> ) ;polish <file_name> ;remove test profile and jvm permSize args
+https://github.com/apache/dubbo/commit/a7cf7373863498b2b01a560a3fe0cca78ad53f0a;add  <file_name>  rule to check import order ( <pr_link> ) ;add <file_name> rule to check import order;<pr_link>
+https://github.com/apache/dubbo/commit/88e52067774526637b1da973b60583607172f544;fix <issue_link> ( <pr_link> ) ;Fix <issue_link> ( <pr_link> );fix
+https://github.com/apache/dubbo/commit/28e737880ce70acb0339100a58512425cfb11fe7;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link> ;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link>;ProxyFactory.getProxy change
+https://github.com/apache/dubbo/commit/529713305fc7807dd1600f18199ff4e7442f955f;Fix stub proxy does not work cause of ProxyFactory.getProxy change ( <pr_link>  <enter> <pr_link> ) <enter>  fix <issue_link> ;Fix stub proxy does not work cause of ProxyFactory.getProxy change  ;fix
+https://github.com/apache/dubbo/commit/c9f12ca17770d7035f1f9bf0a27c18fd6c4dce5a; <file_name>  class should be consistent with the writing of the ExecutionChannelHandler class. ( <pr_link> ) <enter>  fix <issue_link> ;`<file_name>` class should be consistent with the writing of the ExecutionChannelHandler class;fix <issue_link>
+https://github.com/apache/dubbo/commit/f720ccb965d490e6cc328af8d3e9820cb6eaf8f7;fix travis cov ( <pr_link> ) ;fix travis cov;
+https://github.com/apache/dubbo/commit/d73831895bc8dc9e85d6818571d6fa17a27ba404;fix <issue_link> , support get system load on windows ( <pr_link> ) ;support get system load on windows ( <pr_link> );fix <issue_link>
+https://github.com/apache/dubbo/commit/3516df569777b2ec6fbe20f130f3c342caf3f476;Fix hessian-lite spelling mistake ( <pr_link> ) ;Fix hessian-lite spelling mistake  ;spelling mistake
+https://github.com/apache/dubbo/commit/392f15952f46340130ba51b08a02536823a5880a;"[Dubbo-6536]Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module ( <pr_link> ) <enter> add remoting-redis module, refactor  <file_name>  ";"Add a remoting redis to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module  ";"to adapt mono, sentinel and cluster redis; refactor redis registry to use the new module"
+https://github.com/apache/dubbo/commit/a2e5102657a8abe03812f0b025f457ca3d994921;Fix NPE when unexport <iden> ( <pr_link> ) ;Fix NPE when unexport <iden> ( <pr_link> );NPE
+https://github.com/apache/dubbo/commit/5230444d5f83e586ce759d15e02ee799cf6241e7;fix publish null value when use consul config center ( <pr_link> )  <enter> * fix publish null value when use consul config center ;fix publish null value when use consul config center  ;fix publish null value
+https://github.com/apache/dubbo/commit/b0064d78a3b929eb3b25e0de9055412cb61f48ce;Make code of process callback of method cleaner in  <file_name>  ( <pr_link> ) ;Make code of process callback of method cleaner in <file_name> (<pr_link>);cleaner
+https://github.com/apache/dubbo/commit/ad5f9f909e6282381499e63070c6175014c81935;Correct @parameter config of field of  <file_name>  ( <pr_link> ) ;Correct @parameter config of field of <file_name> (<pr_link>);
+https://github.com/apache/dubbo/commit/c39eeb57aef6d2cb046a031a47dbd37e43b4b056;Revert 'fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )' <enter> This reverts commit  <otherCommit_link> . ;Revert 'fix wrong check of <iden> when export a service (fix issue_6269) ( <pr_link> )'  ;fix wrong check
+https://github.com/apache/dubbo/commit/951955ad51c602a51b4ac6ada7344eef9ee1c195;Polish <issue_link> : Adding the new methods into  <file_name>  to manipulate the exported <iden> for service introspection ( <pr_link> ) ;Adding the new methods into <file_name>  ;to manipulate the exported <iden> for service introspection ( <pr_link> )
+https://github.com/apache/dubbo/commit/7234078e8cf49f4ee0231b6cd0237fb730446dd1;[Enhancement] Adding the overriding rule for  <file_name>  ( <pr_link> ) ;Adding the overriding rule for <file_name> (<pr_link>);Enhancement
+https://github.com/apache/dubbo/commit/c13809fa5dab74cc11cdc549de7293d27581116e;Add `how can I contribute?` section. ;Add `how can I contribute?` section;-
+https://github.com/apache/dubbo/commit/0d00ef25a230f0f252045fa700ec007fb4c52c6b;Correct  <file_name>  version. ;Correct <file_name> version  ;Correct
+https://github.com/apache/dubbo/commit/c1b686545cc1adaa1ff69c1493a094b751cad52f;Remove unused code. ;Remove unused code  ;unused
+https://github.com/apache/dubbo/commit/6ec0225cfa9b45c8349d19019f965d5c52d40a09;Remove unnecessary null check and fix typo. ;Remove unnecessary null check and fix typo;unnecessary, fix typo
+https://github.com/apache/dubbo/commit/203078981bb23517703e7bbb60925b8542bc8983;Ignore <iden> since it is unstable and consider removing it later. ;Consider removing <iden> later  ;<iden> is unstable
+https://github.com/apache/dubbo/commit/543a52abc0a86efad59f0f97f32de282321a4ab5; <file_name>  ( <pr_link> )  <enter> fixes <issue_link> ,  <issue_link> ,  <issue_link> ;<file_name> ( <pr_link> ) <enter> fixes <issue_link>, <issue_link>, <issue_link>;Fixing <issue_link> multiple times
+https://github.com/apache/dubbo/commit/5caa422add46efa9b6de8c0e763e1ccecbcbfacd;just for modify comments and imports ( <pr_link> ) ;Modify comments and imports  ;just for [by implication]
+https://github.com/apache/dubbo/commit/e5fe041812285869d5ab73516dd424338473bcf2;remove tomcat-embed-logging-juli ( <pr_link> )  <enter> fixes <issue_link> ;remove tomcat-embed-logging-juli ( <pr_link> );fixes <issue_link>
+https://github.com/apache/dubbo/commit/18773aa4d0925693839be7f53c0eee27697ebc1d;fix qos configuration cannot work after added 'qos-enable' style support ( <pr_link> ) <enter>  fixes <issue_link> ;fix qos configuration cannot work after added 'qos-enable' style support ( <pr_link> ) <enter>  fixes <issue_link>;qos configuration cannot work after added 'qos-enable' style support
+https://github.com/apache/dubbo/commit/0aebefec3d4653c5144e4e68e77049d7b1198b1d;modify consumer  <file_name> : param type from string to map ;modify consumer  <file_name> : param type from string to map;param type from string to map
+https://github.com/apache/dubbo/commit/d8db928d0a080767fe7ad4a3398d17ec39ec9614;fix :dubbo.properties cannot work on <iden> ;fix dubbo.properties cannot work on <iden>;dubbo.properties cannot work on <iden>
+https://github.com/apache/dubbo/commit/1e6800bea49698c6d27b0ab05a1ffb15edff634b;seperate retry from  <file_name>  ;separate retry from <file_name>;
+https://github.com/apache/dubbo/commit/336ffd1db4a65fb77285674821e86e7b9274e944;add unit test ;add unit test;
+https://github.com/apache/dubbo/commit/103e0264b4e246cc74f05a99f8d293e970798694; <file_name> <enter> <url> ;\<file_name\> <enter> <url>;
+https://github.com/apache/dubbo/commit/1352d4688d17c003434a5200db8cfd9693d61a41;Modify  <file_name> <enter> <url> ;Modify <file_name> <enter> <url>;to indicate the revision of the <file_name> and inclusion of <url>
+https://github.com/apache/dubbo/commit/0234dd23a95adb5dc90f5eb0f38f6c15c1473f07;Modify  <file_name> <enter> <url> ;Modify <file_name> <enter> <url>;
+https://github.com/apache/dubbo/commit/10052d468760f2f952064289719286d3ba608693;Add <version>  <enter> < <file_name> > ;Add <version>  <enter> < <file_name> >;
+https://github.com/apache/dubbo/commit/5f19335477a9ea4eb0af0dd0bdbe068b4e309edd;typo for  <file_name>  ( <pr_link> ) ;typo for <file_name> (<pr_link>);
+https://github.com/apache/dubbo/commit/bd6e5f101ba5ddaa6bd4f153d694bf7dcf0c19d0;Class comment error ( <pr_link> ) ;Class comment error (<pr_link>);
+https://github.com/apache/dubbo/commit/8798d3852ed0e9e82f037e89f9b8cd8b96a17e49;fix protocol register set false not work ( <pr_link> ) ;fix protocol register set false not work ( <pr_link> );not work
+https://github.com/apache/dubbo/commit/6f6ef6c9f2100e6d9a69c0337601d766f5587dea;[dubbo-2766] fix the bug of <iden> method of  <file_name>  ( <pr_link>  <enter> ) ;Fix the bug of <iden> method of <file_name>  ;
+https://github.com/apache/dubbo/commit/c0d62ed7a83347fa469c2b2a7d75287a5feb799b;[Dubbo-perf]: Reduce object allocation for  <method_name>  <iden>, <iden>, <iden>) ( <pr_link> ) ;Reduce object allocation for <method_name>;"-
+None"
+https://github.com/apache/dubbo/commit/fa157deadf65d00c9884d611430ec78e585840ff;Refactor: remove  <method_name>  and relace it with  <method_name>  ( <pr_link> ) ;Refactor: remove;and replace it with <method_name> ( <pr_link> )
+https://github.com/apache/dubbo/commit/8b6f4456d5664f4e7f32b0e772befc4b12086aaa;Minor improvement on test cases: ( <pr_link> )  <enter> 1. Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4) 2. Use assertTrue and other assert methods through static import to make codes easier to read ;Minor improvement on test cases: ( <pr_link> )  ;Use org.junit.Assert instead of junit.framework.Assert( @deprecated  since Junit 4), Use assertTrue and other assert methods through static import to make codes easier to read
+https://github.com/apache/dubbo/commit/8be896e663812f9b981010295d47fa730af51428;Simplify code with Lambda ( <pr_link> )  <enter> Simplify code with Lambda ;Simplify code with Lambda;code simplification
+https://github.com/apache/dubbo/commit/57c13e07430a58e77249b96af9574b3db04e6dba;Remove unused import for unit test ( <pr_link> )  <enter> * clear unused import ;Remove unused import for unit test;clear unused import
+https://github.com/apache/dubbo/commit/3a05378a2f9f1d183c33882c585a9d2a90445ef8;Simply  <file_name>  ( <pr_link> ) ;Simply <file_name> ( <pr_link> );
+https://github.com/apache/dubbo/commit/737f7a7ea67832d7f17517326fb2491d0a086dd7;add jdk11 to travis ci ( <pr_link> )  <enter> * add jdk11 to travis ci * Update  <file_name>  * upgrade jacoco to support jdk11 ;add jdk11 to travis ci;upgrade jacoco to support jdk11
+https://github.com/apache/dubbo/commit/a466f4f4a4b58d1089533bdbbde372d852afb5f0;fix <issue_link> : enhance  <file_name>  equals ( <pr_link> ) ;fix <issue_link> : enhance  <file_name>  equals ( <pr_link> );
+https://github.com/apache/dubbo/commit/f490df87de45b57be8c224581a8a1a7dd9a20946;keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )  <enter> * keep demo simple, and switch to use zookeeper as registry center <enter> * remove comment ;"
+keep demo simple, and switch to use zookeeper as registry center ( <pr_link> )
+keep demo simple, and switch to use zookeeper as registry center
+remove comment
+";"
+None"
+https://github.com/apache/dubbo/commit/b4afeb982b943ca8c6bbd261302a9e161c2e98a9;follow up for pr#4339, remove the space ( <pr_link> ) ;remove the space ( <pr_link> );follow up for pr#4339
+https://github.com/apache/dubbo/commit/d5c517607b5bb5360c56b8d619799b2795594040;port <pr_link> into main trunk ( <pr_link> )  <enter> fixes <issue_link> ;Port <pr_link> into main trunk (<pr_link>);Fixes <issue_link>
+https://github.com/apache/dubbo/commit/b30bddb464344bdefad4034d06ed1ddba5d00aef;switch from <iden> to regular list in order to avoid potential UnsupportedOperationException ( <pr_link> ) <enter>  Fixes <issue_link> ;switch from <iden> to regular list;in order to avoid potential UnsupportedOperationException ( <pr_link> )
+https://github.com/apache/dubbo/commit/53644f70aeb269345121dd46e74a6490dbd223db;<issue_link> : need javadoc and articles for spring annotation use. ( <pr_link> ) ;need javadoc and articles for spring annotation use;
+https://github.com/apache/dubbo/commit/2c36be62d3ecd1d8fc6526cfffc83e7630110589;rename log file from alibaba to custom-access ( <pr_link> ) ;rename log file from alibaba to custom-access  ;
+https://github.com/apache/dubbo/commit/fcdf9c8ce71c26e28d23066a33eb4116a73d7d5a;update changes for <version> ;update changes for <version>  ;
+https://github.com/apache/dubbo/commit/0d1ef9b411ea06e6b8c30439a96e0290b0b9dbf6;rename package name from <iden> to impl ;rename package name from <iden> to impl;-
+https://github.com/apache/dubbo/commit/c7695d4fc8bf50ace2489849dcd82051785257b4;remove  <file_name>  ;Remove \<file\_name\>  ;
+https://github.com/apache/dubbo/commit/66139d567eef8198101368b5d8ea37458767cae4;add unit test for parsing path ;add unit test for parsing path;-
+https://github.com/apache/dubbo/commit/f7127c7abc6424ff07e4615546176f543927fbfa;fix comment grammar error ( <pr_link> )  <enter> Co-authored-by: tangtong <alan1@sfmail.sf-express.com> ;fix comment grammar error;to correct the grammar error
+https://github.com/apache/dubbo/commit/8a6fd8b2adeb566dc0b281846e827694845e2ed5;update year to 2021 ( <pr_link> ) ;update year to 2021  ;
+https://github.com/apache/dubbo/commit/e51c52f1fdda187e033328f79ff0538ecf9c4972;Merge pull re  <enter> fix qos port can only configure by <iden> property problem ;Merge pull request  ;fix QoS port can only be configured by identity property problem
+https://github.com/apache/dubbo/commit/4a8da59573cb0f1d793809439abb2f2162f2d80f;Proofread README.md file with multiple fixes ( <pr_link> )  <enter> Fixed typo, grammatical, punctuations, and semantic coherence to improve readability and content quality. <enter> ;Proofread README.md file with multiple fixes;to improve readability and content quality
+https://github.com/apache/dubbo/commit/16f7a1efe95abed080081fbdbcf18bc9ec472b1b;Close all servers/ports after tests finish ( <pr_link> ) ;Close all servers/ports after tests finish  ;Ensure proper cleanup
+https://github.com/apache/dubbo/commit/9ca9bb04b926ba33c6755aff8373314e60f2be89;Fix typo <issue_link> ;Fix typo;typo
+https://github.com/apache/dubbo/commit/4dc0612cb64eae2afe2ac0493d44723769556326;Update README.md ( <pr_link> )  <enter> add @override annotation ;Update README.md ( <pr_link> )  <enter> add @override annotation;to include the @override annotation
+https://github.com/apache/dubbo/commit/61d5d44b90b76f264ecdf5aa50763a91b91e0fa6;Update  <file_name>  ( <pr_link> ) ;Update <file_name> ( <pr_link> );
+https://github.com/apache/dubbo/commit/bbacab0b32b74ba4beb90f9100980b184ac70c71;Enhancement, support <iden> auto recognize in  <file_name>  ( <pr_link> )  <enter> Fix <issue_link> ;Support <iden> auto recognize in <file_name> ( <pr_link>);"Enhancement
+
+Decision: Fix <issue_link>"
+https://github.com/apache/dubbo/commit/789775b3ae35d673028dd99e5251e92334ff14c3;Change <iden> to regular list in  <file_name>  ( <pr_link> ) ;Change <iden> to regular list in <file_name> (<pr_link>);to regular list
+https://github.com/apache/dubbo/commit/055f1cc6adab30fc09496144cb66952fa5a05376;[Dubbo-4871] fix cache file name issue in windows platform ( <pr_link> ) ;fix cache file name issue in windows platform  ;
