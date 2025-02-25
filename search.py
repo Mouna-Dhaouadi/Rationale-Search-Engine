@@ -7,9 +7,8 @@ from utils import *
 st.set_page_config(page_title="Rationale Search Engine", layout="wide")
 st.title("Rationale Search Engine")
 
-
 module = mocule_selector()
-sim_file, cont_file, incon_m1_file, incon_m2_file, triples_file = files_selector(module)
+sim_file, cont_file, incon_m1_file, incon_m2_file = files_selector(module)
 st.divider()
 
 ##### 1.  Similarities
@@ -42,22 +41,6 @@ df_search_r_sim = df_sim[ m1_r_sim | m2_r_sim ]
 if text_search_r_sim:
     col2.write(df_search_r_sim)
 
-# ask LLM - RAG system
-cols_llm = st.container(border=True)
-cols_llm.subheader('Ask ChatGPT to check wether there are any duplicate or similar changes')
-col_llm_1, col_llm_2, col_llm_3  = cols_llm.columns(3)
-user_input = col_llm_1.text_input("Enter your change", value="")
-similarity_threshold = col_llm_2.text_input("Enter the cosine similarity threshold to consider relevant changes:", value=0.4)
-context_size = col_llm_3.text_input("Enter the size of your context (number of relevant decisions for LLM to consider):", value=5)
-if user_input:
-    triples_file_path = os.path.join(module, triples_file)
-    relevant_decisions = get_relevant_changes(user_input, triples_file_path, similarity_threshold)
-    cols_llm.write('%s relevant decisions' % len(relevant_decisions))
-    prompt = construct_propmt(module, user_input, relevant_decisions[:int(context_size)])
-    response = ask_llm(user_input, prompt)
-    cols_llm.write(response)
-
-
 
 ###########################################################################
 st.divider()
@@ -75,7 +58,7 @@ col3, col4 = st.columns(2, border=True)
 
 # Search decisions
 col3_1, col3_2 = col3.columns(2)
-text_search_d_cont = col3_1.text_input("Search Contradictory decisions", value="")
+text_search_d_cont = col3_1.text_input("Search Contradictory decisions (exact match)", value="")
 threshold_d_cont = col3_2.text_input("Threshold for Contradictory decisions (Alpha)", value="0.5")
 m1_d_cont = df_cont["Decision1"].str.contains(text_search_d_cont)
 m2_d_cont = df_cont["Decision2"].str.contains(text_search_d_cont)
@@ -84,7 +67,7 @@ if text_search_d_cont:
     col3.write(df_search_d_cont)
 
 # Search Rationales
-text_search_r_cont = col4.text_input("Search their rationales", value="")
+text_search_r_cont = col4.text_input("Search their rationales (exact match)", value="")
 m1_r_cont = df_cont["Rationale1"].str.contains(text_search_r_cont)
 m2_r_cont = df_cont["Rationale2"].str.contains(text_search_r_cont)
 df_search_r_cont = df_cont[m1_r_cont | m2_r_cont]

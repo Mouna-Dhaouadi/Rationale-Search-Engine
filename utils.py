@@ -4,6 +4,7 @@ from openai import OpenAI
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
+from transformers import pipeline
 
 
 def mocule_selector(folder_path='./Sources_with_URL/Modules'):
@@ -18,12 +19,16 @@ def files_selector(module_path):
     cont_file = next((f for f in file_names if f.startswith("contradictions")), None)
     incon_m1_file = next((f for f in file_names if f.startswith("inconsistencies_mechanism1")), None)
     incon_m2_file = next((f for f in file_names if f.startswith("inconsistencies_mechanism2")), None)
+    return sim_file, cont_file, incon_m1_file, incon_m2_file 
+
+
+def triples_files_selector(module_path):
+    file_names = os.listdir(module_path)
     triples_file = next((f for f in file_names if f.startswith("ChatGPT_decision_rationale")), None) 
-    print(triples_file)
-    return sim_file, cont_file, incon_m1_file, incon_m2_file, triples_file 
+    return triples_file 
 
 
-def construct_propmt(module, user_input, relevant_decisions):
+def construct_propmt(module, user_input, relevant_decisions): 
     prompt = """
             You are a experienced developer of the {module} module. 
             You answer in very short sentences and do not include extra information.
@@ -36,6 +41,19 @@ def construct_propmt(module, user_input, relevant_decisions):
                 Write a summary for each of the similar decisions and provide its Github URL.
             """
     return prompt.format(user_input=user_input, relevant_decisions=relevant_decisions, module = module)
+
+
+def construct_propmt_2(module, user_input, contradictory_decisions): 
+    prompt = """
+            You are a experienced developer of the {module} module. 
+            You answer in very short sentences and do not include extra information.
+            This is the proposed commit: {user_input}
+            These are some potenial contradictory previous decisions: {contradictory_decisions}
+            Based ONLY on these relevant previous decisions and the user proposed commit, answer the following question: 
+                Is the proposed commit conflicting with these previous decisions ? 
+                Answer globally, then for each decision, write its Github URL and explain why or why not it is not conflicting with the new commit. 
+            """
+    return prompt.format(user_input=user_input, contradictory_decisions=contradictory_decisions, module = module)
 
 
 def ask_llm(user_input, prompt):
@@ -69,3 +87,29 @@ def get_relevant_changes(user_input, triples_file_path, similarity_threshold):
     relevant_changes = [text_url_df.iloc[idx]['url'] for idx, score in sorted_indices if score >= float(similarity_threshold)]
 
     return  relevant_changes
+
+
+def get_contradictory_changes(user_input, triples_file_path, contradiction_threshold):
+    pipe = pipeline( model="roberta-large-mnli")
+    contradictory_changes = []
+
+    triples_df = pd.read_csv(triples_file_path, sep=';', dtype=str)
+    text_url_df = triples_df[['Decision','Rationale', 'url']].copy()
+    text_url_df['text'] = text_url_df['Decision'].astype(str) +" "+ text_url_df["Rationale"].astype(str)
+    previous_commits_list = list (text_url_df['text'])
+
+    # Concatenate the sentences and get predictions
+    # sentence_pairs = str(sentence1 + sentence2)
+    decision_pairs = [ str(decision + user_input) for decision in previous_commits_list]
+    predictions = pipe(decision_pairs)
+
+    for ind, pair in enumerate(decision_pairs):
+    # Extract prediction +  score
+      label = predictions[ind]['label']
+      score = predictions[ind]['score']
+
+      if label == 'CONTRADICTION' and score >= float(contradiction_threshold):
+          contradictory_changes.append(text_url_df['url'][ind])   # TODO: sort these !!!! 
+
+    return  contradictory_changes
+      
