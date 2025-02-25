@@ -1,4 +1,4 @@
-level_0;index;message_preprocessed;Decision;Rationale;URL;web_url
+level_0;index;message_preprocessed;Decision;Rationale;URL;url
 0;0;mm: reduce noise in show_mem for lowmem allocations;reduce noise in show_mem for lowmem allocations;lowmem allocations;https://api.github.com/repos/torvalds/linux/git/commits/974f4367dd315acc15ad4a6453f8304aea60dfbd;https://github.com/torvalds/linux/commit/974f4367dd315acc15ad4a6453f8304aea60dfbd
 1;3;"This is an attempt to reduce the ballast that doesn't provide any relevant
 information for those allocation failures investigation";Reduce the ballast;Doesn't provide any relevant information;https://api.github.com/repos/torvalds/linux/git/commits/974f4367dd315acc15ad4a6453f8304aea60dfbd;https://github.com/torvalds/linux/commit/974f4367dd315acc15ad4a6453f8304aea60dfbd
