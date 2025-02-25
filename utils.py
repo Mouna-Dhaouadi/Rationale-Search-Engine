@@ -19,6 +19,7 @@ def files_selector(module_path):
     incon_m1_file = next((f for f in file_names if f.startswith("inconsistencies_mechanism1")), None)
     incon_m2_file = next((f for f in file_names if f.startswith("inconsistencies_mechanism2")), None)
     triples_file = next((f for f in file_names if f.startswith("ChatGPT_decision_rationale")), None) 
+    print(triples_file)
     return sim_file, cont_file, incon_m1_file, incon_m2_file, triples_file 
 
 
