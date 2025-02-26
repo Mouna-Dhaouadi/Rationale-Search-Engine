@@ -71,7 +71,6 @@ def ask_llm(user_input, prompt):
 
 def get_relevant_changes(user_input, triples_file_path, similarity_threshold):
     model = SentenceTransformer('all-MiniLM-L6-v2')
-    relevant_changes = []
 
     triples_df = pd.read_csv(triples_file_path, sep=';', dtype=str)
     text_url_df = triples_df[['Decision','Rationale', 'url']].copy()
@@ -84,14 +83,18 @@ def get_relevant_changes(user_input, triples_file_path, similarity_threshold):
     similarities = cosine_similarity(query_embedding, doc_embeddings)
 
     sorted_indices = sorted(enumerate(similarities[0]), key=lambda x: x[1], reverse=True)
+    
+    relevant_scores = [ score for idx, score in sorted_indices if score >= float(similarity_threshold) ]
     relevant_changes = [text_url_df.iloc[idx]['url'] for idx, score in sorted_indices if score >= float(similarity_threshold)]
+    relevant_text = [text_url_df.iloc[idx]['text'] for idx, score in sorted_indices if score >= float(similarity_threshold)]
 
-    return  relevant_changes
+    relevant_changes_df = pd.DataFrame(data={'Commit': relevant_text, 'Url': relevant_changes , 'Alpha': relevant_scores })
+
+    return  relevant_changes_df
 
 
 def get_contradictory_changes(user_input, triples_file_path, contradiction_threshold):
     pipe = pipeline( model="roberta-large-mnli")
-    contradictory_changes = []
 
     triples_df = pd.read_csv(triples_file_path, sep=';', dtype=str)
     text_url_df = triples_df[['Decision','Rationale', 'url']].copy()
@@ -100,16 +103,24 @@ def get_contradictory_changes(user_input, triples_file_path, contradiction_thres
 
     # Concatenate the sentences and get predictions
     # sentence_pairs = str(sentence1 + sentence2)
-    decision_pairs = [ str(decision + user_input) for decision in previous_commits_list]
+    decision_pairs = [ str(text + user_input) for text in previous_commits_list]
     predictions = pipe(decision_pairs)
 
+    contradictory_commits = []
+    contradictory_changes = []
+    contradictions_scores = []
     for ind, pair in enumerate(decision_pairs):
     # Extract prediction +  score
       label = predictions[ind]['label']
       score = predictions[ind]['score']
+      commit = pair.removesuffix(user_input)
 
       if label == 'CONTRADICTION' and score >= float(contradiction_threshold):
-          contradictory_changes.append(text_url_df['url'][ind])   # TODO: sort these !!!! 
+          contradictory_changes.append(text_url_df['url'][ind])   
+          contradictions_scores.append(float(score))
+          contradictory_commits.append(commit)
 
-    return  contradictory_changes
+    contradictory_changes_df = pd.DataFrame(data= {'Commit' : contradictory_commits , 'Url':contradictory_changes, 'Alpha':contradictions_scores} )
+    sorted_df = contradictory_changes_df.sort_values(by=['Alpha'], ascending=False) 
+    return  sorted_df
       
